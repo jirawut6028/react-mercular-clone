@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Banner1 from "../../assets/banners/GG_Sale.webp";
 import Banner2 from "../../assets/banners/Hot-Deals.jpg";
 import Banner3 from "../../assets/banners/HP-Banner.webp";
@@ -59,7 +59,7 @@ function HeroSwiper() {
     <div className="w-[850px] relative">
       <Swiper
         onSwiper={setHeroSwiper}
-        className="w-full rounded-xl z-10"
+        className="w-full rounded-xl"
         loop={true}
         autoplay={{
           delay: 2500,

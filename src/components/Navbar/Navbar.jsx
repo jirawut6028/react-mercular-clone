@@ -68,7 +68,7 @@ function Navbar() {
   }, [isFocused, fullText]);
 
   return (
-    <nav className="sticky top-0 flex flex-col py-2 max-w-[1300px] mx-auto">
+    <nav className="sticky top-0 flex flex-col py-2 max-w-[1300px] mx-auto z-50">
       <div className="flex justify-between items-center px-2.5 pb-3">
         <div className="flex gap-6">
           <img src={logo} alt="logo" className="cursor-pointer h-10" />

@@ -16,3 +16,7 @@ body {
 .swiper-button-disabled {
     opacity: 0;
 }
+
+.swiper-slide {
+    width: auto;
+}
