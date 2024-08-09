@@ -10,53 +10,45 @@ import TV from "../../assets/categorys/2278.webp";
 
 const data = [
   {
-    id: 1,
-    title: "หูฟัง/ลำโพง",
     img: Audio,
+    title: "หูฟัง/ลำโพง",
   },
   {
-    id: 2,
-    title: "คอมพิวเตอร์",
     img: Computer,
+    title: "คอมพิวเตอร์",
   },
   {
-    id: 3,
-    title: "เกมมิ่ง",
     img: Gaming,
+    title: "เกมมิ่ง",
   },
   {
-    id: 4,
-    title: "จัดโต๊ะคอม",
     img: Work,
+    title: "จัดโต๊ะคอม",
   },
   {
-    id: 5,
-    title: "อุปกรณ์มือถือ",
     img: Mobile,
+    title: "อุปกรณ์มือถือ",
   },
   {
-    id: 6,
-    title: "แกตเจ็ต",
     img: Gadget,
+    title: "แกตเจ็ต",
   },
   {
-    id: 7,
-    title: "เครื่องเสียงมืออาชีพ",
     img: Pro,
+    title: "เครื่องเสียงมืออาชีพ",
   },
   {
-    id: 8,
-    title: "ทีวี",
     img: TV,
+    title: "ทีวี",
   },
 ];
 
 function Category() {
   return (
     <div className="flex py-1.5 gap-4 max-w-[1300px] mx-auto">
-      {data.map((item) => (
+      {data.map((item, index) => (
         <button
-          key={item.id}
+          key={index}
           className="bg-[#f6f7f8] hover:bg-[#d8e6fb] hover:text-[#0f63e9] rounded-xl text-sm py-2 focus:outline-none font-semibold flex flex-col items-center gap-2 cursor-pointer duration-200"
         >
           <img src={item.img} alt={item.title} className="w-20 mx-[33px]" />

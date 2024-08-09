@@ -16,30 +16,12 @@ import "swiper/css";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const data = [
-  {
-    id: 1,
-    img: Banner1,
-  },
-  {
-    id: 2,
-    img: Banner2,
-  },
-  {
-    id: 3,
-    img: Banner3,
-  },
-  {
-    id: 4,
-    img: Banner4,
-  },
-  {
-    id: 5,
-    img: Banner5,
-  },
-  {
-    id: 6,
-    img: Banner6,
-  },
+  { img: Banner1 },
+  { img: Banner2 },
+  { img: Banner3 },
+  { img: Banner4 },
+  { img: Banner5 },
+  { img: Banner6 },
 ];
 
 function HeroSwiper() {
@@ -75,8 +57,8 @@ function HeroSwiper() {
         }}
         modules={[Autoplay, Pagination, Navigation]}
       >
-        {data.map((item) => (
-          <SwiperSlide key={item.id}>
+        {data.map((item, index) => (
+          <SwiperSlide key={index}>
             <img src={item.img} alt="Banner" />
           </SwiperSlide>
         ))}

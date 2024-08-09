@@ -21,23 +21,19 @@ import { Navigation } from "swiper/modules";
 
 const data = [
   {
-    id: 1,
     title: "เก้าอี้สุขภาพ",
     bestsell: [
       {
-        id: 1,
         img: chiar1,
         brand: "Bewell",
         name: "เก้าอี้สุขภาพ Bewell FOSTER Ergonomic Chair",
       },
       {
-        id: 2,
         img: chiar2,
         brand: "Bewell",
         name: "เก้าอี้สุขภาพ Bewell Glory Ergonomic Chair",
       },
       {
-        id: 3,
         img: chiar3,
         brand: "Ergotrend",
         name: "เก้าอี้สุขภาพ Ergotrend Konomous Ergonomic Chair",
@@ -45,23 +41,19 @@ const data = [
     ],
   },
   {
-    id: 2,
     title: "โน๊ตบุ๊คเกมมิ่ง",
     bestsell: [
       {
-        id: 1,
         img: notebook1,
         brand: "Lenovo",
         name: "โน๊ตบุ๊ค Lenovo IdeaPad Gaming 3 15ARH7-82SB00JETA Gaming Notebook",
       },
       {
-        id: 2,
         img: notebook2,
         brand: "MSI",
         name: "โน๊ตบุ๊ค MSI Thin A15 B7VE-045TH Gaming Notebook Cosmos Gray",
       },
       {
-        id: 3,
         img: notebook3,
         brand: "Acer",
         name: "โน๊ตบุ๊ค Acer Nitro V 15 ANV15-51-574G Gaming Notebook",
@@ -69,23 +61,19 @@ const data = [
     ],
   },
   {
-    id: 3,
     title: "เมาส์เกมมิ่ง",
     bestsell: [
       {
-        id: 1,
         img: mouse1,
         brand: "Logitech",
         name: "เมาส์ Logitech G Pro X Superlight Wireless Gaming Mouse White",
       },
       {
-        id: 2,
         img: mouse2,
         brand: "Lamzu",
         name: "เมาส์ Lamzu Thorn 4K Wireless Gaming Mouse Charcoal Black",
       },
       {
-        id: 3,
         img: mouse3,
         brand: "ThundeRobot",
         name: "เมาส์ ThundeRobot ML903 NearLink Wireless Gaming Mouse White",
@@ -105,10 +93,10 @@ function BestSellSwiper() {
         }}
         modules={[Navigation]}
       >
-        {data.map((item) => (
+        {data.map((item, index) => (
           <SwiperSlide
             className="px-3 py-3.5 flex flex-col justify-between"
-            key={item.id}
+            key={index}
           >
             <div className="flex gap-1">
               <RiFireFill className="text-2xl text-red-400" />
@@ -118,7 +106,7 @@ function BestSellSwiper() {
             </div>
             {item.bestsell.map((i, index) => (
               <div
-                key={i.id}
+                key={index}
                 className="w-full h-[103px] bg-white rounded-xl flex items-center justify-between px-4"
               >
                 <div className="bg-[#0f63e9] h-[34px] w-[34px] rounded-full text-white flex items-center justify-center text-lg font-bold relative">

@@ -13,34 +13,30 @@ import Store from "../../assets/icons/Menu Icon-04.webp";
 import Dropdown from "./Dropdown";
 
 const data = [
-  { id: 1, title: "คูปองส่วนลด" },
   {
-    id: 2,
+    title: "คูปองส่วนลด",
+  },
+  {
     title: "Flash Sale",
     icon: FlashSale,
   },
   {
-    id: 3,
     title: "Only at Mercular",
     icon: OnlyAt,
   },
   {
-    id: 4,
     title: "โปรหน้าร้าน",
     icon: Promotion,
   },
   {
-    id: 5,
     title: "บทความ",
     icon: Blog,
   },
   {
-    id: 6,
     title: "Best Of",
     icon: Best,
   },
   {
-    id: 7,
     title: "สาขาของเรา",
     icon: Store,
   },
@@ -112,9 +108,9 @@ function Navbar() {
         </div>
       </div>
       <div className="flex gap-2">
-        {data.map((item) => (
+        {data.map((item, index) => (
           <button
-            key={item.id}
+            key={index}
             className="bg-[#f6f7f8] hover:bg-[#d8e6fb] hover:text-[#0f63e9] rounded-lg text-sm px-2 py-[5px] focus:outline-none font-semibold flex items-center gap-2 cursor-pointer duration-200"
           >
             {item.icon && (
