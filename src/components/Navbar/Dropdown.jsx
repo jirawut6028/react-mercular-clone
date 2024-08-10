@@ -19,6 +19,15 @@ import Sport from "../../assets/categorys/headphones/2008.png";
 import InEar from "../../assets/categorys/headphones/1716963039529_2006.webp";
 import Earbud from "../../assets/categorys/headphones/2007.webp";
 import CallCenter from "../../assets/categorys/headphones/2009.png";
+import Marshall from "../../assets/categorys/headphones/brands/Brand Logo-01.webp";
+import Klipsch from "../../assets/categorys/headphones/brands/Brand Logo-45.webp";
+import Edifier from "../../assets/categorys/headphones/brands/Brand Logo-04.webp";
+import BO from "../../assets/categorys/headphones/brands/Brand Logo-47.webp";
+import Soundpeats from "../../assets/categorys/headphones/brands/Brand Logo-44.webp";
+import JBL from "../../assets/categorys/headphones/brands/Brand Logo_2-08.webp";
+import Sony from "../../assets/categorys/headphones/brands/Brand Logo-03.webp";
+import Jabra from "../../assets/categorys/headphones/brands/Brand Logo-48.webp";
+import Bose from "../../assets/categorys/headphones/brands/Brand Logo-46.webp";
 import Dap from "../../assets/categorys/dap&dac/2033.webp";
 import DACAmp from "../../assets/categorys/dap&dac/2034.webp";
 import RecordPlayer from "../../assets/categorys/dap&dac/2035.webp";
@@ -92,7 +101,7 @@ function Dropdown() {
     <div className="absolute flex bg-white shadow-xl visible mt-1 rounded-lg">
       <div className="bg-[#f4f6f8] flex flex-col p-3 w-[230px] rounded-s-lg">
         <p className="font-semibold pb-3">สินค้าทั้งหมด</p>
-        <ul className="font-semibold text-sm *:py-2 *:px-1 *:mb-1 *:gap-3 *:rounded-lg *:flex *:items-center *:cursor-pointer">
+        <ul className="font-semibold text-sm *:py-2 *:px-2 *:mb-0.5 *:gap-3 *:rounded-lg *:flex *:items-center *:cursor-pointer">
           <li
             className={`${
               title == "หูฟัง/ลำโพง" && "bg-[#cfdef5] font-bold text-[#0f63e9]"
@@ -169,7 +178,7 @@ function Dropdown() {
           </li>
         </ul>
       </div>
-      <div className="flex flex-col w-[730px] p-3">
+      <div className="flex flex-col w-[730px] p-4">
         <div className="flex justify-between font-semibold">
           <p>{title}</p>
           <div className="flex gap-1.5 items-center text-sm text-[#0f63e9] hover:bg-[#ecf3fd] rounded-lg p-[5px] duration-200 cursor-pointer">
@@ -181,7 +190,7 @@ function Dropdown() {
         </div>
         <div className="relative">
           <Swiper
-            className="w-full pt-4"
+            className="w-full pt-3 pb-4"
             slidesPerView={"auto"}
             spaceBetween={12}
             navigation={{
@@ -207,6 +216,9 @@ function Dropdown() {
                 <p className="line-clamp-2 text-sm font-semibold text-center">
                   หูฟัง
                 </p>
+                {cate == "หูฟัง" && (
+                  <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-solid border-t-0 border-r-[25px] border-l-[25px] border-b-[20px] border-l-transparent border-r-transparent border-t-transparent border-b-[#f4f6f8]"></span>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -226,6 +238,9 @@ function Dropdown() {
                 <p className="line-clamp-2 text-sm font-semibold text-center">
                   ลำโพง
                 </p>
+                {cate == "ลำโพง" && (
+                  <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-solid border-t-0 border-r-[25px] border-l-[25px] border-b-[20px] border-l-transparent border-r-transparent border-t-transparent border-b-[#f4f6f8]"></span>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -245,6 +260,9 @@ function Dropdown() {
                 <p className="line-clamp-2 text-sm font-semibold text-center">
                   เครื่องเล่นเพลง & DAC
                 </p>
+                {cate == "เครื่องเล่นเพลง & DAC" && (
+                  <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-solid border-t-0 border-r-[25px] border-l-[25px] border-b-[20px] border-l-transparent border-r-transparent border-t-transparent border-b-[#f4f6f8]"></span>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -264,6 +282,9 @@ function Dropdown() {
                 <p className="line-clamp-2 text-sm font-semibold text-center">
                   อุปกรณ์เสริมหูฟัง
                 </p>
+                {cate == "อุปกรณ์เสริมหูฟัง" && (
+                  <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-solid border-t-0 border-r-[25px] border-l-[25px] border-b-[20px] border-l-transparent border-r-transparent border-t-transparent border-b-[#f4f6f8]"></span>
+                )}
               </div>
             </SwiperSlide>
             <SwiperSlide>
@@ -283,6 +304,9 @@ function Dropdown() {
                 <p className="line-clamp-2 text-sm font-semibold text-center">
                   อุปกรณ์เสริมลำโพง
                 </p>
+                {cate == "อุปกรณ์เสริมลำโพง" && (
+                  <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-solid border-t-0 border-r-[25px] border-l-[25px] border-b-[20px] border-l-transparent border-r-transparent border-t-transparent border-b-[#f4f6f8]"></span>
+                )}
               </div>
             </SwiperSlide>
           </Swiper>
@@ -293,7 +317,7 @@ function Dropdown() {
             <FaAngleRight />
           </button>
         </div>
-        <div className="bg-[#f4f6f8] mt-4 h-[215px] rounded-lg pt-5 px-4">
+        <div className="bg-[#f4f6f8] h-[215px] rounded-lg pt-5 px-4">
           <div className="flex justify-between font-semibold">
             <p>{cate}</p>
             <div className="flex gap-1.5 items-center text-sm text-[#0f63e9] hover:bg-[#ecf3fd] rounded-lg p-[5px] duration-200 cursor-pointer">
@@ -329,6 +353,73 @@ function Dropdown() {
                 </button>
               ))}
           </div>
+        </div>
+        <p className="font-semibold mt-6">แบรนด์แนะนำ</p>
+        <div className="relative">
+          <Swiper
+            className="w-full"
+            slidesPerView={"auto"}
+            spaceBetween={19}
+            navigation={{
+              nextEl: ".swiper-brand-button-next",
+              prevEl: ".swiper-brand-button-prev",
+            }}
+            modules={[Navigation]}
+          >
+            <SwiperSlide>
+              <img
+                src={Marshall}
+                alt="Marshall"
+                className="w-[70px] cursor-pointer"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={Klipsch}
+                alt="Klipsch"
+                className="w-[70px] cursor-pointer"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={Edifier}
+                alt="Edifier"
+                className="w-[70px] cursor-pointer"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={BO} alt="BO" className="w-[70px] cursor-pointer" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={Soundpeats}
+                alt="Soundpeats"
+                className="w-[70px] cursor-pointer"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={JBL} alt="JBL" className="w-[70px] cursor-pointer" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={Sony} alt="Sony" className="w-[70px] cursor-pointer" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img
+                src={Jabra}
+                alt="Jabra"
+                className="w-[70px] cursor-pointer"
+              />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={Bose} alt="Bose" className="w-[70px] cursor-pointer" />
+            </SwiperSlide>
+          </Swiper>
+          <button className="swiper-brand-button-prev absolute -left-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md">
+            <FaAngleLeft />
+          </button>
+          <button className="swiper-brand-button-next absolute -right-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md">
+            <FaAngleRight />
+          </button>
         </div>
       </div>
     </div>
