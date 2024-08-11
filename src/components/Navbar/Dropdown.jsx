@@ -1,36 +1,53 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
-import Audio from "../../assets/categorys/2001.png";
-import Computer from "../../assets/categorys/2157.webp";
-import Gaming from "../../assets/categorys/2071.webp";
-import Work from "../../assets/categorys/2119.webp";
-import Mobile from "../../assets/categorys/2227.webp";
-import Gadget from "../../assets/categorys/2208.webp";
-import Pro from "../../assets/categorys/2047.png";
-import TV from "../../assets/categorys/2278.webp";
-import Speaker from "../../assets/categorys/2010.webp";
-import Dac from "../../assets/categorys/2032.webp";
-import HeadphoneAccessories from "../../assets/categorys/2036.webp";
-import SpeakerAccessories from "../../assets/categorys/2041.png";
-import Bluetooth from "../../assets/categorys/headphones/2003.png";
-import TrueWireless from "../../assets/categorys/headphones/2004.webp";
-import Headphone from "../../assets/categorys/headphones/2005.png";
-import Sport from "../../assets/categorys/headphones/2008.png";
-import InEar from "../../assets/categorys/headphones/1716963039529_2006.webp";
-import Earbud from "../../assets/categorys/headphones/2007.webp";
-import CallCenter from "../../assets/categorys/headphones/2009.png";
-import Marshall from "../../assets/categorys/headphones/brands/Brand Logo-01.webp";
-import Klipsch from "../../assets/categorys/headphones/brands/Brand Logo-45.webp";
-import Edifier from "../../assets/categorys/headphones/brands/Brand Logo-04.webp";
-import BO from "../../assets/categorys/headphones/brands/Brand Logo-47.webp";
-import Soundpeats from "../../assets/categorys/headphones/brands/Brand Logo-44.webp";
-import JBL from "../../assets/categorys/headphones/brands/Brand Logo_2-08.webp";
-import Sony from "../../assets/categorys/headphones/brands/Brand Logo-03.webp";
-import Jabra from "../../assets/categorys/headphones/brands/Brand Logo-48.webp";
-import Bose from "../../assets/categorys/headphones/brands/Brand Logo-46.webp";
-import Dap from "../../assets/categorys/dap&dac/2033.webp";
-import DACAmp from "../../assets/categorys/dap&dac/2034.webp";
-import RecordPlayer from "../../assets/categorys/dap&dac/2035.webp";
+import Audio from "../../assets/categorys/audio/audio.png";
+import Computer from "../../assets/categorys/computer/computer.webp";
+import Gaming from "../../assets/categorys/gaming/gaming.webp";
+import WorkStation from "../../assets/categorys/work-station/work-station.webp";
+import MobileAccessory from "../../assets/categorys/mobile-accessory/mobile-accessory.webp";
+import SmartGadget from "../../assets/categorys/smart-gadget/smart-gadget.webp";
+import ProfessionalAudio from "../../assets/categorys/professional-audio/professional-audio.png";
+import TV from "../../assets/categorys/tv/tv.webp";
+import Speaker from "../../assets/categorys/audio/speaker.webp";
+import DapDacAmp from "../../assets/categorys/audio/dap-dac-amp.webp";
+import HeadphoneAccessory from "../../assets/categorys/audio/headphone-accessory.webp";
+import SpeakerAccessory from "../../assets/categorys/audio/speaker-accessory.png";
+import WirelessHeadphone from "../../assets/categorys/audio/headphone/wireless-headphone.png";
+import TrueWirelessHeadphone from "../../assets/categorys/audio/headphone/true-wireless-headphone.webp";
+import OnEarOverEarHeadphone from "../../assets/categorys/audio/headphone/on-ear-over-ear-headphone.png";
+import SportHeadphone from "../../assets/categorys/audio/headphone/sport-headphone.png";
+import InEarHeadphone from "../../assets/categorys/audio/headphone/in-ear-headphone.webp";
+import EarbudHeadphone from "../../assets/categorys/audio/headphone/earbud-headphone.webp";
+import BluetoothHeadsetCallCenter from "../../assets/categorys/audio/headphone/bluetooth-headset-call-center.png";
+import PortableSpeaker from "../../assets/categorys/audio/speaker/portable-speaker.webp";
+import WirelessSpeaker from "../../assets/categorys/audio/speaker/wireless-speaker.webp";
+import ComputerSpeaker from "../../assets/categorys/audio/speaker/computer-speaker.webp";
+import Soundbar from "../../assets/categorys/audio/speaker/soundbar.webp";
+import PartySpeaker from "../../assets/categorys/audio/speaker/party-speaker.webp";
+import ConferenceSpeaker from "../../assets/categorys/audio/speaker/conference-speaker.png";
+import MultiRoom from "../../assets/categorys/audio/speaker/multi-room.webp";
+import HomeSpeaker from "../../assets/categorys/audio/speaker/home-speaker.webp";
+import Dap from "../../assets/categorys/audio/dap-dac-amp/dap.webp";
+import DACAmp from "../../assets/categorys/audio/dap-dac-amp/dac-amplifiers.webp";
+import TurntableCartridge from "../../assets/categorys/audio/dap-dac-amp/turntable-cartridge.webp";
+import Eartip from "../../assets/categorys/audio/headphone-accessory/eartip.webp";
+import HeadphoneChord from "../../assets/categorys/audio/headphone-accessory/headphone-chord.png";
+import HeadphoneCase from "../../assets/categorys/audio/headphone-accessory/headphone-case.webp";
+import HeadphoneStand from "../../assets/categorys/audio/headphone-accessory/headphone-stand.png";
+import AudioWire from "../../assets/categorys/audio/speaker-accessory/audio-wire.png";
+import AudioPowerPlugPowerFilter from "../../assets/categorys/audio/speaker-accessory/audio-power-plug-power-filter.webp";
+import SpeakerStand from "../../assets/categorys/audio/speaker-accessory/speaker-stand.png";
+import BluetoothRecieverTransmitter from "../../assets/categorys/audio/speaker-accessory/bluetooth-reciever-transmitter.webp";
+import CaseAndAudioAccessories from "../../assets/categorys/audio/speaker-accessory/case-and-audio-accessories.webp";
+import Marshall from "../../assets/categorys/audio/brand/marshall.webp";
+import Klipsch from "../../assets/categorys/audio/brand/klipsch.webp";
+import Edifier from "../../assets/categorys/audio/brand/edifier.webp";
+import BO from "../../assets/categorys/audio/brand/bo.webp";
+import Soundpeats from "../../assets/categorys/audio/brand/soundpeats.webp";
+import JBL from "../../assets/categorys/audio/brand/jbl.webp";
+import Sony from "../../assets/categorys/audio/brand/sony.webp";
+import Jabra from "../../assets/categorys/audio/brand/jabra.webp";
+import Bose from "../../assets/categorys/audio/brand/bose.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
@@ -40,38 +57,73 @@ import "swiper/css";
 // import required modules
 import { Navigation } from "swiper/modules";
 
-const headphones = [
+const headphone = [
   {
-    img: Bluetooth,
+    img: WirelessHeadphone,
     title: "หูฟังไร้สาย & หูฟังบลูทูธ",
   },
   {
-    img: TrueWireless,
+    img: TrueWirelessHeadphone,
     title: "หูฟัง True Wireless",
   },
   {
-    img: Headphone,
+    img: OnEarOverEarHeadphone,
     title: "หูฟังครอบหู & แนบหู",
   },
   {
-    img: Sport,
+    img: SportHeadphone,
     title: "หูฟังออกกำลังกาย",
   },
   {
-    img: InEar,
+    img: InEarHeadphone,
     title: "หูฟัง In Ear",
   },
   {
-    img: Earbud,
+    img: EarbudHeadphone,
     title: "หูฟัง Earbud",
   },
   {
-    img: CallCenter,
+    img: BluetoothHeadsetCallCenter,
     title: "หูฟัง Call Center",
   },
 ];
 
-const DapDac = [
+const speaker = [
+  {
+    img: PortableSpeaker,
+    title: "ลำโพงพกพา",
+  },
+  {
+    img: WirelessSpeaker,
+    title: "ลำโพง Bluetooth",
+  },
+  {
+    img: ComputerSpeaker,
+    title: "ลำโพงคอมพิวเตอร์",
+  },
+  {
+    img: Soundbar,
+    title: "ลำโพงซาวด์บาร์ (Soundbar)",
+  },
+  {
+    img: PartySpeaker,
+    title: "ลำโพงเคลื่อนที่",
+  },
+  {
+    img: ConferenceSpeaker,
+    title: "ลำโพงห้องประชุม (Conference speaker)",
+  },
+  {
+    img: MultiRoom,
+    title: "ลำโพง Multi-room",
+  },
+  {
+    img: HomeSpeaker,
+    title: "เครื่องเสียงบ้าน",
+  },
+];
+
+const dapDacAmp = [
   {
     img: Dap,
     title: "เครื่องเล่นเพลงพกพา (DAP)",
@@ -81,8 +133,50 @@ const DapDac = [
     title: "DAC-Amplifiers",
   },
   {
-    img: RecordPlayer,
+    img: TurntableCartridge,
     title: "เครื่องเล่นแผ่นเสียง",
+  },
+];
+
+const headphoneAccessory = [
+  {
+    img: Eartip,
+    title: "ฟองน้ำหูฟัง / จุกหูฟัง",
+  },
+  {
+    img: HeadphoneChord,
+    title: "สายหูฟัง",
+  },
+  {
+    img: HeadphoneCase,
+    title: "เคสหูฟัง",
+  },
+  {
+    img: HeadphoneStand,
+    title: "ที่แขวนหูฟัง",
+  },
+];
+
+const speakerAccessory = [
+  {
+    img: AudioWire,
+    title: "สายสัญญาณ",
+  },
+  {
+    img: AudioPowerPlugPowerFilter,
+    title: "เครื่องกรองไฟ",
+  },
+  {
+    img: SpeakerStand,
+    title: "ขาตั้งลำโพง",
+  },
+  {
+    img: BluetoothRecieverTransmitter,
+    title: "ตัวเชื่อมสัญญาณบลูทูธ (Bluetooth Connector)",
+  },
+  {
+    img: CaseAndAudioAccessories,
+    title: "เคสและอุปกรณ์เสริมอื่นๆ",
   },
 ];
 
@@ -98,7 +192,7 @@ function Dropdown() {
   }, [title]);
 
   return (
-    <div className="absolute flex bg-white shadow-xl visible mt-1 rounded-lg">
+    <div className="invisible absolute flex bg-white shadow-xl mt-1 rounded-lg group-hover:visible">
       <div className="bg-[#f4f6f8] flex flex-col p-3 w-[230px] rounded-s-lg">
         <p className="font-semibold pb-3">สินค้าทั้งหมด</p>
         <ul className="font-semibold text-sm *:py-2 *:px-2 *:mb-0.5 *:gap-3 *:rounded-lg *:flex *:items-center *:cursor-pointer">
@@ -135,7 +229,7 @@ function Dropdown() {
             }`}
             onMouseEnter={() => setTitle("จัดโต๊ะคอม")}
           >
-            <img className="w-8" src={Work} alt="Work" />
+            <img className="w-8" src={WorkStation} alt="WorkStation" />
             จัดโต๊ะคอม
           </li>
           <li
@@ -145,7 +239,7 @@ function Dropdown() {
             }`}
             onMouseEnter={() => setTitle("อุปกรณ์มือถือ")}
           >
-            <img className="w-8" src={Mobile} alt="Mobile" />
+            <img className="w-8" src={MobileAccessory} alt="MobileAccessory" />
             อุปกรณ์มือถือ
           </li>
           <li
@@ -154,7 +248,7 @@ function Dropdown() {
             }`}
             onMouseEnter={() => setTitle("แกตเจ็ต")}
           >
-            <img className="w-8" src={Gadget} alt="Gadget" />
+            <img className="w-8" src={SmartGadget} alt="SmartGadget" />
             แกตเจ็ต
           </li>
           <li
@@ -164,7 +258,11 @@ function Dropdown() {
             }`}
             onMouseEnter={() => setTitle("เครื่องเสียงมืออาชีพ")}
           >
-            <img className="w-8" src={Pro} alt="Pro" />
+            <img
+              className="w-8"
+              src={ProfessionalAudio}
+              alt="ProfessionalAudio"
+            />
             เครื่องเสียงมืออาชีพ
           </li>
           <li
@@ -181,7 +279,7 @@ function Dropdown() {
       <div className="flex flex-col w-[730px] p-4">
         <div className="flex justify-between font-semibold">
           <p>{title}</p>
-          <div className="flex gap-1.5 items-center text-sm text-[#0f63e9] hover:bg-[#ecf3fd] rounded-lg p-[5px] duration-200 cursor-pointer">
+          <div className="flex gap-1.5 items-center text-sm text-[#0f63e9] hover:bg-[#ecf3fd] rounded-lg p-[5px] cursor-pointer">
             <p>ดูทั้งหมด</p>
             <div className="bg-[#ecf3fe] rounded-full p-0.5 text-[10px]">
               <FaArrowRight />
@@ -253,8 +351,8 @@ function Dropdown() {
                 onMouseEnter={() => setCate("เครื่องเล่นเพลง & DAC")}
               >
                 <img
-                  src={Dac}
-                  alt="Dac"
+                  src={DapDacAmp}
+                  alt="DapDacAmp"
                   className="w-16 absolute left-0.5 -top-2"
                 />
                 <p className="line-clamp-2 text-sm font-semibold text-center">
@@ -275,8 +373,8 @@ function Dropdown() {
                 onMouseEnter={() => setCate("อุปกรณ์เสริมหูฟัง")}
               >
                 <img
-                  src={HeadphoneAccessories}
-                  alt="HeadphoneAccessories"
+                  src={HeadphoneAccessory}
+                  alt="HeadphoneAccessory"
                   className="w-16 absolute left-0.5 -top-2"
                 />
                 <p className="line-clamp-2 text-sm font-semibold text-center">
@@ -297,8 +395,8 @@ function Dropdown() {
                 onMouseEnter={() => setCate("อุปกรณ์เสริมลำโพง")}
               >
                 <img
-                  src={SpeakerAccessories}
-                  alt="SpeakerAccessories"
+                  src={SpeakerAccessory}
+                  alt="SpeakerAccessory"
                   className="w-16 absolute left-0.5 -top-2"
                 />
                 <p className="line-clamp-2 text-sm font-semibold text-center">
@@ -320,7 +418,7 @@ function Dropdown() {
         <div className="bg-[#f4f6f8] h-[215px] rounded-lg pt-5 px-4">
           <div className="flex justify-between font-semibold">
             <p>{cate}</p>
-            <div className="flex gap-1.5 items-center text-sm text-[#0f63e9] hover:bg-[#ecf3fd] rounded-lg p-[5px] duration-200 cursor-pointer">
+            <div className="flex gap-1.5 items-center text-sm text-[#0f63e9] hover:bg-[#ecf3fd] rounded-lg p-[5px] cursor-pointer">
               <p>ดูทั้งหมด</p>
               <div className="bg-[#ecf3fe] rounded-full p-0.5 text-[10px]">
                 <FaArrowRight />
@@ -329,7 +427,19 @@ function Dropdown() {
           </div>
           <div className="flex flex-wrap gap-3 h-[164px] overflow-y-auto scrollbar-hide">
             {cate == "หูฟัง" &&
-              headphones.map((item, index) => (
+              headphone.map((item, index) => (
+                <button
+                  key={index}
+                  className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-[#0f63e9]"
+                >
+                  <img src={item.img} alt={item.title} className="w-14" />
+                  <p className="font-medium text-sm text-center line-clamp-2">
+                    {item.title}
+                  </p>
+                </button>
+              ))}
+            {cate == "ลำโพง" &&
+              speaker.map((item, index) => (
                 <button
                   key={index}
                   className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-[#0f63e9]"
@@ -341,7 +451,31 @@ function Dropdown() {
                 </button>
               ))}
             {cate == "เครื่องเล่นเพลง & DAC" &&
-              DapDac.map((item, index) => (
+              dapDacAmp.map((item, index) => (
+                <button
+                  key={index}
+                  className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-[#0f63e9]"
+                >
+                  <img src={item.img} alt={item.title} className="w-14" />
+                  <p className="font-medium text-sm text-center line-clamp-2">
+                    {item.title}
+                  </p>
+                </button>
+              ))}
+            {cate == "อุปกรณ์เสริมหูฟัง" &&
+              headphoneAccessory.map((item, index) => (
+                <button
+                  key={index}
+                  className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-[#0f63e9]"
+                >
+                  <img src={item.img} alt={item.title} className="w-14" />
+                  <p className="font-medium text-sm text-center line-clamp-2">
+                    {item.title}
+                  </p>
+                </button>
+              ))}
+            {cate == "อุปกรณ์เสริมลำโพง" &&
+              speakerAccessory.map((item, index) => (
                 <button
                   key={index}
                   className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-[#0f63e9]"
@@ -357,7 +491,7 @@ function Dropdown() {
         <p className="font-semibold mt-6">แบรนด์แนะนำ</p>
         <div className="relative">
           <Swiper
-            className="w-full"
+            className="w-full p-[1px]"
             slidesPerView={"auto"}
             spaceBetween={19}
             navigation={{
@@ -370,48 +504,64 @@ function Dropdown() {
               <img
                 src={Marshall}
                 alt="Marshall"
-                className="w-[70px] cursor-pointer"
+                className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src={Klipsch}
                 alt="Klipsch"
-                className="w-[70px] cursor-pointer"
+                className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src={Edifier}
                 alt="Edifier"
-                className="w-[70px] cursor-pointer"
+                className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
               />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={BO} alt="BO" className="w-[70px] cursor-pointer" />
+              <img
+                src={BO}
+                alt="BO"
+                className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
+              />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src={Soundpeats}
                 alt="Soundpeats"
-                className="w-[70px] cursor-pointer"
+                className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
               />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={JBL} alt="JBL" className="w-[70px] cursor-pointer" />
+              <img
+                src={JBL}
+                alt="JBL"
+                className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
+              />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={Sony} alt="Sony" className="w-[70px] cursor-pointer" />
+              <img
+                src={Sony}
+                alt="Sony"
+                className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
+              />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src={Jabra}
                 alt="Jabra"
-                className="w-[70px] cursor-pointer"
+                className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
               />
             </SwiperSlide>
             <SwiperSlide>
-              <img src={Bose} alt="Bose" className="w-[70px] cursor-pointer" />
+              <img
+                src={Bose}
+                alt="Bose"
+                className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
+              />
             </SwiperSlide>
           </Swiper>
           <button className="swiper-brand-button-prev absolute -left-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md">

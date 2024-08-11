@@ -1,12 +1,12 @@
 import React from "react";
-import Audio from "../../assets/categorys/2001.png";
-import Computer from "../../assets/categorys/2157.webp";
-import Gaming from "../../assets/categorys/2071.webp";
-import Work from "../../assets/categorys/2119.webp";
-import Mobile from "../../assets/categorys/2227.webp";
-import Gadget from "../../assets/categorys/2208.webp";
-import Pro from "../../assets/categorys/2047.png";
-import TV from "../../assets/categorys/2278.webp";
+import Audio from "../../assets/categorys/audio/audio.png";
+import Computer from "../../assets/categorys/computer/computer.webp";
+import Gaming from "../../assets/categorys/gaming/gaming.webp";
+import WorkStation from "../../assets/categorys/work-station/work-station.webp";
+import MobileAccessory from "../../assets/categorys/mobile-accessory/mobile-accessory.webp";
+import SmartGadget from "../../assets/categorys/smart-gadget/smart-gadget.webp";
+import ProfessionalAudio from "../../assets/categorys/professional-audio/professional-audio.png";
+import TV from "../../assets/categorys/tv/tv.webp";
 
 const data = [
   {
@@ -22,19 +22,19 @@ const data = [
     title: "เกมมิ่ง",
   },
   {
-    img: Work,
+    img: WorkStation,
     title: "จัดโต๊ะคอม",
   },
   {
-    img: Mobile,
+    img: MobileAccessory,
     title: "อุปกรณ์มือถือ",
   },
   {
-    img: Gadget,
+    img: SmartGadget,
     title: "แกตเจ็ต",
   },
   {
-    img: Pro,
+    img: ProfessionalAudio,
     title: "เครื่องเสียงมืออาชีพ",
   },
   {

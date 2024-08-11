@@ -4,12 +4,11 @@ import thai from "../../assets/icons/th.png";
 import { GrAppsRounded } from "react-icons/gr";
 import { IoCartOutline } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
-import FlashSale from "../../assets/icons/Menu Icon-01.webp";
-import OnlyAt from "../../assets/icons/Menu Icon-05.webp";
-import Promotion from "../../assets/icons/Menu Icon-06.png";
-import Blog from "../../assets/icons/Menu Icon-03.webp";
-import Best from "../../assets/icons/Menu Icon-02.webp";
-import Store from "../../assets/icons/Menu Icon-04.webp";
+import FlashSale from "../../assets/icons/flash-sale.webp";
+import OnlyAt from "../../assets/icons/promotion-exclusive-deals.webp";
+import Blog from "../../assets/icons/review-article.webp";
+import Best from "../../assets/icons/best-of.webp";
+import Store from "../../assets/icons/store.webp";
 import Dropdown from "./Dropdown";
 
 const data = [
@@ -23,10 +22,6 @@ const data = [
   {
     title: "Only at Mercular",
     icon: OnlyAt,
-  },
-  {
-    title: "โปรหน้าร้าน",
-    icon: Promotion,
   },
   {
     title: "บทความ",
@@ -64,12 +59,12 @@ function Navbar() {
   }, [isFocused, fullText]);
 
   return (
-    <nav className="sticky top-0 flex flex-col py-2 max-w-[1300px] mx-auto z-50">
+    <nav className="sticky top-0 flex flex-col py-[7.5px] max-w-[1300px] mx-auto z-50">
       <div className="flex justify-between items-center px-2.5 pb-3">
         <div className="flex gap-6">
           <img src={logo} alt="logo" className="cursor-pointer h-10" />
           <div className="relative group">
-            <button className="text-[#0f63e9] bg-[#d8e6fb] hover:bg-[#b2cdf8] rounded-lg text-sm px-3.5 py-2 focus:outline-none font-bold flex items-center gap-1.5 cursor-pointer duration-200">
+            <button className="text-[#0f63e9] bg-[#d8e6fb] hover:bg-[#b2cdf8] rounded-lg text-sm w-[133px] pl-2.5 py-2 focus:outline-none font-bold flex items-center gap-1.5 cursor-pointer duration-200">
               <GrAppsRounded className="text-2xl" />
               สินค้าทั้งหมด
             </button>
@@ -99,10 +94,10 @@ function Navbar() {
               className="w-6 h-6 border-2 rounded-full"
             />
           </div>
-          <div className="hover:bg-[#ecf3fd] rounded-full mr-5 ml-3 p-1 text-2xl text-gray-600 hover:text-[#0f63e9] cursor-pointer duration-200">
+          <div className="hover:bg-[#ecf3fd] rounded-full mr-5 ml-[11px] p-1 text-2xl text-gray-600 hover:text-[#0f63e9] cursor-pointer duration-200">
             <IoCartOutline />
           </div>
-          <button className="text-white bg-[#0f63e9] rounded-lg text-sm px-4 py-2.5 focus:outline-none font-bold hover:drop-shadow-[0_10px_10px_#d4e3fb] cursor-pointer duration-200">
+          <button className="text-white bg-[#0f63e9] rounded-lg text-sm px-[16.5px] py-2.5 focus:outline-none font-bold hover:drop-shadow-[0_10px_10px_#d4e3fb] cursor-pointer duration-200">
             เข้าสู่ระบบ
           </button>
         </div>

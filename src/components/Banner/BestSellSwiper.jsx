@@ -1,15 +1,15 @@
 import React from "react";
 import { RiFireFill } from "react-icons/ri";
 import { PiCrownSimpleFill } from "react-icons/pi";
-import chiar1 from "../../assets/bestsell/ergonomic-chair1.jpg";
-import chiar2 from "../../assets/bestsell/ergonomic-chair2.jpg";
-import chiar3 from "../../assets/bestsell/ergonomic-chair3.jpg";
-import notebook1 from "../../assets/bestsell/gaming-notebook1.webp";
-import notebook2 from "../../assets/bestsell/gaming-notebook2.jpg";
-import notebook3 from "../../assets/bestsell/gaming-notebook3.jpg";
-import mouse1 from "../../assets/bestsell/gaming-mouse1.jpg";
-import mouse2 from "../../assets/bestsell/gaming-mouse2.jpg";
-import mouse3 from "../../assets/bestsell/gaming-mouse3.webp";
+import BewellFoster from "../../assets/best-seller/bewell-foster.jpg";
+import BewellGlory from "../../assets/best-seller/bewell-glory.jpg";
+import FurradecRio from "../../assets/best-seller/furradec-rio.webp";
+import AsusTufA15 from "../../assets/best-seller/asus-tuf-a15.webp";
+import HpVictus15 from "../../assets/best-seller/hp-victus-15.jpg";
+import MsiCyborg15 from "../../assets/best-seller/msi-cyborg-15.jpg";
+import LogitechGProXSuperlight from "../../assets/best-seller/logitech-g-pro-x-superlight.jpg";
+import LamzuThorn from "../../assets/best-seller/lamzu-thorn.jpg";
+import ThunderobotMl903 from "../../assets/best-seller/thunderobot-ml903.webp";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -24,19 +24,19 @@ const data = [
     title: "เก้าอี้สุขภาพ",
     bestsell: [
       {
-        img: chiar1,
+        img: BewellFoster,
         brand: "Bewell",
-        name: "เก้าอี้สุขภาพ Bewell FOSTER Ergonomic Chair",
+        name: "เก้าอี้สุขภาพ Bewell FOSTER Ergonomic Chair [ส่งของภายใน 3-7 วันทำการ]",
       },
       {
-        img: chiar2,
+        img: BewellGlory,
         brand: "Bewell",
-        name: "เก้าอี้สุขภาพ Bewell Glory Ergonomic Chair",
+        name: "เก้าอี้สุขภาพ Bewell Glory Ergonomic Chair Black [ส่งของภายใน 3-7 วันทำการ]",
       },
       {
-        img: chiar3,
-        brand: "Ergotrend",
-        name: "เก้าอี้สุขภาพ Ergotrend Konomous Ergonomic Chair",
+        img: FurradecRio,
+        brand: "Furradec",
+        name: "เก้าอี้สุขภาพ Furradec Rio Ergonomic Chair Black",
       },
     ],
   },
@@ -44,19 +44,19 @@ const data = [
     title: "โน๊ตบุ๊คเกมมิ่ง",
     bestsell: [
       {
-        img: notebook1,
-        brand: "Lenovo",
-        name: "โน๊ตบุ๊ค Lenovo IdeaPad Gaming 3 15ARH7-82SB00JETA Gaming Notebook",
+        img: AsusTufA15,
+        brand: "ASUS",
+        name: "โน๊ตบุ๊ค Asus TUF A15 FA507NV-LP023W Gaming Notebook Mecha Gray",
       },
       {
-        img: notebook2,
+        img: HpVictus15,
+        brand: "HP",
+        name: "โน๊ตบุ๊ค HP Victus 15-fb2023AX Gaming Notebook Mica Silver",
+      },
+      {
+        img: MsiCyborg15,
         brand: "MSI",
-        name: "โน๊ตบุ๊ค MSI Thin A15 B7VE-045TH Gaming Notebook Cosmos Gray",
-      },
-      {
-        img: notebook3,
-        brand: "Acer",
-        name: "โน๊ตบุ๊ค Acer Nitro V 15 ANV15-51-574G Gaming Notebook",
+        name: "โน๊ตบุ๊ค MSI Cyborg 15 A13VEK-875TH Gaming Notebook Translucent Black",
       },
     ],
   },
@@ -64,17 +64,17 @@ const data = [
     title: "เมาส์เกมมิ่ง",
     bestsell: [
       {
-        img: mouse1,
+        img: LogitechGProXSuperlight,
         brand: "Logitech",
         name: "เมาส์ Logitech G Pro X Superlight Wireless Gaming Mouse White",
       },
       {
-        img: mouse2,
+        img: LamzuThorn,
         brand: "Lamzu",
         name: "เมาส์ Lamzu Thorn 4K Wireless Gaming Mouse Charcoal Black",
       },
       {
-        img: mouse3,
+        img: ThunderobotMl903,
         brand: "ThundeRobot",
         name: "เมาส์ ThundeRobot ML903 NearLink Wireless Gaming Mouse White",
       },
@@ -107,7 +107,7 @@ function BestSellSwiper() {
             {item.bestsell.map((i, index) => (
               <div
                 key={index}
-                className="w-full h-[103px] bg-white rounded-xl flex items-center justify-between px-4"
+                className="w-full h-[103px] bg-white rounded-xl flex items-center justify-between px-4 cursor-pointer"
               >
                 <div className="bg-[#0f63e9] h-[34px] w-[34px] rounded-full text-white flex items-center justify-center text-lg font-bold relative">
                   <PiCrownSimpleFill
