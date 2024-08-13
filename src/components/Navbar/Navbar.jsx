@@ -64,7 +64,7 @@ function Navbar() {
         <div className="flex gap-6">
           <img src={logo} alt="logo" className="cursor-pointer h-10" />
           <div className="relative group">
-            <button className="text-[#0f63e9] bg-[#d8e6fb] hover:bg-[#b2cdf8] rounded-lg text-sm w-[133px] pl-2.5 py-2 focus:outline-none font-bold flex items-center gap-1.5 cursor-pointer duration-200">
+            <button className="text-[#0f63e9] bg-[#d8e6fb] hover:bg-[#b2cdf8] rounded-lg text-sm w-[133px] pl-2.5 py-2 font-bold flex items-center gap-1.5 cursor-pointer duration-200">
               <GrAppsRounded className="text-2xl" />
               สินค้าทั้งหมด
             </button>
@@ -97,7 +97,7 @@ function Navbar() {
           <div className="hover:bg-[#ecf3fd] rounded-full mr-5 ml-[11px] p-1 text-2xl text-gray-600 hover:text-[#0f63e9] cursor-pointer duration-200">
             <IoCartOutline />
           </div>
-          <button className="text-white bg-[#0f63e9] rounded-lg text-sm px-[16.5px] py-2.5 focus:outline-none font-bold hover:drop-shadow-[0_10px_10px_#d4e3fb] cursor-pointer duration-200">
+          <button className="text-white bg-[#0f63e9] rounded-lg text-sm px-[16.5px] py-2.5 font-bold hover:drop-shadow-[0_10px_10px_#d4e3fb] cursor-pointer duration-200">
             เข้าสู่ระบบ
           </button>
         </div>
