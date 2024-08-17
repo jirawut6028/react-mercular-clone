@@ -1,14 +1,7 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/mercular-logo.webp";
-import thai from "../../assets/icons/th.png";
 import { GrAppsRounded } from "react-icons/gr";
 import { IoCartOutline } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
-import FlashSale from "../../assets/icons/flash-sale.webp";
-import OnlyAt from "../../assets/icons/promotion-exclusive-deals.webp";
-import Blog from "../../assets/icons/review-article.webp";
-import Best from "../../assets/icons/best-of.webp";
-import Store from "../../assets/icons/store.webp";
 import Dropdown from "./Dropdown";
 
 const data = [
@@ -17,23 +10,23 @@ const data = [
   },
   {
     title: "Flash Sale",
-    icon: FlashSale,
+    icon: "https://cdn.mercular.com/images/bestof/v2/1/1721816508028_Menu%20Icon-01",
   },
   {
     title: "Only at Mercular",
-    icon: OnlyAt,
+    icon: "https://cdn.mercular.com/images/bestof/v2/20/1721816518983_Menu%20Icon-05",
   },
   {
     title: "บทความ",
-    icon: Blog,
+    icon: "https://cdn.mercular.com/images/bestof/v2/22/1721816534901_Menu%20Icon-03",
   },
   {
     title: "Best Of",
-    icon: Best,
+    icon: "https://cdn.mercular.com/images/bestof/v2/23/1721816541729_Menu%20Icon-02",
   },
   {
     title: "สาขาของเรา",
-    icon: Store,
+    icon: "https://cdn.mercular.com/images/bestof/v2/24/1721816548623_Menu%20Icon-04",
   },
 ];
 
@@ -59,10 +52,14 @@ function Navbar() {
   }, [isFocused, fullText]);
 
   return (
-    <nav className="sticky top-0 flex flex-col py-[7.5px] max-w-[1300px] mx-auto z-50">
+    <nav className="sticky top-0 flex flex-col py-[7.5px] max-w-[1300px] mx-auto z-50 bg-white">
       <div className="flex justify-between items-center px-2.5 pb-3">
         <div className="flex gap-6">
-          <img src={logo} alt="logo" className="cursor-pointer h-10" />
+          <img
+            src="https://www.mercular.com/_next/image?url=%2Fimages%2Fmercular-logo.png&w=128&q=75"
+            alt="logo"
+            className="cursor-pointer h-10"
+          />
           <div className="relative group">
             <button className="text-[#0f63e9] bg-[#d8e6fb] hover:bg-[#b2cdf8] rounded-lg text-sm w-[133px] pl-2.5 py-2 font-bold flex items-center gap-1.5 cursor-pointer duration-200">
               <GrAppsRounded className="text-2xl" />
@@ -89,7 +86,7 @@ function Navbar() {
         <div className="flex items-center">
           <div className="hover:bg-[#f5f5f5] rounded-full p-2 cursor-pointer duration-200">
             <img
-              src={thai}
+              src="https://www.mercular.com/images/th.png"
               alt="thai"
               className="w-6 h-6 border-2 rounded-full"
             />
