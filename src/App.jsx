@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Category from "./components/Category/Category";
 import Banner from "./components/Banner/Banner";
 import FlashSale from "./components/FlashSale/FlashSale";
+import OnlyAtMercular from "./components/OnlyAtMercular/OnlyAtMercular";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Category />
       <Banner />
       <FlashSale />
+      <OnlyAtMercular />
     </div>
   );
 }

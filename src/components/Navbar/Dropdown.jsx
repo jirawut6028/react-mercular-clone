@@ -1,5 +1,53 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
+import Audio from "../../assets/categorys/audio/audio.png";
+import Computer from "../../assets/categorys/computer/computer.webp";
+import Gaming from "../../assets/categorys/gaming/gaming.webp";
+import WorkStation from "../../assets/categorys/work-station/work-station.webp";
+import MobileAccessory from "../../assets/categorys/mobile-accessory/mobile-accessory.webp";
+import SmartGadget from "../../assets/categorys/smart-gadget/smart-gadget.webp";
+import ProfessionalAudio from "../../assets/categorys/professional-audio/professional-audio.png";
+import TV from "../../assets/categorys/tv/tv.webp";
+import Speaker from "../../assets/categorys/audio/speaker.webp";
+import DapDacAmp from "../../assets/categorys/audio/dap-dac-amp.webp";
+import HeadphoneAccessory from "../../assets/categorys/audio/headphone-accessory.webp";
+import SpeakerAccessory from "../../assets/categorys/audio/speaker-accessory.png";
+import WirelessHeadphone from "../../assets/categorys/audio/headphone/wireless-headphone.png";
+import TrueWirelessHeadphone from "../../assets/categorys/audio/headphone/true-wireless-headphone.webp";
+import OnEarOverEarHeadphone from "../../assets/categorys/audio/headphone/on-ear-over-ear-headphone.png";
+import SportHeadphone from "../../assets/categorys/audio/headphone/sport-headphone.png";
+import InEarHeadphone from "../../assets/categorys/audio/headphone/in-ear-headphone.webp";
+import EarbudHeadphone from "../../assets/categorys/audio/headphone/earbud-headphone.webp";
+import BluetoothHeadsetCallCenter from "../../assets/categorys/audio/headphone/bluetooth-headset-call-center.png";
+import PortableSpeaker from "../../assets/categorys/audio/speaker/portable-speaker.webp";
+import WirelessSpeaker from "../../assets/categorys/audio/speaker/wireless-speaker.webp";
+import ComputerSpeaker from "../../assets/categorys/audio/speaker/computer-speaker.webp";
+import Soundbar from "../../assets/categorys/audio/speaker/soundbar.webp";
+import PartySpeaker from "../../assets/categorys/audio/speaker/party-speaker.webp";
+import ConferenceSpeaker from "../../assets/categorys/audio/speaker/conference-speaker.png";
+import MultiRoom from "../../assets/categorys/audio/speaker/multi-room.webp";
+import HomeSpeaker from "../../assets/categorys/audio/speaker/home-speaker.webp";
+import Dap from "../../assets/categorys/audio/dap-dac-amp/dap.webp";
+import DACAmp from "../../assets/categorys/audio/dap-dac-amp/dac-amplifiers.webp";
+import TurntableCartridge from "../../assets/categorys/audio/dap-dac-amp/turntable-cartridge.webp";
+import Eartip from "../../assets/categorys/audio/headphone-accessory/eartip.webp";
+import HeadphoneChord from "../../assets/categorys/audio/headphone-accessory/headphone-chord.png";
+import HeadphoneCase from "../../assets/categorys/audio/headphone-accessory/headphone-case.webp";
+import HeadphoneStand from "../../assets/categorys/audio/headphone-accessory/headphone-stand.png";
+import AudioWire from "../../assets/categorys/audio/speaker-accessory/audio-wire.png";
+import AudioPowerPlugPowerFilter from "../../assets/categorys/audio/speaker-accessory/audio-power-plug-power-filter.webp";
+import SpeakerStand from "../../assets/categorys/audio/speaker-accessory/speaker-stand.png";
+import BluetoothRecieverTransmitter from "../../assets/categorys/audio/speaker-accessory/bluetooth-reciever-transmitter.webp";
+import CaseAndAudioAccessories from "../../assets/categorys/audio/speaker-accessory/case-and-audio-accessories.webp";
+import Marshall from "../../assets/categorys/audio/brand/marshall.webp";
+import Klipsch from "../../assets/categorys/audio/brand/klipsch.webp";
+import Edifier from "../../assets/categorys/audio/brand/edifier.webp";
+import BO from "../../assets/categorys/audio/brand/bo.webp";
+import Soundpeats from "../../assets/categorys/audio/brand/soundpeats.webp";
+import JBL from "../../assets/categorys/audio/brand/jbl.webp";
+import Sony from "../../assets/categorys/audio/brand/sony.webp";
+import Jabra from "../../assets/categorys/audio/brand/jabra.webp";
+import Bose from "../../assets/categorys/audio/brand/bose.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 
@@ -11,123 +59,123 @@ import { Navigation } from "swiper/modules";
 
 const headphone = [
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2003.png",
+    img: WirelessHeadphone,
     title: "หูฟังไร้สาย & หูฟังบลูทูธ",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2004.png",
+    img: TrueWirelessHeadphone,
     title: "หูฟัง True Wireless",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2005.png",
+    img: OnEarOverEarHeadphone,
     title: "หูฟังครอบหู & แนบหู",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2008.png",
+    img: SportHeadphone,
     title: "หูฟังออกกำลังกาย",
   },
   {
-    img: "https://mercular.s3.ap-southeast-1.amazonaws.com/images/categories/2006/1716963039529_2006.png",
+    img: InEarHeadphone,
     title: "หูฟัง In Ear",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2007.png",
+    img: EarbudHeadphone,
     title: "หูฟัง Earbud",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2009.png",
+    img: BluetoothHeadsetCallCenter,
     title: "หูฟัง Call Center",
   },
 ];
 
 const speaker = [
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2011.png",
+    img: PortableSpeaker,
     title: "ลำโพงพกพา",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2012.png",
+    img: WirelessSpeaker,
     title: "ลำโพง Bluetooth",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2013.png",
+    img: ComputerSpeaker,
     title: "ลำโพงคอมพิวเตอร์",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2014.png",
+    img: Soundbar,
     title: "ลำโพงซาวด์บาร์ (Soundbar)",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2015.png",
+    img: PartySpeaker,
     title: "ลำโพงเคลื่อนที่",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2016.png",
+    img: ConferenceSpeaker,
     title: "ลำโพงห้องประชุม (Conference speaker)",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2017.png",
+    img: MultiRoom,
     title: "ลำโพง Multi-room",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2018.png",
+    img: HomeSpeaker,
     title: "เครื่องเสียงบ้าน",
   },
 ];
 
 const dapDacAmp = [
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2033.png",
+    img: Dap,
     title: "เครื่องเล่นเพลงพกพา (DAP)",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2034.png",
+    img: DACAmp,
     title: "DAC-Amplifiers",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2035.png",
+    img: TurntableCartridge,
     title: "เครื่องเล่นแผ่นเสียง",
   },
 ];
 
 const headphoneAccessory = [
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2037.png",
+    img: Eartip,
     title: "ฟองน้ำหูฟัง / จุกหูฟัง",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2038.png",
+    img: HeadphoneChord,
     title: "สายหูฟัง",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2039.png",
+    img: HeadphoneCase,
     title: "เคสหูฟัง",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2035.png",
+    img: HeadphoneStand,
     title: "ที่แขวนหูฟัง",
   },
 ];
 
 const speakerAccessory = [
   {
-    img: "https://www.mercular.com/category/2042",
+    img: AudioWire,
     title: "สายสัญญาณ",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2043.png",
+    img: AudioPowerPlugPowerFilter,
     title: "เครื่องกรองไฟ",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2044.png",
+    img: SpeakerStand,
     title: "ขาตั้งลำโพง",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2045.png",
+    img: BluetoothRecieverTransmitter,
     title: "ตัวเชื่อมสัญญาณบลูทูธ (Bluetooth Connector)",
   },
   {
-    img: "https://cdn.mercular.com/images/bulk-2024-04/categories/2046.png",
+    img: CaseAndAudioAccessories,
     title: "เคสและอุปกรณ์เสริมอื่นๆ",
   },
 ];
@@ -156,11 +204,7 @@ function Dropdown() {
               }`}
               onMouseEnter={() => setTitle("หูฟัง/ลำโพง")}
             >
-              <img
-                className="w-8"
-                src="https://cdn.mercular.com/images/bulk-2024-04/categories/2002.png"
-                alt="audio"
-              />
+              <img className="w-8" src={Audio} alt="audio" />
               หูฟัง/ลำโพง
             </li>
             <li
@@ -170,11 +214,7 @@ function Dropdown() {
               }`}
               onMouseEnter={() => setTitle("คอมพิวเตอร์")}
             >
-              <img
-                className="w-8"
-                src="https://cdn.mercular.com/images/bulk-2024-04/categories/2157.png"
-                alt="Computer"
-              />
+              <img className="w-8" src={Computer} alt="Computer" />
               คอมพิวเตอร์
             </li>
             <li
@@ -183,11 +223,7 @@ function Dropdown() {
               }`}
               onMouseEnter={() => setTitle("เกมมิ่ง")}
             >
-              <img
-                className="w-8"
-                src="https://cdn.mercular.com/images/bulk-2024-04/categories/2071.png"
-                alt="Gaming"
-              />
+              <img className="w-8" src={Gaming} alt="Gaming" />
               เกมมิ่ง
             </li>
             <li
@@ -196,11 +232,7 @@ function Dropdown() {
               }`}
               onMouseEnter={() => setTitle("จัดโต๊ะคอม")}
             >
-              <img
-                className="w-8"
-                src="https://cdn.mercular.com/images/bulk-2024-04/categories/2119.png"
-                alt="WorkStation"
-              />
+              <img className="w-8" src={WorkStation} alt="WorkStation" />
               จัดโต๊ะคอม
             </li>
             <li
@@ -212,7 +244,7 @@ function Dropdown() {
             >
               <img
                 className="w-8"
-                src="https://cdn.mercular.com/images/bulk-2024-04/categories/2227.png"
+                src={MobileAccessory}
                 alt="MobileAccessory"
               />
               อุปกรณ์มือถือ
@@ -223,11 +255,7 @@ function Dropdown() {
               }`}
               onMouseEnter={() => setTitle("แกตเจ็ต")}
             >
-              <img
-                className="w-8"
-                src="https://cdn.mercular.com/images/bulk-2024-04/categories/2208.png"
-                alt="SmartGadget"
-              />
+              <img className="w-8" src={SmartGadget} alt="SmartGadget" />
               แกตเจ็ต
             </li>
             <li
@@ -239,7 +267,7 @@ function Dropdown() {
             >
               <img
                 className="w-8"
-                src="https://cdn.mercular.com/images/bulk-2024-04/categories/2047.png"
+                src={ProfessionalAudio}
                 alt="ProfessionalAudio"
               />
               เครื่องเสียงมืออาชีพ
@@ -250,11 +278,7 @@ function Dropdown() {
               }`}
               onMouseEnter={() => setTitle("ทีวี")}
             >
-              <img
-                className="w-8"
-                src="https://cdn.mercular.com/images/bulk-2024-04/categories/2278.png"
-                alt="TV"
-              />
+              <img className="w-8" src={TV} alt="TV" />
               ทีวี
             </li>
           </ul>
@@ -290,7 +314,7 @@ function Dropdown() {
                   onMouseEnter={() => setCate("หูฟัง")}
                 >
                   <img
-                    src="https://cdn.mercular.com/images/bulk-2024-04/categories/2002.png"
+                    src={Audio}
                     alt="Audio"
                     className="w-16 absolute left-0.5 -top-2"
                   />
@@ -312,7 +336,7 @@ function Dropdown() {
                   onMouseEnter={() => setCate("ลำโพง")}
                 >
                   <img
-                    src="https://cdn.mercular.com/images/bulk-2024-04/categories/2010.png"
+                    src={Speaker}
                     alt="Speaker"
                     className="w-16 absolute left-0.5 -top-2"
                   />
@@ -334,7 +358,7 @@ function Dropdown() {
                   onMouseEnter={() => setCate("เครื่องเล่นเพลง & DAC")}
                 >
                   <img
-                    src="https://cdn.mercular.com/images/bulk-2024-04/categories/2032.png"
+                    src={DapDacAmp}
                     alt="DapDacAmp"
                     className="w-16 absolute left-0.5 -top-2"
                   />
@@ -356,7 +380,7 @@ function Dropdown() {
                   onMouseEnter={() => setCate("อุปกรณ์เสริมหูฟัง")}
                 >
                   <img
-                    src="https://cdn.mercular.com/images/bulk-2024-04/categories/2041.png"
+                    src={HeadphoneAccessory}
                     alt="HeadphoneAccessory"
                     className="w-16 absolute left-0.5 -top-2"
                   />
@@ -378,7 +402,7 @@ function Dropdown() {
                   onMouseEnter={() => setCate("อุปกรณ์เสริมลำโพง")}
                 >
                   <img
-                    src="https://cdn.mercular.com/images/bulk-2024-04/categories/2041.png"
+                    src={SpeakerAccessory}
                     alt="SpeakerAccessory"
                     className="w-16 absolute left-0.5 -top-2"
                   />
@@ -485,63 +509,63 @@ function Dropdown() {
             >
               <SwiperSlide>
                 <img
-                  src="https://mercular.s3.ap-southeast-1.amazonaws.com/images/brands/1093/1714738134350_Brand%20Logo-01.jpg"
+                  src={Marshall}
                   alt="Marshall"
                   className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://mercular.s3.ap-southeast-1.amazonaws.com/images/brands/1413/1718168461261_Brand%20Logo-45.jpg"
+                  src={Klipsch}
                   alt="Klipsch"
                   className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://mercular.s3.ap-southeast-1.amazonaws.com/images/brands/1197/1715146261134_Brand%20Logo-04.jpg"
+                  src={Edifier}
                   alt="Edifier"
                   className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://mercular.s3.ap-southeast-1.amazonaws.com/images/brands/1248/1714738589557_Brand%20Logo-47.jpg"
+                  src={BO}
                   alt="BO"
                   className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://mercular.s3.ap-southeast-1.amazonaws.com/images/brands/1740/1714738447069_Brand%20Logo-44.jpg"
+                  src={Soundpeats}
                   alt="Soundpeats"
                   className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://mercular.s3.ap-southeast-1.amazonaws.com/images/brands/1095/1715146065660_Brand%20Logo_2-08.jpg"
+                  src={JBL}
                   alt="JBL"
                   className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://mercular.s3.ap-southeast-1.amazonaws.com/images/brands/1137/1715145441563_Brand%20Logo-03.jpg"
+                  src={Sony}
                   alt="Sony"
                   className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://mercular.s3.ap-southeast-1.amazonaws.com/images/brands/1254/1715146571262_Brand%20Logo-48.jpg"
+                  src={Jabra}
                   alt="Jabra"
                   className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
                 />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                  src="https://mercular.s3.ap-southeast-1.amazonaws.com/images/brands/1053/1714738539373_Brand%20Logo-46.jpg"
+                  src={Bose}
                   alt="Bose"
                   className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
                 />

@@ -1,4 +1,10 @@
 import React, { useState } from "react";
+import Banner1 from "../../assets/banners/GG_Sale.webp";
+import Banner2 from "../../assets/banners/Hot-Deals.jpg";
+import Banner3 from "../../assets/banners/HP-Banner.webp";
+import Banner4 from "../../assets/banners/HP-DDay.webp";
+import Banner5 from "../../assets/banners/JBL.webp";
+import Banner6 from "../../assets/banners/Smartwatch.webp";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { IoPlayOutline, IoPauseOutline } from "react-icons/io5";
 
@@ -10,21 +16,12 @@ import "swiper/css";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
 const data = [
-  {
-    img: "https://cdn.mercular.com/images/homepage/sections/8/spaces/11/1722487284109_HP-DDay%20(34).jpg",
-  },
-  {
-    img: "https://cdn.mercular.com/images/homepage/sections/8/spaces/11/1722497079651_HP-DDay%20(35).jpg",
-  },
-  {
-    img: "https://cdn.mercular.com/images/homepage/sections/8/spaces/11/1720518626325_HP-Banner.jpg",
-  },
-  {
-    img: "https://cdn.mercular.com/images/homepage/sections/8/spaces/11/1720597141351_Smartwatch_2024_Curation_HP.jpg",
-  },
-  {
-    img: "https://cdn.mercular.com/images/homepage/sections/8/spaces/11/1710849795305_Mercular_Store_Homepage.jpg",
-  },
+  { img: Banner1 },
+  { img: Banner2 },
+  { img: Banner3 },
+  { img: Banner4 },
+  { img: Banner5 },
+  { img: Banner6 },
 ];
 
 function HeroSwiper() {

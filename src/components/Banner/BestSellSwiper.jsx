@@ -1,6 +1,15 @@
 import React from "react";
 import { RiFireFill } from "react-icons/ri";
 import { PiCrownSimpleFill } from "react-icons/pi";
+import BewellFoster from "../../assets/best-seller/bewell-foster.jpg";
+import BewellGlory from "../../assets/best-seller/bewell-glory.jpg";
+import FurradecRio from "../../assets/best-seller/furradec-rio.webp";
+import AsusTufA15 from "../../assets/best-seller/asus-tuf-a15.webp";
+import HpVictus15 from "../../assets/best-seller/hp-victus-15.jpg";
+import MsiCyborg15 from "../../assets/best-seller/msi-cyborg-15.jpg";
+import LogitechGProXSuperlight from "../../assets/best-seller/logitech-g-pro-x-superlight.jpg";
+import LamzuThorn from "../../assets/best-seller/lamzu-thorn.jpg";
+import ThunderobotMl903 from "../../assets/best-seller/thunderobot-ml903.webp";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -15,19 +24,19 @@ const data = [
     title: "เก้าอี้สุขภาพ",
     bestsell: [
       {
-        img: "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2022/01/bewell-foster-ergonomic-chair-front-view.jpg",
+        img: BewellFoster,
         brand: "Bewell",
         name: "เก้าอี้สุขภาพ Bewell FOSTER Ergonomic Chair [ส่งของภายใน 3-7 วันทำการ]",
       },
       {
-        img: "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2023/04/Product/furradec-rio-ergonomic-chair-front-left-view.jpg",
-        brand: "Furradec",
-        name: "เก้าอี้สุขภาพ Furradec Rio Ergonomic Chair Black",
+        img: BewellGlory,
+        brand: "Bewell",
+        name: "เก้าอี้สุขภาพ Bewell Glory Ergonomic Chair Black [ส่งของภายใน 3-7 วันทำการ]",
       },
       {
-        img: "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2022/09/Product/sihoo-comfy-ergonomic-chair-black-basic-m57-001-front-view.jpg",
-        brand: "Sihoo",
-        name: "เก้าอี้สุขภาพ Sihoo Comfy Ergonomic Chair Basic Black M57-N110",
+        img: FurradecRio,
+        brand: "Furradec",
+        name: "เก้าอี้สุขภาพ Furradec Rio Ergonomic Chair Black",
       },
     ],
   },
@@ -35,19 +44,19 @@ const data = [
     title: "โน๊ตบุ๊คเกมมิ่ง",
     bestsell: [
       {
-        img: "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2023/06/Product/asus-tuf-a15-fa507nv-lp023w-gaming-notebook-front-view.png",
+        img: AsusTufA15,
         brand: "ASUS",
         name: "โน๊ตบุ๊ค Asus TUF A15 FA507NV-LP023W Gaming Notebook Mecha Gray",
       },
       {
-        img: "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2024/04/Product/asus-tuf-a15-fa506nf-hn012w-gaming-notebook-front-view.jpg",
-        brand: "ASUS",
-        name: "โน๊ตบุ๊ค Asus TUF A15 FA506NF-HN012W Gaming Notebook Graphite Black",
+        img: HpVictus15,
+        brand: "HP",
+        name: "โน๊ตบุ๊ค HP Victus 15-fb2023AX Gaming Notebook Mica Silver",
       },
       {
-        img: "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2023/07/Product/hp-victus-15-fa1069tx-gaming-notebook-icon.jpg",
-        brand: "HP",
-        name: "โน๊ตบุ๊ค HP Victus 15-fa1069TX Gaming Notebook Performance Blue",
+        img: MsiCyborg15,
+        brand: "MSI",
+        name: "โน๊ตบุ๊ค MSI Cyborg 15 A13VEK-875TH Gaming Notebook Translucent Black",
       },
     ],
   },
@@ -55,17 +64,17 @@ const data = [
     title: "เมาส์เกมมิ่ง",
     bestsell: [
       {
-        img: "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2021/01/logitech-g-pro-x-superlight-wireless-gaming-mouse-white-icon.jpg",
+        img: LogitechGProXSuperlight,
         brand: "Logitech",
         name: "เมาส์ Logitech G Pro X Superlight Wireless Gaming Mouse White",
       },
       {
-        img: "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2024/02/Product/lamzu-thorn-4k-wireless-gaming-mouse-top-view.jpg",
+        img: LamzuThorn,
         brand: "Lamzu",
         name: "เมาส์ Lamzu Thorn 4K Wireless Gaming Mouse Charcoal Black",
       },
       {
-        img: "https://mercular.s3.ap-southeast-1.amazonaws.com/images/products/2024/05/Product/thunderobot-ml903-nearlink-wireless-gaming-mouse-white-top-view.jpg",
+        img: ThunderobotMl903,
         brand: "ThundeRobot",
         name: "เมาส์ ThundeRobot ML903 NearLink Wireless Gaming Mouse White",
       },
