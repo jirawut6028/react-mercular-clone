@@ -415,11 +415,11 @@ function Dropdown() {
                 </div>
               </SwiperSlide>
             </Swiper>
-            <button className="swiper-drop-button-prev absolute -left-2 top-1/2 -translate-y-1/4 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md">
-              <FaAngleLeft />
+            <button className="swiper-drop-button-prev absolute -left-2 top-1/2 -translate-y-1/4 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md btn-ripple-m">
+              <FaAngleLeft className="z-10 relative" />
             </button>
-            <button className="swiper-drop-button-next absolute -right-2 top-1/2 -translate-y-1/4 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md">
-              <FaAngleRight />
+            <button className="swiper-drop-button-next absolute -right-2 top-1/2 -translate-y-1/4 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md btn-ripple-m">
+              <FaAngleRight className="z-10 relative" />
             </button>
           </div>
           <div className="bg-[#f4f6f8] h-[215px] rounded-lg pt-5 px-4">
@@ -571,11 +571,11 @@ function Dropdown() {
                 />
               </SwiperSlide>
             </Swiper>
-            <button className="swiper-brand-button-prev absolute -left-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md">
-              <FaAngleLeft />
+            <button className="swiper-brand-button-prev absolute -left-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md btn-ripple-m">
+              <FaAngleLeft className="z-10 relative" />
             </button>
-            <button className="swiper-brand-button-next absolute -right-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md">
-              <FaAngleRight />
+            <button className="swiper-brand-button-next absolute -right-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md btn-ripple-m">
+              <FaAngleRight className="z-10 relative" />
             </button>
           </div>
         </div>

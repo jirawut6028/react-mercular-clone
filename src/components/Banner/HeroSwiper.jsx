@@ -59,7 +59,7 @@ function HeroSwiper() {
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <img src={item.img} alt="Banner" />
+            <img src={item.img} alt="Banner" className="cursor-pointer" />
           </SwiperSlide>
         ))}
       </Swiper>
@@ -70,7 +70,7 @@ function HeroSwiper() {
         >
           {pause ? <IoPlayOutline /> : <IoPauseOutline />}
         </button>
-        <div className="swiper-pagination text-white bg-black rounded-full py-2 px-4 bg-opacity-30 -tracking-widest text-base noselect no-select"></div>
+        <div className="swiper-pagination text-white bg-black rounded-full py-2 px-4 bg-opacity-30 -tracking-widest text-base select-none"></div>
         <button className="swiper-button-prev cursor-pointer bg-black rounded-full p-2.5 bg-opacity-30">
           <FaAngleLeft />
         </button>

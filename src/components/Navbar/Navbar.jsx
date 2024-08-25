@@ -41,6 +41,22 @@ function Navbar() {
   const [placeholderText, setPlaceholderText] = useState("");
   const fullText = "หา Gadget ที่ใช่กับ Mercular...";
   const [isFocused, setIsFocused] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 150) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     if (isFocused) {
@@ -59,7 +75,11 @@ function Navbar() {
   }, [isFocused, fullText]);
 
   return (
-    <nav className="sticky top-0 flex flex-col py-[7.5px] max-w-[1300px] mx-auto z-50 bg-white">
+    <nav
+      className={`sticky top-0 flex flex-col py-[7.5px] px-[303px] z-50 bg-white ${
+        scrolled && "shadow-md"
+      }`}
+    >
       <div className="flex justify-between items-center px-2.5 pb-3">
         <div className="flex gap-6">
           <img src={logo} alt="logo" className="cursor-pointer h-10" />

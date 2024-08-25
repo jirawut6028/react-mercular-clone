@@ -27,7 +27,7 @@ function FlashSaleSwiper({ data }) {
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className="flex flex-col w-[200px] rounded-xl shadow-lg cursor-pointer hover:shadow-[0_10px_10px_#d4e3fb] group/card">
+            <div className="flex flex-col w-[200px] rounded-xl shadow-lg cursor-pointer hover:shadow-[0_10px_10px_#d4e3fb] group/card duration-200">
               <div className="relative group/img">
                 <img
                   src={item.brand}
@@ -122,11 +122,11 @@ function FlashSaleSwiper({ data }) {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className="swiper-flash-button-prev absolute -left-4 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xl text-[#0f63e9] p-2.5 z-10 shadow-md">
-        <FaAngleLeft />
+      <button className="swiper-flash-button-prev absolute -left-4 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xl text-[#0f63e9] p-2.5 z-10 shadow-md btn-ripple-m">
+        <FaAngleLeft className="z-10 relative" />
       </button>
-      <button className="swiper-flash-button-next absolute -right-4 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xl text-[#0f63e9] p-2.5 z-10 shadow-md">
-        <FaAngleRight />
+      <button className="swiper-flash-button-next absolute -right-4 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xl text-[#0f63e9] p-2.5 z-10 shadow-md btn-ripple-m">
+        <FaAngleRight className="z-10 relative" />
       </button>
     </div>
   );

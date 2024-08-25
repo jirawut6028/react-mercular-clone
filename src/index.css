@@ -1,22 +1,114 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-    font-family: "Noto Sans Thai", "sans-serif";
-}
-
-.no-select {
-    user-select: none;
+  font-family: "Noto Sans Thai", "sans-serif";
 }
 
 .swiper-button-disabled {
-    opacity: 0;
+  opacity: 0;
 }
 
 .swiper-slide {
-    width: auto;
+  width: auto;
+}
+
+.btn-ripple,
+.btn-ripple-m {
+  overflow: hidden;
+}
+
+.btn-ripple::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 0px;
+  height: 0px;
+  background-color: #d0d5d9;
+  z-index: 1;
+  opacity: 0;
+  transition: width 1000ms, height 1000ms, opacity 200ms;
+}
+
+.btn-ripple:active:before {
+  opacity: 0.4;
+  width: 700px;
+  height: 700px;
+}
+
+.btn-ripple-m::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 0px;
+  height: 0px;
+  background: #b7d0f8;
+  z-index: 1;
+  opacity: 0;
+  transition: width 1000ms, height 1000ms, opacity 300ms;
+}
+
+.btn-ripple-m:active:before {
+  opacity: 1;
+  width: 100px;
+  height: 100px;
+}
+
+.ripple-effect {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  pointer-events: none;
+  z-index: 1;
+  animation: ripple 700ms linear infinite;
+}
+
+.ripple-effect-m {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+  pointer-events: none;
+  z-index: 1;
+  animation: ripple-m 700ms linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.4;
+  }
+  100% {
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-m {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.4;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
 }

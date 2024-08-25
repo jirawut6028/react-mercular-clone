@@ -36,6 +36,7 @@ import QwertykeysNeo70_1 from "../../assets/flash-sale/gaming/qwertykeys-neo70-1
 import QwertykeysNeo70_2 from "../../assets/flash-sale/gaming/qwertykeys-neo70-2.jpg";
 import QwertyQK100_1 from "../../assets/flash-sale/gaming/qwertykeys-qk100-1.webp";
 import QwertyQK100_2 from "../../assets/flash-sale/gaming/qwertykeys-qk100-2.jpg";
+import Ripple from "../Ripple/Ripple";
 
 const category = [
   "ทั้งหมด",
@@ -189,17 +190,17 @@ function FlashSale() {
   return (
     <div className="max-w-[1300px] mx-auto mt-[30px] pr-[17.5px]">
       <div className="flex items-center justify-between gap-2">
-        <div className="flex items-center">
+        <div className="flex items-center gap-1">
           <img src={FSLogo} alt="FSLogo" className="w-52 mr-3" />
           {category.map((item, index) => (
             <button
               key={index}
-              className={`text-sm font-semibold px-[23px] py-[9px] rounded-full cursor-pointer ${
+              className={`text-sm font-semibold px-[23px] py-[9px] rounded-full cursor-pointer relative btn-ripple ${
                 cate == item ? "bg-black text-white" : "text-[#637385]"
               }`}
               onClick={() => setCate(item)}
             >
-              {item}
+              <p className="z-10 relative">{item}</p>
             </button>
           ))}
         </div>
@@ -250,9 +251,9 @@ function FlashSale() {
           data={data.filter((item) => item.cate == "จัดโต๊ะคอม")}
         />
       )}
-      <button className="bg-[#161c24] text-white font-semibold flex items-center gap-3 rounded-md px-20 py-2.5 mx-auto mb-10 text-sm">
-        ดู Flash Sale ทั้งหมด
-        <FaArrowRight />
+      <button className="bg-[#161c24] text-white font-semibold flex items-center gap-3 rounded-md px-20 py-2.5 mx-auto mb-10 text-sm relative btn-ripple">
+        <p className="z-10 relative">ดู Flash Sale ทั้งหมด</p>
+        <FaArrowRight className="z-10 relative" />
       </button>
     </div>
   );
