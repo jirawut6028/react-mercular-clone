@@ -86,7 +86,7 @@ function BestSellSwiper() {
   return (
     <div className="w-[414px] relative">
       <Swiper
-        className="w-full h-full rounded-xl bg-[#0f63e9]"
+        className="w-full h-full rounded-xl bg-primary"
         navigation={{
           nextEl: ".swiper-best-button-next",
           prevEl: ".swiper-best-button-prev",
@@ -109,7 +109,7 @@ function BestSellSwiper() {
                 key={index}
                 className="w-full h-[103px] bg-white rounded-xl flex items-center justify-between px-4 cursor-pointer"
               >
-                <div className="bg-[#0f63e9] h-[34px] w-[34px] rounded-full text-white flex items-center justify-center text-lg font-bold relative">
+                <div className="bg-primary h-[34px] w-[34px] rounded-full text-white flex items-center justify-center text-lg font-bold relative">
                   <PiCrownSimpleFill
                     className={`absolute -top-2.5 ${
                       index == 0 && "text-yellow-500"
@@ -133,10 +133,10 @@ function BestSellSwiper() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className="swiper-best-button-prev absolute -left-4 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xl text-[#0f63e9] p-2.5 z-10 shadow-md btn-ripple-m">
+      <button className="swiper-best-button-prev -left-4 btn-swiper-left btn-ripple-m">
         <FaAngleLeft className="z-10 relative" />
       </button>
-      <button className="swiper-best-button-next absolute -right-4 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xl text-[#0f63e9] p-2.5 z-10 shadow-md btn-ripple-m">
+      <button className="swiper-best-button-next -right-4 btn-swiper-right btn-ripple-m">
         <FaAngleRight className="z-10 relative" />
       </button>
     </div>

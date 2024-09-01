@@ -36,7 +36,6 @@ import QwertykeysNeo70_1 from "../../assets/flash-sale/gaming/qwertykeys-neo70-1
 import QwertykeysNeo70_2 from "../../assets/flash-sale/gaming/qwertykeys-neo70-2.jpg";
 import QwertyQK100_1 from "../../assets/flash-sale/gaming/qwertykeys-qk100-1.webp";
 import QwertyQK100_2 from "../../assets/flash-sale/gaming/qwertykeys-qk100-2.jpg";
-import Ripple from "../Ripple/Ripple";
 
 const category = [
   "ทั้งหมด",
@@ -188,7 +187,7 @@ function FlashSale() {
   const seconds = String(timeLeft % 60).padStart(2, "0");
 
   return (
-    <div className="max-w-[1300px] mx-auto mt-[30px] pr-[17.5px]">
+    <div className="w-[1280px] mx-auto mt-[30px]">
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-1">
           <img src={FSLogo} alt="FSLogo" className="w-52 mr-3" />

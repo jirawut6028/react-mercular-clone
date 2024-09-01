@@ -28,7 +28,7 @@ const image = [
 
 function OnlyAtMercular() {
   return (
-    <div className="max-w-[1300px] mx-auto">
+    <div className="w-[1280px] mx-auto mb-20">
       <p className="text-center font-bold text-2xl mb-2">
         🌟 Only at Mercular 🌟
       </p>
@@ -60,10 +60,10 @@ function OnlyAtMercular() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className="swiper-only-button-prev absolute left-0 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xl text-[#0f63e9] p-2.5 z-10 shadow-md btn-ripple-m">
+        <button className="swiper-only-button-prev left-0 btn-swiper-left btn-ripple-m">
           <FaAngleLeft className="z-10 relative" />
         </button>
-        <button className="swiper-only-button-next absolute right-0 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xl text-[#0f63e9] p-2.5 z-10 shadow-md btn-ripple-m">
+        <button className="swiper-only-button-next right-0 btn-swiper-right btn-ripple-m">
           <FaAngleRight className="z-10 relative" />
         </button>
       </div>

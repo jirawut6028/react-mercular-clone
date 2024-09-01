@@ -4,6 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .btn-swiper-left {
+    @apply absolute top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xl text-primary p-2.5 z-10 shadow-md;
+  }
+
+  .btn-swiper-right {
+    @apply absolute top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xl text-primary p-2.5 z-10 shadow-md;
+  }
+}
+
 body {
   font-family: "Noto Sans Thai", "sans-serif";
 }
@@ -85,6 +95,10 @@ body {
   pointer-events: none;
   z-index: 1;
   animation: ripple-m 700ms linear infinite;
+}
+
+.font-outline-2 {
+  -webkit-text-stroke: 2px #0f63e9;
 }
 
 @keyframes ripple {

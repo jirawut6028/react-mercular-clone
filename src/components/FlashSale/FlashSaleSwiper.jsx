@@ -122,10 +122,10 @@ function FlashSaleSwiper({ data }) {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className="swiper-flash-button-prev absolute -left-4 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xl text-[#0f63e9] p-2.5 z-10 shadow-md btn-ripple-m">
+      <button className="swiper-flash-button-prev -left-4 btn-swiper-left btn-ripple-m">
         <FaAngleLeft className="z-10 relative" />
       </button>
-      <button className="swiper-flash-button-next absolute -right-4 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xl text-[#0f63e9] p-2.5 z-10 shadow-md btn-ripple-m">
+      <button className="swiper-flash-button-next -right-4 btn-swiper-right btn-ripple-m">
         <FaAngleRight className="z-10 relative" />
       </button>
     </div>

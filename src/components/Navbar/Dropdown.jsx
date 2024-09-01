@@ -199,8 +199,7 @@ function Dropdown() {
           <ul className="font-semibold text-sm *:py-2 *:px-2 *:mb-0.5 *:gap-3 *:rounded-lg *:flex *:items-center *:cursor-pointer">
             <li
               className={`${
-                title == "หูฟัง/ลำโพง" &&
-                "bg-[#cfdef5] font-bold text-[#0f63e9]"
+                title == "หูฟัง/ลำโพง" && "bg-[#cfdef5] font-bold text-primary"
               }`}
               onMouseEnter={() => setTitle("หูฟัง/ลำโพง")}
             >
@@ -209,8 +208,7 @@ function Dropdown() {
             </li>
             <li
               className={`${
-                title == "คอมพิวเตอร์" &&
-                "bg-[#cfdef5] font-bold text-[#0f63e9]"
+                title == "คอมพิวเตอร์" && "bg-[#cfdef5] font-bold text-primary"
               }`}
               onMouseEnter={() => setTitle("คอมพิวเตอร์")}
             >
@@ -219,7 +217,7 @@ function Dropdown() {
             </li>
             <li
               className={`${
-                title == "เกมมิ่ง" && "bg-[#cfdef5] font-bold text-[#0f63e9]"
+                title == "เกมมิ่ง" && "bg-[#cfdef5] font-bold text-primary"
               }`}
               onMouseEnter={() => setTitle("เกมมิ่ง")}
             >
@@ -228,7 +226,7 @@ function Dropdown() {
             </li>
             <li
               className={`${
-                title == "จัดโต๊ะคอม" && "bg-[#cfdef5] font-bold text-[#0f63e9]"
+                title == "จัดโต๊ะคอม" && "bg-[#cfdef5] font-bold text-primary"
               }`}
               onMouseEnter={() => setTitle("จัดโต๊ะคอม")}
             >
@@ -238,7 +236,7 @@ function Dropdown() {
             <li
               className={`${
                 title == "อุปกรณ์มือถือ" &&
-                "bg-[#cfdef5] font-bold text-[#0f63e9]"
+                "bg-[#cfdef5] font-bold text-primary"
               }`}
               onMouseEnter={() => setTitle("อุปกรณ์มือถือ")}
             >
@@ -251,7 +249,7 @@ function Dropdown() {
             </li>
             <li
               className={`${
-                title == "แกตเจ็ต" && "bg-[#cfdef5] font-bold text-[#0f63e9]"
+                title == "แกตเจ็ต" && "bg-[#cfdef5] font-bold text-primary"
               }`}
               onMouseEnter={() => setTitle("แกตเจ็ต")}
             >
@@ -261,7 +259,7 @@ function Dropdown() {
             <li
               className={`${
                 title == "เครื่องเสียงมืออาชีพ" &&
-                "bg-[#cfdef5] font-bold text-[#0f63e9]"
+                "bg-[#cfdef5] font-bold text-primary"
               }`}
               onMouseEnter={() => setTitle("เครื่องเสียงมืออาชีพ")}
             >
@@ -274,7 +272,7 @@ function Dropdown() {
             </li>
             <li
               className={`${
-                title == "ทีวี" && "bg-[#cfdef5] font-bold text-[#0f63e9]"
+                title == "ทีวี" && "bg-[#cfdef5] font-bold text-primary"
               }`}
               onMouseEnter={() => setTitle("ทีวี")}
             >
@@ -286,12 +284,12 @@ function Dropdown() {
         <div className="flex flex-col w-[730px] p-4">
           <div className="flex justify-between font-semibold">
             <p>{title}</p>
-            <div className="flex gap-1.5 items-center text-sm text-[#0f63e9] hover:bg-[#ecf3fd] rounded-lg p-[5px] cursor-pointer">
+            <button className="flex gap-1.5 items-center text-sm text-primary hover:bg-[#ecf3fd] rounded-lg p-[5px] cursor-pointer">
               <p>ดูทั้งหมด</p>
               <div className="bg-[#ecf3fe] rounded-full p-0.5 text-[10px]">
                 <FaArrowRight />
               </div>
-            </div>
+            </button>
           </div>
           <div className="relative">
             <Swiper
@@ -308,7 +306,7 @@ function Dropdown() {
                 <div
                   className={`overflow-visible relative flex items-center justify-center pl-16 h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
                     cate == "หูฟัง"
-                      ? "bg-[#cfdef5] text-[#0f63e9]"
+                      ? "bg-[#cfdef5] text-primary"
                       : "bg-[#f4f6f8]"
                   }`}
                   onMouseEnter={() => setCate("หูฟัง")}
@@ -330,7 +328,7 @@ function Dropdown() {
                 <div
                   className={`overflow-visible relative flex items-center justify-center pl-16 h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
                     cate == "ลำโพง"
-                      ? "bg-[#cfdef5] text-[#0f63e9]"
+                      ? "bg-[#cfdef5] text-primary"
                       : "bg-[#f4f6f8]"
                   }`}
                   onMouseEnter={() => setCate("ลำโพง")}
@@ -352,7 +350,7 @@ function Dropdown() {
                 <div
                   className={`overflow-visible relative flex items-center justify-center pl-16 h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
                     cate == "เครื่องเล่นเพลง & DAC"
-                      ? "bg-[#cfdef5] text-[#0f63e9]"
+                      ? "bg-[#cfdef5] text-primary"
                       : "bg-[#f4f6f8]"
                   }`}
                   onMouseEnter={() => setCate("เครื่องเล่นเพลง & DAC")}
@@ -374,7 +372,7 @@ function Dropdown() {
                 <div
                   className={`overflow-visible relative flex items-center justify-center pl-16 h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
                     cate == "อุปกรณ์เสริมหูฟัง"
-                      ? "bg-[#cfdef5] text-[#0f63e9]"
+                      ? "bg-[#cfdef5] text-primary"
                       : "bg-[#f4f6f8]"
                   }`}
                   onMouseEnter={() => setCate("อุปกรณ์เสริมหูฟัง")}
@@ -396,7 +394,7 @@ function Dropdown() {
                 <div
                   className={`overflow-visible relative flex items-center justify-center pl-16 h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
                     cate == "อุปกรณ์เสริมลำโพง"
-                      ? "bg-[#cfdef5] text-[#0f63e9]"
+                      ? "bg-[#cfdef5] text-primary"
                       : "bg-[#f4f6f8]"
                   }`}
                   onMouseEnter={() => setCate("อุปกรณ์เสริมลำโพง")}
@@ -415,29 +413,29 @@ function Dropdown() {
                 </div>
               </SwiperSlide>
             </Swiper>
-            <button className="swiper-drop-button-prev absolute -left-2 top-1/2 -translate-y-1/4 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md btn-ripple-m">
+            <button className="swiper-drop-button-prev absolute -left-2 top-1/2 -translate-y-1/4 cursor-pointer bg-white rounded-full text-xs text-primary p-1.5 z-10 shadow-md btn-ripple-m">
               <FaAngleLeft className="z-10 relative" />
             </button>
-            <button className="swiper-drop-button-next absolute -right-2 top-1/2 -translate-y-1/4 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md btn-ripple-m">
+            <button className="swiper-drop-button-next absolute -right-2 top-1/2 -translate-y-1/4 cursor-pointer bg-white rounded-full text-xs text-primary p-1.5 z-10 shadow-md btn-ripple-m">
               <FaAngleRight className="z-10 relative" />
             </button>
           </div>
           <div className="bg-[#f4f6f8] h-[215px] rounded-lg pt-5 px-4">
             <div className="flex justify-between font-semibold">
               <p>{cate}</p>
-              <div className="flex gap-1.5 items-center text-sm text-[#0f63e9] hover:bg-[#ecf3fd] rounded-lg p-[5px] cursor-pointer">
+              <button className="flex gap-1.5 items-center text-sm text-primary hover:bg-[#ecf3fd] rounded-lg p-[5px] cursor-pointer">
                 <p>ดูทั้งหมด</p>
                 <div className="bg-[#ecf3fe] rounded-full p-0.5 text-[10px]">
                   <FaArrowRight />
                 </div>
-              </div>
+              </button>
             </div>
             <div className="flex flex-wrap gap-3 h-[164px] overflow-y-auto scrollbar-hide">
               {cate == "หูฟัง" &&
                 headphone.map((item, index) => (
                   <button
                     key={index}
-                    className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-[#0f63e9]"
+                    className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-primary"
                   >
                     <img src={item.img} alt={item.title} className="w-14" />
                     <p className="font-medium text-sm text-center line-clamp-2">
@@ -449,7 +447,7 @@ function Dropdown() {
                 speaker.map((item, index) => (
                   <button
                     key={index}
-                    className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-[#0f63e9]"
+                    className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-primary"
                   >
                     <img src={item.img} alt={item.title} className="w-14" />
                     <p className="font-medium text-sm text-center line-clamp-2">
@@ -461,7 +459,7 @@ function Dropdown() {
                 dapDacAmp.map((item, index) => (
                   <button
                     key={index}
-                    className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-[#0f63e9]"
+                    className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-primary"
                   >
                     <img src={item.img} alt={item.title} className="w-14" />
                     <p className="font-medium text-sm text-center line-clamp-2">
@@ -473,7 +471,7 @@ function Dropdown() {
                 headphoneAccessory.map((item, index) => (
                   <button
                     key={index}
-                    className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-[#0f63e9]"
+                    className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-primary"
                   >
                     <img src={item.img} alt={item.title} className="w-14" />
                     <p className="font-medium text-sm text-center line-clamp-2">
@@ -485,7 +483,7 @@ function Dropdown() {
                 speakerAccessory.map((item, index) => (
                   <button
                     key={index}
-                    className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-[#0f63e9]"
+                    className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-primary"
                   >
                     <img src={item.img} alt={item.title} className="w-14" />
                     <p className="font-medium text-sm text-center line-clamp-2">
@@ -571,10 +569,10 @@ function Dropdown() {
                 />
               </SwiperSlide>
             </Swiper>
-            <button className="swiper-brand-button-prev absolute -left-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md btn-ripple-m">
+            <button className="swiper-brand-button-prev absolute -left-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-primary p-1.5 z-10 shadow-md btn-ripple-m">
               <FaAngleLeft className="z-10 relative" />
             </button>
-            <button className="swiper-brand-button-next absolute -right-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-[#0f63e9] p-1.5 z-10 shadow-md btn-ripple-m">
+            <button className="swiper-brand-button-next absolute -right-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-primary p-1.5 z-10 shadow-md btn-ripple-m">
               <FaAngleRight className="z-10 relative" />
             </button>
           </div>
