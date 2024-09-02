@@ -2,9 +2,9 @@ import React from "react";
 
 function FacilityFooter() {
   return (
-    <div className="bg-[#f9fafb] flex items-center justify-center gap-14 py-5 mt-4">
+    <div className="bg-[#f9fafb] flex items-center justify-center gap-14 py-6 mt-4">
       <div className="flex items-center gap-3 cursor-pointer">
-        <div className="bg-primary rounded-full p-2">
+        <div className="p-2 rounded-full bg-primary">
           <svg
             width="32"
             height="32"
@@ -23,12 +23,12 @@ function FacilityFooter() {
           </svg>
         </div>
         <div>
-          <p className="font-bold text-lg">ของแท้</p>
+          <p className="text-lg font-bold">ของแท้</p>
           <p className="text-sm">มั่นใจประกันศูนย์</p>
         </div>
       </div>
       <div className="flex gap-3 cursor-pointer">
-        <div className="bg-primary rounded-full p-2">
+        <div className="p-2 rounded-full bg-primary">
           <svg
             width="32"
             height="32"
@@ -45,12 +45,12 @@ function FacilityFooter() {
           </svg>
         </div>
         <div>
-          <p className="font-bold text-lg">ส่งด้วยใจ</p>
+          <p className="text-lg font-bold">ส่งด้วยใจ</p>
           <p className="text-sm">จัดส่งไว ทั่วไทย</p>
         </div>
       </div>
       <div className="flex gap-3 cursor-pointer">
-        <div className="bg-primary rounded-full p-2">
+        <div className="p-2 rounded-full bg-primary">
           <svg
             width="32"
             height="32"
@@ -69,12 +69,12 @@ function FacilityFooter() {
           </svg>
         </div>
         <div>
-          <p className="font-bold text-lg">ผ่อนได้ทุกชิ้น</p>
+          <p className="text-lg font-bold">ผ่อนได้ทุกชิ้น</p>
           <p className="text-sm">0% หรือสูงสุด 10 เดือน*</p>
         </div>
       </div>
       <div className="flex gap-3 cursor-pointer">
-        <div className="bg-primary rounded-full p-2">
+        <div className="p-2 rounded-full bg-primary">
           <svg
             width="32"
             height="32"
@@ -91,7 +91,7 @@ function FacilityFooter() {
           </svg>
         </div>
         <div>
-          <p className="font-bold text-lg">ทักแชท</p>
+          <p className="text-lg font-bold">ทักแชท</p>
           <p className="text-sm">ปรึกษาผู้เชี่ยวชาญฟรี</p>
         </div>
       </div>

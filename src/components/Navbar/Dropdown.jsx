@@ -180,105 +180,63 @@ const speakerAccessory = [
   },
 ];
 
+const t = [
+  { title: "หูฟัง/ลำโพง", img: Audio },
+  { title: "คอมพิวเตอร์", img: Computer },
+  { title: "เกมมิ่ง", img: Gaming },
+  { title: "จัดโต๊ะคอม", img: WorkStation },
+  { title: "อุปกรณ์มือถือ", img: MobileAccessory },
+  { title: "แกตเจ็ต", img: SmartGadget },
+  { title: "เครื่องเสียงมืออาชีพ", img: ProfessionalAudio },
+  { title: "ทีวี", img: TV },
+];
+
+const c = [
+  { title: "หูฟัง", img: Audio },
+  { title: "ลำโพง", img: Speaker },
+  { title: "เครื่องเล่นเพลง & DAC", img: DapDacAmp },
+  { title: "อุปกรณ์เสริมหูฟัง", img: HeadphoneAccessory },
+  { title: "อุปกรณ์เสริมลำโพง", img: SpeakerAccessory },
+];
+
+const brand = [
+  Marshall,
+  Klipsch,
+  Edifier,
+  BO,
+  Soundpeats,
+  JBL,
+  Sony,
+  Jabra,
+  Bose,
+];
+
 function Dropdown() {
-  const [title, setTitle] = useState("");
+  const [title, setTitle] = useState("หูฟัง/ลำโพง");
   const [cate, setCate] = useState("");
-  useEffect(() => {
-    setTitle("หูฟัง/ลำโพง");
-  }, []);
 
   useEffect(() => {
     title == "หูฟัง/ลำโพง" && setCate("หูฟัง");
   }, [title]);
 
   return (
-    <div className="invisible absolute group-hover:visible pt-1">
-      <div className="flex bg-white shadow-xl rounded-lg">
+    <div className="absolute invisible pt-1 group-hover:visible">
+      <div className="flex bg-white rounded-lg shadow-xl">
         <div className="bg-[#f4f6f8] flex flex-col p-3 w-[230px] rounded-s-lg">
-          <p className="font-semibold pb-3">สินค้าทั้งหมด</p>
-          <ul className="font-semibold text-sm *:py-2 *:px-2 *:mb-0.5 *:gap-3 *:rounded-lg *:flex *:items-center *:cursor-pointer">
-            <li
-              className={`${
-                title == "หูฟัง/ลำโพง" && "bg-[#cfdef5] font-bold text-primary"
-              }`}
-              onMouseEnter={() => setTitle("หูฟัง/ลำโพง")}
-            >
-              <img className="w-8" src={Audio} alt="audio" />
-              หูฟัง/ลำโพง
-            </li>
-            <li
-              className={`${
-                title == "คอมพิวเตอร์" && "bg-[#cfdef5] font-bold text-primary"
-              }`}
-              onMouseEnter={() => setTitle("คอมพิวเตอร์")}
-            >
-              <img className="w-8" src={Computer} alt="Computer" />
-              คอมพิวเตอร์
-            </li>
-            <li
-              className={`${
-                title == "เกมมิ่ง" && "bg-[#cfdef5] font-bold text-primary"
-              }`}
-              onMouseEnter={() => setTitle("เกมมิ่ง")}
-            >
-              <img className="w-8" src={Gaming} alt="Gaming" />
-              เกมมิ่ง
-            </li>
-            <li
-              className={`${
-                title == "จัดโต๊ะคอม" && "bg-[#cfdef5] font-bold text-primary"
-              }`}
-              onMouseEnter={() => setTitle("จัดโต๊ะคอม")}
-            >
-              <img className="w-8" src={WorkStation} alt="WorkStation" />
-              จัดโต๊ะคอม
-            </li>
-            <li
-              className={`${
-                title == "อุปกรณ์มือถือ" &&
-                "bg-[#cfdef5] font-bold text-primary"
-              }`}
-              onMouseEnter={() => setTitle("อุปกรณ์มือถือ")}
-            >
-              <img
-                className="w-8"
-                src={MobileAccessory}
-                alt="MobileAccessory"
-              />
-              อุปกรณ์มือถือ
-            </li>
-            <li
-              className={`${
-                title == "แกตเจ็ต" && "bg-[#cfdef5] font-bold text-primary"
-              }`}
-              onMouseEnter={() => setTitle("แกตเจ็ต")}
-            >
-              <img className="w-8" src={SmartGadget} alt="SmartGadget" />
-              แกตเจ็ต
-            </li>
-            <li
-              className={`${
-                title == "เครื่องเสียงมืออาชีพ" &&
-                "bg-[#cfdef5] font-bold text-primary"
-              }`}
-              onMouseEnter={() => setTitle("เครื่องเสียงมืออาชีพ")}
-            >
-              <img
-                className="w-8"
-                src={ProfessionalAudio}
-                alt="ProfessionalAudio"
-              />
-              เครื่องเสียงมืออาชีพ
-            </li>
-            <li
-              className={`${
-                title == "ทีวี" && "bg-[#cfdef5] font-bold text-primary"
-              }`}
-              onMouseEnter={() => setTitle("ทีวี")}
-            >
-              <img className="w-8" src={TV} alt="TV" />
-              ทีวี
-            </li>
+          <p className="pb-3 font-semibold">สินค้าทั้งหมด</p>
+          <ul className="text-sm font-semibold">
+            {t.map((item, index) => (
+              <li
+                key={index}
+                className={`py-2 px-2 mb-0.5 gap-3 rounded-lg flex items-center cursor-pointer ${
+                  title == item.title && "bg-[#cfdef5] font-bold text-primary"
+                }`}
+                onMouseEnter={() => setTitle(item.title)}
+              >
+                <img className="w-8" src={item.img} alt={item.title} />
+                {item.title}
+              </li>
+            ))}
           </ul>
         </div>
         <div className="flex flex-col w-[730px] p-4">
@@ -302,122 +260,36 @@ function Dropdown() {
               }}
               modules={[Navigation]}
             >
-              <SwiperSlide>
-                <div
-                  className={`overflow-visible relative flex items-center justify-center pl-16 h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
-                    cate == "หูฟัง"
-                      ? "bg-[#cfdef5] text-primary"
-                      : "bg-[#f4f6f8]"
-                  }`}
-                  onMouseEnter={() => setCate("หูฟัง")}
-                >
-                  <img
-                    src={Audio}
-                    alt="Audio"
-                    className="w-16 absolute left-0.5 -top-2"
-                  />
-                  <p className="line-clamp-2 text-sm font-semibold text-center">
-                    หูฟัง
-                  </p>
-                  {cate == "หูฟัง" && (
-                    <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-solid border-t-0 border-r-[25px] border-l-[25px] border-b-[20px] border-l-transparent border-r-transparent border-t-transparent border-b-[#f4f6f8]"></span>
-                  )}
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className={`overflow-visible relative flex items-center justify-center pl-16 h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
-                    cate == "ลำโพง"
-                      ? "bg-[#cfdef5] text-primary"
-                      : "bg-[#f4f6f8]"
-                  }`}
-                  onMouseEnter={() => setCate("ลำโพง")}
-                >
-                  <img
-                    src={Speaker}
-                    alt="Speaker"
-                    className="w-16 absolute left-0.5 -top-2"
-                  />
-                  <p className="line-clamp-2 text-sm font-semibold text-center">
-                    ลำโพง
-                  </p>
-                  {cate == "ลำโพง" && (
-                    <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-solid border-t-0 border-r-[25px] border-l-[25px] border-b-[20px] border-l-transparent border-r-transparent border-t-transparent border-b-[#f4f6f8]"></span>
-                  )}
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className={`overflow-visible relative flex items-center justify-center pl-16 h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
-                    cate == "เครื่องเล่นเพลง & DAC"
-                      ? "bg-[#cfdef5] text-primary"
-                      : "bg-[#f4f6f8]"
-                  }`}
-                  onMouseEnter={() => setCate("เครื่องเล่นเพลง & DAC")}
-                >
-                  <img
-                    src={DapDacAmp}
-                    alt="DapDacAmp"
-                    className="w-16 absolute left-0.5 -top-2"
-                  />
-                  <p className="line-clamp-2 text-sm font-semibold text-center">
-                    เครื่องเล่นเพลง & DAC
-                  </p>
-                  {cate == "เครื่องเล่นเพลง & DAC" && (
-                    <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-solid border-t-0 border-r-[25px] border-l-[25px] border-b-[20px] border-l-transparent border-r-transparent border-t-transparent border-b-[#f4f6f8]"></span>
-                  )}
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className={`overflow-visible relative flex items-center justify-center pl-16 h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
-                    cate == "อุปกรณ์เสริมหูฟัง"
-                      ? "bg-[#cfdef5] text-primary"
-                      : "bg-[#f4f6f8]"
-                  }`}
-                  onMouseEnter={() => setCate("อุปกรณ์เสริมหูฟัง")}
-                >
-                  <img
-                    src={HeadphoneAccessory}
-                    alt="HeadphoneAccessory"
-                    className="w-16 absolute left-0.5 -top-2"
-                  />
-                  <p className="line-clamp-2 text-sm font-semibold text-center">
-                    อุปกรณ์เสริมหูฟัง
-                  </p>
-                  {cate == "อุปกรณ์เสริมหูฟัง" && (
-                    <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-solid border-t-0 border-r-[25px] border-l-[25px] border-b-[20px] border-l-transparent border-r-transparent border-t-transparent border-b-[#f4f6f8]"></span>
-                  )}
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div
-                  className={`overflow-visible relative flex items-center justify-center pl-16 h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
-                    cate == "อุปกรณ์เสริมลำโพง"
-                      ? "bg-[#cfdef5] text-primary"
-                      : "bg-[#f4f6f8]"
-                  }`}
-                  onMouseEnter={() => setCate("อุปกรณ์เสริมลำโพง")}
-                >
-                  <img
-                    src={SpeakerAccessory}
-                    alt="SpeakerAccessory"
-                    className="w-16 absolute left-0.5 -top-2"
-                  />
-                  <p className="line-clamp-2 text-sm font-semibold text-center">
-                    อุปกรณ์เสริมลำโพง
-                  </p>
-                  {cate == "อุปกรณ์เสริมลำโพง" && (
-                    <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-solid border-t-0 border-r-[25px] border-l-[25px] border-b-[20px] border-l-transparent border-r-transparent border-t-transparent border-b-[#f4f6f8]"></span>
-                  )}
-                </div>
-              </SwiperSlide>
+              {c.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div
+                    className={`overflow-visible relative flex items-center justify-center pl-16 h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
+                      cate == item.title
+                        ? "bg-[#cfdef5] text-primary"
+                        : "bg-[#f4f6f8]"
+                    }`}
+                    onMouseEnter={() => setCate(item.title)}
+                  >
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="w-16 absolute left-0.5 -top-2"
+                    />
+                    <p className="text-sm font-semibold text-center line-clamp-2">
+                      {item.title}
+                    </p>
+                    {cate == item.title && (
+                      <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-solid border-t-0 border-r-[25px] border-l-[25px] border-b-[20px] border-l-transparent border-r-transparent border-t-transparent border-b-[#f4f6f8]"></span>
+                    )}
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
             <button className="swiper-drop-button-prev absolute -left-2 top-1/2 -translate-y-1/4 cursor-pointer bg-white rounded-full text-xs text-primary p-1.5 z-10 shadow-md btn-ripple-m">
-              <FaAngleLeft className="z-10 relative" />
+              <FaAngleLeft className="relative z-10" />
             </button>
             <button className="swiper-drop-button-next absolute -right-2 top-1/2 -translate-y-1/4 cursor-pointer bg-white rounded-full text-xs text-primary p-1.5 z-10 shadow-md btn-ripple-m">
-              <FaAngleRight className="z-10 relative" />
+              <FaAngleRight className="relative z-10" />
             </button>
           </div>
           <div className="bg-[#f4f6f8] h-[215px] rounded-lg pt-5 px-4">
@@ -438,7 +310,7 @@ function Dropdown() {
                     className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-primary"
                   >
                     <img src={item.img} alt={item.title} className="w-14" />
-                    <p className="font-medium text-sm text-center line-clamp-2">
+                    <p className="text-sm font-medium text-center line-clamp-2">
                       {item.title}
                     </p>
                   </button>
@@ -450,7 +322,7 @@ function Dropdown() {
                     className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-primary"
                   >
                     <img src={item.img} alt={item.title} className="w-14" />
-                    <p className="font-medium text-sm text-center line-clamp-2">
+                    <p className="text-sm font-medium text-center line-clamp-2">
                       {item.title}
                     </p>
                   </button>
@@ -462,7 +334,7 @@ function Dropdown() {
                     className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-primary"
                   >
                     <img src={item.img} alt={item.title} className="w-14" />
-                    <p className="font-medium text-sm text-center line-clamp-2">
+                    <p className="text-sm font-medium text-center line-clamp-2">
                       {item.title}
                     </p>
                   </button>
@@ -474,7 +346,7 @@ function Dropdown() {
                     className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-primary"
                   >
                     <img src={item.img} alt={item.title} className="w-14" />
-                    <p className="font-medium text-sm text-center line-clamp-2">
+                    <p className="text-sm font-medium text-center line-clamp-2">
                       {item.title}
                     </p>
                   </button>
@@ -486,14 +358,14 @@ function Dropdown() {
                     className="rounded-xl w-[100px] h-28 px-2 focus:outline-none flex flex-col items-center justify-center gap-2 cursor-pointer hover:bg-[#d8e6fb] hover:text-primary"
                   >
                     <img src={item.img} alt={item.title} className="w-14" />
-                    <p className="font-medium text-sm text-center line-clamp-2">
+                    <p className="text-sm font-medium text-center line-clamp-2">
                       {item.title}
                     </p>
                   </button>
                 ))}
             </div>
           </div>
-          <p className="font-semibold mt-6">แบรนด์แนะนำ</p>
+          <p className="mt-6 font-semibold">แบรนด์แนะนำ</p>
           <div className="relative">
             <Swiper
               className="w-full p-[1px]"
@@ -505,75 +377,21 @@ function Dropdown() {
               }}
               modules={[Navigation]}
             >
-              <SwiperSlide>
-                <img
-                  src={Marshall}
-                  alt="Marshall"
-                  className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={Klipsch}
-                  alt="Klipsch"
-                  className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={Edifier}
-                  alt="Edifier"
-                  className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={BO}
-                  alt="BO"
-                  className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={Soundpeats}
-                  alt="Soundpeats"
-                  className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={JBL}
-                  alt="JBL"
-                  className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={Sony}
-                  alt="Sony"
-                  className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={Jabra}
-                  alt="Jabra"
-                  className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
-                />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  src={Bose}
-                  alt="Bose"
-                  className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
-                />
-              </SwiperSlide>
+              {brand.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <img
+                    src={item}
+                    alt="Brand"
+                    className="w-[70px] cursor-pointer rounded-lg hover:drop-shadow-sm"
+                  />
+                </SwiperSlide>
+              ))}
             </Swiper>
             <button className="swiper-brand-button-prev absolute -left-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-primary p-1.5 z-10 shadow-md btn-ripple-m">
-              <FaAngleLeft className="z-10 relative" />
+              <FaAngleLeft className="relative z-10" />
             </button>
             <button className="swiper-brand-button-next absolute -right-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-primary p-1.5 z-10 shadow-md btn-ripple-m">
-              <FaAngleRight className="z-10 relative" />
+              <FaAngleRight className="relative z-10" />
             </button>
           </div>
         </div>

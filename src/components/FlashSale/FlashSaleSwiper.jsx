@@ -32,7 +32,7 @@ function FlashSaleSwiper({ data }) {
                 <img
                   src={item.brand}
                   alt="item.name"
-                  className="absolute top-2 right-2 w-10 z-10 rounded-md group-hover/img:brightness-75"
+                  className="absolute z-10 w-10 rounded-md top-2 right-2 group-hover/img:brightness-75"
                 />
                 <div className="absolute flex flex-col gap-2 top-[60px] right-3 z-10 invisible group-hover/img:visible">
                   <button className="p-2 bg-white rounded-full">
@@ -84,7 +84,7 @@ function FlashSaleSwiper({ data }) {
                 <img
                   src={item.img2}
                   alt={item.name}
-                  className="w-full rounded-xl group-hover/img:brightness-75 hidden group-hover/card:block"
+                  className="hidden w-full rounded-xl group-hover/img:brightness-75 group-hover/card:block"
                 />
               </div>
               <div className="text-[14px] px-4 py-1">
@@ -99,7 +99,7 @@ function FlashSaleSwiper({ data }) {
                         )}
                         %
                       </p>
-                      <p className="font-semibold text-base">
+                      <p className="text-base font-semibold">
                         ฿{formatNumber(item.discount)}
                       </p>
                     </div>
@@ -123,10 +123,10 @@ function FlashSaleSwiper({ data }) {
         ))}
       </Swiper>
       <button className="swiper-flash-button-prev -left-4 btn-swiper-left btn-ripple-m">
-        <FaAngleLeft className="z-10 relative" />
+        <FaAngleLeft className="relative z-10" />
       </button>
       <button className="swiper-flash-button-next -right-4 btn-swiper-right btn-ripple-m">
-        <FaAngleRight className="z-10 relative" />
+        <FaAngleRight className="relative z-10" />
       </button>
     </div>
   );

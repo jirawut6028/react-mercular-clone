@@ -100,7 +100,7 @@ function BestSellSwiper() {
           >
             <div className="flex gap-1">
               <RiFireFill className="text-2xl text-red-400" />
-              <p className="text-white font-bold text-xl">
+              <p className="text-xl font-bold text-white">
                 Best Seller {item.title}
               </p>
             </div>
@@ -134,10 +134,10 @@ function BestSellSwiper() {
         ))}
       </Swiper>
       <button className="swiper-best-button-prev -left-4 btn-swiper-left btn-ripple-m">
-        <FaAngleLeft className="z-10 relative" />
+        <FaAngleLeft className="relative z-10" />
       </button>
       <button className="swiper-best-button-next -right-4 btn-swiper-right btn-ripple-m">
-        <FaAngleRight className="z-10 relative" />
+        <FaAngleRight className="relative z-10" />
       </button>
     </div>
   );

@@ -2,13 +2,13 @@ import React from "react";
 
 function AllArticle({ data }) {
   return (
-    <div className="w-full ml-5 grid grid-cols-5 grid-rows-2 gap-4">
+    <div className="grid w-full grid-cols-5 grid-rows-2 gap-4 ml-5">
       {data.slice(0, 7).map((item, index) => (
         <div
           key={index}
           className="first:row-span-2 first:col-span-2 flex flex-col first:gap-1.5 cursor-pointer"
         >
-          <div className="overflow-hidden rounded-lg mb-2">
+          <div className="mb-2 overflow-hidden rounded-lg">
             <img
               src={item.img}
               alt={item.title}
@@ -26,7 +26,7 @@ function AllArticle({ data }) {
             {item.title}
           </p>
           {index == 0 && (
-            <p className="line-clamp-2 text-sm leading-6">{item.desc}</p>
+            <p className="text-sm leading-6 line-clamp-2">{item.desc}</p>
           )}
         </div>
       ))}

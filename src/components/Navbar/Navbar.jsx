@@ -81,7 +81,7 @@ function Navbar() {
     >
       <div className="w-[1280px] mx-auto flex justify-between items-center pl-2.5 pb-3">
         <div className="flex gap-6">
-          <img src={logo} alt="logo" className="cursor-pointer h-10" />
+          <img src={logo} alt="logo" className="h-10 cursor-pointer" />
           <div className="relative group">
             <button className="text-primary bg-[#d8e6fb] hover:bg-[#b2cdf8] rounded-lg text-sm w-[133px] pl-2.5 py-2 font-bold flex items-center gap-1.5 cursor-pointer duration-200">
               <GrAppsRounded className="text-2xl" />

@@ -98,10 +98,10 @@ const Social = [Facebook, Twitter, Tiktok, Youtube, Instagram, Line, Threads];
 function Footer() {
   return (
     <div className="w-[1280px] mx-auto mb-8">
-      <div className="grid grid-cols-4 gap-y-5 text-gray-700 mt-6">
+      <div className="grid grid-cols-4 mt-6 text-gray-700 gap-y-5">
         {cate.map((item, index) => (
           <div key={index} className="space-y-1">
-            <p className="font-semibold hover:text-primary cursor-pointer">
+            <p className="font-semibold cursor-pointer hover:text-primary">
               {item.title}
             </p>
             <div className="flex flex-wrap text-sm leading-7">
@@ -130,7 +130,7 @@ function Footer() {
             </div>
           </div>
           <div className="space-y-2">
-            <p className="text-black text-base font-semibold">
+            <p className="text-base font-semibold text-black">
               แผนกบริการลูกค้า
             </p>
             <div className="text-sm text-gray-700 hover:*:text-primary *:cursor-pointer leading-7">
@@ -144,7 +144,7 @@ function Footer() {
             </div>
           </div>
           <div className="space-y-2">
-            <p className="text-black text-base font-semibold">รีวิวและบทความ</p>
+            <p className="text-base font-semibold text-black">รีวิวและบทความ</p>
             <div className="text-sm text-gray-700 hover:*:text-primary *:cursor-pointer leading-7">
               <p>บทความทั้งหมด</p>
               <p>Hobby News</p>
@@ -158,13 +158,18 @@ function Footer() {
           </div>
         </div>
         <div className="space-y-2">
-          <p className="text-black text-base font-semibold">ติดต่อเรา</p>
+          <p className="text-base font-semibold text-black">ติดต่อเรา</p>
           <p className="text-sm text-gray-700">
             พูดคุย แลกเปลี่ยนประสบการณ์กันได้ที่ช่องทาง
           </p>
           <div className="flex gap-3 pt-4">
             {Social.map((item, index) => (
-              <img key={index} src={item} alt="Social" className="size-9" />
+              <img
+                key={index}
+                src={item}
+                alt="Social"
+                className="cursor-pointer size-9"
+              />
             ))}
           </div>
         </div>
@@ -184,10 +189,10 @@ function Footer() {
             </svg>
             ที่ตั้งร้าน
           </button>
-          <button className="flex items-center gap-2 bg-[#f6f7f8] py-2 px-3 w-[200px] rounded-lg text-gray-700 hover:bg-[#ecf3fd] duration-200">
+          <button className="flex items-center gap-2 bg-[#f6f7f8] py-2 px-3 w-[200px] rounded-lg text-gray-700 hover:bg-[#ecf3fd] hover:text-primary duration-200">
             <img src={Thai} alt="Thai" className="rounded-full size-6" />
             ภาษาไทย
-            <IoIosArrowDown className="text-xl ml-auto" />
+            <IoIosArrowDown className="ml-auto text-xl" />
           </button>
         </div>
       </div>

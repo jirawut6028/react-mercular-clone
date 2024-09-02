@@ -95,7 +95,7 @@ function Article() {
 
   return (
     <div className="w-[1280px] mx-auto">
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex items-center justify-between mb-4">
         <p className="text-2xl font-bold">บทความแนะนำ</p>
         <button className="flex gap-1.5 items-center text-sm font-bold text-primary hover:bg-[#ecf3fd] duration-200 rounded-lg px-2.5 py-2 cursor-pointer">
           <p>ดูทั้งหมด</p>

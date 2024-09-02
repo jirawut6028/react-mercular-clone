@@ -63,14 +63,14 @@ function HeroSwiper() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="absolute bottom-4 right-4 z-20 flex gap-2 text-white text-xl">
+      <div className="absolute z-20 flex gap-2 text-xl text-white bottom-4 right-4">
         <button
           onClick={handleAutoplay}
           className="cursor-pointer bg-black rounded-full p-2.5 bg-opacity-30 hover:bg-opacity-10"
         >
           {pause ? <IoPlayOutline /> : <IoPauseOutline />}
         </button>
-        <div className="swiper-pagination text-white bg-black rounded-full py-2 px-4 bg-opacity-30 -tracking-widest text-base select-none"></div>
+        <div className="px-4 py-2 text-base text-white bg-black rounded-full select-none swiper-pagination bg-opacity-30 -tracking-widest"></div>
         <button className="swiper-button-prev cursor-pointer bg-black rounded-full p-2.5 bg-opacity-30">
           <FaAngleLeft />
         </button>

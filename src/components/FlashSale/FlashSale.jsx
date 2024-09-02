@@ -190,7 +190,7 @@ function FlashSale() {
     <div className="w-[1280px] mx-auto mt-[30px]">
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-1">
-          <img src={FSLogo} alt="FSLogo" className="w-52 mr-3" />
+          <img src={FSLogo} alt="FSLogo" className="mr-3 w-52" />
           {category.map((item, index) => (
             <button
               key={index}
@@ -199,25 +199,25 @@ function FlashSale() {
               }`}
               onClick={() => setCate(item)}
             >
-              <p className="z-10 relative">{item}</p>
+              <p className="relative z-10">{item}</p>
             </button>
           ))}
         </div>
-        <div className="flex items-center gap-1 ">
+        <div className="flex items-center gap-1">
           <div className="w-9 h-[52px] bg-black rounded-lg">
             <div className="bg-[#161c24] h-[65%] flex items-center justify-center text-white text-[18px] font-bold rounded-lg">
               {hours}
             </div>
             <div className="text-white text-[10px] text-center">ชั่วโมง</div>
           </div>
-          <p className="font-bold text-xl">:</p>
+          <p className="text-xl font-bold">:</p>
           <div className="w-9 h-[52px] bg-black rounded-lg">
             <div className="bg-[#161c24] h-[65%] flex items-center justify-center text-white text-[18px] font-bold rounded-lg">
               {minutes}
             </div>
             <div className="text-white text-[10px] text-center">นาที</div>
           </div>
-          <p className="font-bold text-xl">:</p>
+          <p className="text-xl font-bold">:</p>
           <div className="w-9 h-[52px] bg-black rounded-lg">
             <div className="bg-[#161c24] h-[65%] flex items-center justify-center text-white text-[18px] font-bold rounded-lg">
               {seconds}
@@ -251,8 +251,8 @@ function FlashSale() {
         />
       )}
       <button className="bg-[#161c24] text-white font-semibold flex items-center gap-3 rounded-md px-20 py-2.5 mx-auto mb-10 text-sm relative btn-ripple">
-        <p className="z-10 relative">ดู Flash Sale ทั้งหมด</p>
-        <FaArrowRight className="z-10 relative" />
+        <p className="relative z-10">ดู Flash Sale ทั้งหมด</p>
+        <FaArrowRight className="relative z-10" />
       </button>
     </div>
   );
