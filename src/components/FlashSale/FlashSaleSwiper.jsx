@@ -12,6 +12,7 @@ function FlashSaleSwiper({ data }) {
   const formatNumber = (number) => {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
+
   return (
     <div className="relative mt-4">
       <Swiper
@@ -29,13 +30,8 @@ function FlashSaleSwiper({ data }) {
           <SwiperSlide key={index}>
             <div className="flex flex-col w-[200px] rounded-xl shadow-lg cursor-pointer hover:shadow-[0_10px_10px_#d4e3fb] group/card duration-200">
               <div className="relative group/img">
-                <img
-                  src={item.brand}
-                  alt="item.name"
-                  className="absolute z-10 w-10 rounded-md top-2 right-2 group-hover/img:brightness-75"
-                />
-                <div className="absolute flex flex-col gap-2 top-[60px] right-3 z-10 invisible group-hover/img:visible">
-                  <button className="p-2 bg-white rounded-full">
+                <div className="absolute flex flex-col gap-2 top-[60px] right-3 z-10 opacity-0 group-hover/img:opacity-100 duration-150 *:p-2 *:duration-200 *:bg-white *:rounded-full hover:*:brightness-95 cursor-default">
+                  <button>
                     <svg
                       width="24"
                       height="24"
@@ -51,7 +47,7 @@ function FlashSaleSwiper({ data }) {
                       ></path>
                     </svg>
                   </button>
-                  <button className="p-2 bg-white rounded-full">
+                  <button>
                     <svg
                       width="24"
                       height="24"
@@ -76,16 +72,23 @@ function FlashSaleSwiper({ data }) {
                     </svg>
                   </button>
                 </div>
-                <img
-                  src={item.img1}
-                  alt={item.name}
-                  className="w-full rounded-xl group-hover/card:hidden"
-                />
-                <img
-                  src={item.img2}
-                  alt={item.name}
-                  className="hidden w-full rounded-xl group-hover/img:brightness-75 group-hover/card:block"
-                />
+                <div className="relative duration-200 group-hover/img:brightness-75">
+                  <img
+                    src={item.brand}
+                    alt="item.name"
+                    className="absolute z-10 w-10 rounded-md top-2 right-2"
+                  />
+                  <img
+                    src={item.img1}
+                    alt={item.name}
+                    className="w-full duration-200 rounded-xl group-hover/card:hidden"
+                  />
+                  <img
+                    src={item.img2}
+                    alt={item.name}
+                    className="hidden w-full duration-200 rounded-xl group-hover/card:block"
+                  />
+                </div>
               </div>
               <div className="text-[14px] px-4 py-1">
                 <p className="line-clamp-2">{item.name}</p>

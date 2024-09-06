@@ -97,6 +97,32 @@ body {
   animation: ripple-m 700ms linear infinite;
 }
 
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.4;
+  }
+  100% {
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+  }
+}
+
+@keyframes ripple-m {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.4;
+  }
+  100% {
+    width: 100px;
+    height: 100px;
+    opacity: 0;
+  }
+}
+
 .font-outline-2 {
   -webkit-text-stroke: 2px #0f63e9;
 }
@@ -135,30 +161,4 @@ body {
   height: 16px;
   background-position: center 6px;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100' height='100' fill='rgb(158, 158, 158)'><polygon points='0,0 100,0 50,50'/></svg>");
-}
-
-@keyframes ripple {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 0.4;
-  }
-  100% {
-    width: 400px;
-    height: 400px;
-    opacity: 0;
-  }
-}
-
-@keyframes ripple-m {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 0.4;
-  }
-  100% {
-    width: 100px;
-    height: 100px;
-    opacity: 0;
-  }
 }
