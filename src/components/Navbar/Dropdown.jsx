@@ -15,7 +15,13 @@ function Dropdown() {
   const [indexCate, setIndexCate] = useState(0);
 
   return (
-    <div className="absolute invisible pt-1 group-hover:visible">
+    <div
+      className="absolute invisible pt-1 group-hover:visible"
+      onMouseLeave={() => {
+        setIndexTitle(0);
+        setIndexCate(0);
+      }}
+    >
       <div className="flex bg-white rounded-lg shadow-xl h-[480px]">
         <div className="bg-[#f4f6f8] flex flex-col p-3 w-[230px] rounded-s-lg">
           <p className="pb-3 font-semibold">สินค้าทั้งหมด</p>

@@ -1,11 +1,11 @@
 export const dropDownNav = [
   {
     title: "หูฟัง/ลำโพง",
-    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281309888194019328/audio.png?ex=66db4052&is=66d9eed2&hm=0e25ed809bf4d7b7ae224343e6cbba7186f1528d38665d80167edc9c3c951129&",
+    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281309888194019328/audio.png?ex=66dd3a92&is=66dbe912&hm=a7461f96d23bea36b919338af4f3b5f9934f4b8cc25da8f0e2936cd751b336e7&",
     cate: [
       {
         title: "หูฟัง",
-        img: "https://cdn.discordapp.com/attachments/956974071193698424/1281309888194019328/audio.png?ex=66db4052&is=66d9eed2&hm=0e25ed809bf4d7b7ae224343e6cbba7186f1528d38665d80167edc9c3c951129&",
+        img: "https://cdn.discordapp.com/attachments/956974071193698424/1281309888194019328/audio.png?ex=66dd3a92&is=66dbe912&hm=a7461f96d23bea36b919338af4f3b5f9934f4b8cc25da8f0e2936cd751b336e7&",
         cate: [
           {
             title: "หูฟังไร้สาย & หูฟังบลูทูธ",
@@ -157,7 +157,7 @@ export const dropDownNav = [
   },
   {
     title: "คอมพิวเตอร์",
-    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281314535831240837/computer.webp?ex=66db44a7&is=66d9f327&hm=e04cc0b42a56687ef1ce91c70c11270eb0dd78f631048b330994f65c3ba3ff0c&",
+    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281314535831240837/computer.webp?ex=66dd3ee7&is=66dbed67&hm=a30ca0e7b1cf82bef428ff9f8c486a8934641fc49d25d4873f982c7ad6ca62f6&",
     cate: [
       {
         title: "โน๊ตบุ๊ค",
@@ -248,7 +248,7 @@ export const dropDownNav = [
   },
   {
     title: "เกมมิ่ง",
-    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281321402179387522/gaming.webp?ex=66db4b0c&is=66d9f98c&hm=8d7635f0bba5f71017997da2364054dae74b4161501f271bd2060a81fe75a8c1&",
+    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281321402179387522/gaming.webp?ex=66dd454c&is=66dbf3cc&hm=4651706b1181737640997e809576fea7b95fcb9bea057b045a7eea91c33b5597&",
     cate: [
       {
         title: "หูฟังเกมมิ่ง & ลำโพงเกมมิ่ง",
@@ -327,7 +327,7 @@ export const dropDownNav = [
   },
   {
     title: "จัดโต๊ะคอม",
-    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281544199354978378/2119.webp?ex=66dc1a8b&is=66dac90b&hm=9f1ee4a833fa704373551de6a164fbebb56fe5dad639adbbd12fdb19b9108e21&",
+    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281544199354978378/2119.webp?ex=66dd6c0b&is=66dc1a8b&hm=3f45dd28b76562d80afc419ea169a42445954da0aa2262647fd40e2b2a219323&",
     cate: [
       {
         title: "เก้าอี้",
@@ -390,7 +390,7 @@ export const dropDownNav = [
   },
   {
     title: "อุปกรณ์มือถือ",
-    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281546938906312797/2227.webp?ex=66dc1d18&is=66dacb98&hm=e86323a439b57b2ee1bfdb00633dd425c19916a54743a008941504635fa241d6&",
+    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281546938906312797/2227.webp?ex=66dd6e98&is=66dc1d18&hm=ea94d2c67ff326a412fe40692d8080ab5b276be63892aa18ade24762ff1200f2&",
     cate: [
       {
         title: "หัวชาร์จ",
@@ -398,11 +398,11 @@ export const dropDownNav = [
         cate: [
           {
             title: "หัวชาร์จเร็ว (Fast Charger)",
-            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281546939892109353/2229.webp?ex=66dc1d18&is=66dacb98&hm=fb2111658cb17a33161ae718787dba236654cba5efebc233a97560a3e206c5ff&",
+            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281546939892109353/2229.webp?ex=66dd6e98&is=66dc1d18&hm=abe43fbbd2df26ec6007d4e8c83b65e9ecf3724c49407e5f6388ad8e12b6ca9c&",
           },
           {
             title: "หัวชาร์จหลายช่อง",
-            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281546939661549568/2231.webp?ex=66dc1d18&is=66dacb98&hm=f497dfb8ea0b7f6f2422f94cb508a362970f508c5e08134265c1d20934b575fc&",
+            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281546939661549568/2231.webp?ex=66dd6e98&is=66dc1d18&hm=bf082fb42aadd6c2ede61fe82e01820bc2f0b9114fd8d3203f069f2c1ea6bb3f&",
           },
           {
             title: "Universal Adapter",
@@ -416,41 +416,41 @@ export const dropDownNav = [
       },
       {
         title: "สายชาร์จ",
-        img: "https://cdn.discordapp.com/attachments/956974071193698424/1281547867680669706/2233.webp?ex=66dc1df5&is=66dacc75&hm=5920a602660021bc098ebc1ab0d1b2e0d6becaf935fb337a486e6592162220c6&",
+        img: "https://cdn.discordapp.com/attachments/956974071193698424/1281547867680669706/2233.webp?ex=66dd6f75&is=66dc1df5&hm=bb8770e3ffa60b456af03787df92e368541170f51577b37195c480da94adee7b&",
         cate: [
           {
             title: "สายชาร์จ Lightning",
-            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281547867336609813/2234.webp?ex=66dc1df5&is=66dacc75&hm=c82460e8ac1a1e3a8abfd78bae565fa4e4e4a439962fef145decd4aab3a0624d&",
+            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281547867336609813/2234.webp?ex=66dd6f75&is=66dc1df5&hm=dea293f18a29771e4ce4b1ac4945058fc20f1c303261752352be3f7164d54725&",
           },
           {
             title: "สายชาร์จ Type C",
-            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281547866950860830/2235.webp?ex=66dc1df5&is=66dacc75&hm=c508d82871fb237194ea09077bc0a1905f7d48177ed0249f27cc53433881cd46&",
+            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281547866950860830/2235.webp?ex=66dd6f75&is=66dc1df5&hm=6400d980b8d1b369ec1e0b03942085f6648078abef050e82fb0f441a6ff7faa3&",
           },
           {
             title: "สายชาร์จ Type C to Lightning",
-            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281547868431454279/2236.webp?ex=66dc1df5&is=66dacc75&hm=3a98fe86fe2272d776c18b42b6e3a1e68160c66958e0efa72541d99942c407d1&",
+            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281547868431454279/2236.webp?ex=66dd6f75&is=66dc1df5&hm=a047175bbdc6babbd61a577f69003ee108ac1d5dda173d4c5c98564a02658789&",
           },
           {
             title: "สายชาร์จ Micro USB",
-            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281547868003373108/2237.webp?ex=66dc1df5&is=66dacc75&hm=38d2c879679f82ba1a0764f03de76c2b496491b91704064549856452e9a3eefc&",
+            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281547868003373108/2237.webp?ex=66dd6f75&is=66dc1df5&hm=a4321bd51eb41ee58cfea6efc82748ff6dcaf97b79eee40edfa59fd36a811e1d&&",
           },
         ],
       },
       {
         title: "พาวเวอร์แบงค์",
-        img: "https://cdn.discordapp.com/attachments/956974071193698424/1281548549623906372/2239.webp?ex=66dc1e98&is=66dacd18&hm=7cce468513ca6d1922112888b7f5b338fe2f4587c74efb5aca66642feeae1ea3&",
+        img: "https://cdn.discordapp.com/attachments/956974071193698424/1281548549623906372/2239.webp?ex=66dd7018&is=66dc1e98&hm=8fc7aeb66b8b047c0c100501c201fd69cbd87b2e6dcaff6bc55b2eaf072b7379&",
         cate: [
           {
             title: "พาวเวอร์แบงค์ชาร์จเร็ว",
-            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281548549623906372/2239.webp?ex=66dc1e98&is=66dacd18&hm=7cce468513ca6d1922112888b7f5b338fe2f4587c74efb5aca66642feeae1ea3&",
+            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281548549623906372/2239.webp?ex=66dd7018&is=66dc1e98&hm=8fc7aeb66b8b047c0c100501c201fd69cbd87b2e6dcaff6bc55b2eaf072b7379&",
           },
           {
             title: "พาวเวอร์แบงค์ไร้สาย",
-            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281548550144004146/2240.webp?ex=66dc1e98&is=66dacd18&hm=e5ab0d597efa3ab6d3be2952f129eb2131bb469f39d8013f37e5f90e63bdde4e&",
+            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281548550144004146/2240.webp?ex=66dd7018&is=66dc1e98&hm=fa3179434bfbd7caf5d384916139804aa2cd025cda9c26061a7873ef754dce07&",
           },
           {
             title: "พาวเวอร์แบงค์ Magsafe",
-            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281548549896798248/2241.webp?ex=66dc1e98&is=66dacd18&hm=d108ce4fa2a1459336d9a95f2e1ec79f59a87d66cc6543790e8dc2bac98eb5d6&",
+            img: "https://cdn.discordapp.com/attachments/956974071193698424/1281548549896798248/2241.webp?ex=66dd7018&is=66dc1e98&hm=4d8921977694fb9527ec840735bd2eccc5d2287300cacad15fbec051e58192ea&",
           },
         ],
       },
@@ -465,7 +465,7 @@ export const dropDownNav = [
   },
   {
     title: "แกตเจ็ต",
-    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281549518512590890/2208.webp?ex=66dc1f7f&is=66dacdff&hm=367214a1e44d99e5e3d7de8b47b2d74cbf1f0f2798e44860f3e1d7b59cab94e3&",
+    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281549518512590890/2208.webp?ex=66dd70ff&is=66dc1f7f&hm=acd66749127df921d6d4afd96fbcf01e8bcad1c83e077e972fc6ac08f50bc4e7&",
     cate: [
       {
         title: "Smart Watch & Fitness Tracker",
@@ -520,7 +520,7 @@ export const dropDownNav = [
   },
   {
     title: "เครื่องเสียงมืออาชีพ",
-    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281610853740974120/professional-audio.png?ex=66dc589e&is=66db071e&hm=7e3d0221e23a2d2c5ae6f947ae1e744fa208cad8b0551b5eebf940353313228c&",
+    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281610853740974120/professional-audio.png?ex=66ddaa1e&is=66dc589e&hm=448b80d251583cd53bb4f45cebc73efa654d55afc2d14aee989cc4e04659086f&",
     cate: [
       {
         title: "ไมโครโฟนและอุปกรณ์เสริม",
@@ -578,7 +578,7 @@ export const dropDownNav = [
   },
   {
     title: "ทีวี",
-    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281616169886810162/2278.webp?ex=66dc5d92&is=66db0c12&hm=4c5e3822720eb37a27ab015029f3258c608ada3edba1cbf4f9811eecf3ed506b&",
+    img: "https://cdn.discordapp.com/attachments/956974071193698424/1281616169886810162/2278.webp?ex=66ddaf12&is=66dc5d92&hm=6745728ce01f18e896e640164bc348996615f79fb869b3cc0f7cdde3384d47cb&",
     cate: [
       {
         title: "Smart TV",

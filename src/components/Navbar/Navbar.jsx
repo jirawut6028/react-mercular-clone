@@ -75,11 +75,11 @@ function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 flex flex-col py-[7.5px] mx-auto z-50 bg-white ${
+      className={`sticky top-0 flex flex-col py-[7px] mx-auto z-50 bg-white ${
         scrolled && "shadow-md"
       }`}
     >
-      <div className="w-[1280px] mx-auto flex justify-between items-center pl-2.5 pb-3">
+      <div className="w-[1280px] mx-auto flex justify-between items-center pl-2 pb-[11px]">
         <div className="flex gap-6">
           <img src={logo} alt="logo" className="h-10 cursor-pointer" />
           <div className="relative group">
