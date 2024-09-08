@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import { FaArrowRight } from "react-icons/fa6";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
+import { FaAngleLeft, FaAngleRight, FaArrowRight } from "react-icons/fa6";
 import { dropDownNav } from "../../utils/constants";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -89,10 +88,10 @@ function Dropdown() {
                 </SwiperSlide>
               ))}
             </Swiper>
-            <button className="swiper-drop-button-prev absolute -left-2 top-1/2 -translate-y-1/4 cursor-pointer bg-white rounded-full text-xs text-primary p-1.5 z-10 shadow-md btn-ripple-m">
+            <button className="swiper-drop-button-prev absolute -left-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-primary p-1.5 z-10 shadow-md btn-ripple-m">
               <FaAngleLeft className="relative z-10" />
             </button>
-            <button className="swiper-drop-button-next absolute -right-2 top-1/2 -translate-y-1/4 cursor-pointer bg-white rounded-full text-xs text-primary p-1.5 z-10 shadow-md btn-ripple-m">
+            <button className="swiper-drop-button-next absolute -right-2 top-1/2 -translate-y-1/2 cursor-pointer bg-white rounded-full text-xs text-primary p-1.5 z-10 shadow-md btn-ripple-m">
               <FaAngleRight className="relative z-10" />
             </button>
           </div>
@@ -127,7 +126,7 @@ function Dropdown() {
               <p className="mt-6 font-semibold">แบรนด์แนะนำ</p>
               <div className="relative">
                 <Swiper
-                  className="w-full p-[1px]"
+                  className="w-full relative p-[1px]"
                   slidesPerView={"auto"}
                   spaceBetween={19}
                   navigation={{

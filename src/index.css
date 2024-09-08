@@ -26,6 +26,29 @@ body {
   width: auto;
 }
 
+.swiper-pagination {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.swiper-pagination-bullet-active {
+  background: #0f63e9;
+  position: relative;
+}
+
+.swiper-pagination-bullet-active::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #0f63e9;
+}
+
 .btn-ripple,
 .btn-ripple-m {
   overflow: hidden;

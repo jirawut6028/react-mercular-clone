@@ -48,7 +48,7 @@ function HeroSwiper() {
           disableOnInteraction: false,
         }}
         pagination={{
-          el: ".swiper-pagination",
+          el: ".swiper-banner-pagination",
           type: "fraction",
         }}
         navigation={{
@@ -70,7 +70,7 @@ function HeroSwiper() {
         >
           {pause ? <IoPlayOutline /> : <IoPauseOutline />}
         </button>
-        <div className="px-4 py-2 text-base text-white bg-black rounded-full select-none swiper-pagination bg-opacity-30 -tracking-widest"></div>
+        <div className="px-4 py-2 text-base text-white bg-black rounded-full select-none swiper-banner-pagination bg-opacity-30 -tracking-widest"></div>
         <button className="swiper-button-prev cursor-pointer bg-black rounded-full p-2.5 bg-opacity-30">
           <FaAngleLeft />
         </button>

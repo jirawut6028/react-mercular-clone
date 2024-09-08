@@ -12,6 +12,7 @@ import DryStudio from "../../assets/only-at-mercular/dry-studio.webp";
 
 import "swiper/css";
 import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
@@ -28,25 +29,31 @@ const image = [
 
 function OnlyAtMercular() {
   return (
-    <div className="w-[1280px] mx-auto mb-20">
+    <div className="w-[1280px] mx-auto">
       <p className="mb-2 text-2xl font-bold text-center">
         🌟 Only at Mercular 🌟
       </p>
-      <div className="relative">
+      <div className="relative mb-10">
         <Swiper
+          className="pb-10"
           effect={"coverflow"}
+          speed={800}
           centeredSlides={true}
           loop={true}
           slidesPerView={"auto"}
           coverflowEffect={{
             rotate: 0,
-            stretch: 110,
-            depth: 100,
+            stretch: 100,
+            depth: 150,
             modifier: 3,
+            slideShadows: false,
           }}
           navigation={{
             nextEl: ".swiper-only-button-next",
             prevEl: ".swiper-only-button-prev",
+          }}
+          pagination={{
+            clickable: true,
           }}
           modules={[EffectCoverflow, Navigation, Pagination]}
         >
@@ -60,10 +67,10 @@ function OnlyAtMercular() {
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className="left-0 swiper-only-button-prev btn-swiper-left btn-ripple-m">
+        <button className="-left-2 swiper-only-button-prev btn-swiper-left btn-ripple-m">
           <FaAngleLeft className="relative z-10" />
         </button>
-        <button className="right-0 swiper-only-button-next btn-swiper-right btn-ripple-m">
+        <button className="-right-2 swiper-only-button-next btn-swiper-right btn-ripple-m">
           <FaAngleRight className="relative z-10" />
         </button>
       </div>

@@ -86,7 +86,7 @@ function BestSellSwiper() {
   return (
     <div className="w-[414px] relative">
       <Swiper
-        className="w-full h-full rounded-xl bg-primary"
+        className="h-full rounded-xl bg-primary"
         navigation={{
           nextEl: ".swiper-best-button-next",
           prevEl: ".swiper-best-button-prev",
@@ -104,7 +104,7 @@ function BestSellSwiper() {
             {item.bestsell.map((i, index) => (
               <div
                 key={index}
-                className="w-full h-[103px] bg-white rounded-xl flex items-center justify-between px-4 cursor-pointer"
+                className="h-[103px] bg-white rounded-xl flex items-center justify-between px-4 cursor-pointer"
               >
                 <div className="bg-primary h-[34px] w-[34px] rounded-full text-white flex items-center justify-center text-lg font-bold relative">
                   <PiCrownSimpleFill
