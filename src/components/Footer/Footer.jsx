@@ -97,8 +97,8 @@ const Social = [Facebook, Twitter, Tiktok, Youtube, Instagram, Line, Threads];
 
 function Footer() {
   return (
-    <div className="w-[1280px] mx-auto mb-8">
-      <div className="grid grid-cols-4 mt-6 text-gray-700 gap-y-5">
+    <div className="w-[1280px] max-xl:w-[97%] mx-auto mb-8">
+      <div className="grid mt-6 text-gray-700 xl:grid-cols-4 gap-y-5">
         {cate.map((item, index) => (
           <div key={index} className="space-y-1">
             <p className="font-semibold cursor-pointer hover:text-primary">
@@ -117,8 +117,8 @@ function Footer() {
           </div>
         ))}
       </div>
-      <div className="flex justify-between gap-[100px] mt-10">
-        <div className="flex gap-16">
+      <div className="flex justify-between gap-[100px] max-xl:gap-5 mt-10 max-xl:flex-col">
+        <div className="flex gap-16 max-xl:hidden">
           <div className="space-y-2">
             <img src={Logo} alt="Logo" className="w-[71px]" />
             <div className="text-sm text-gray-700 hover:*:text-primary *:cursor-pointer leading-7">
@@ -162,19 +162,33 @@ function Footer() {
           <p className="text-sm text-gray-700">
             พูดคุย แลกเปลี่ยนประสบการณ์กันได้ที่ช่องทาง
           </p>
-          <div className="flex gap-3 pt-4">
+          <div className="flex gap-3 xl:pt-4">
             {Social.map((item, index) => (
               <img
                 key={index}
                 src={item}
                 alt="Social"
-                className="cursor-pointer size-9"
+                className="cursor-pointer size-9 max-xl:size-8"
               />
             ))}
           </div>
         </div>
-        <div className="space-y-4">
-          <button className="flex gap-2 bg-[#f6f7f8] py-2 pl-3 w-[200px] rounded-lg text-gray-700 hover:text-primary hover:bg-[#ecf3fd] duration-200">
+        <div className="space-y-1 xl:hidden">
+          <p className="font-semibold cursor-pointer hover:text-primary">
+            แผนกบริการลูกค้า
+          </p>
+          <div className="flex flex-wrap text-sm leading-7 after:*:content-['|'] after:*:text-gray-400 after:*:px-1 last:after:*:content-[''] hover:*:text-primary *:cursor-pointer">
+            <p>ติดต่อเรา</p>
+            <p>การสมัครสมาชิก</p>
+            <p>วิธีการชำระเงินและบริการอื่น ๆ</p>
+            <p>วิธีการขอใบกำกับภาษี</p>
+            <p>วิธีการเคลมสินค้า</p>
+            <p>รายละเอียดการประกันสินค้า</p>
+            <p>คำถามที่พบบ่อย (FAQs)</p>
+          </div>
+        </div>
+        <div className="xl:space-y-4 max-xl:flex max-xl:justify-center max-xl:gap-2">
+          <button className="flex gap-2 bg-[#f6f7f8] py-2 pl-3 w-[200px] max-xl:w-[160px] rounded-lg text-gray-700 hover:text-primary hover:bg-[#ecf3fd] duration-200">
             <svg
               width="24"
               height="24"
@@ -189,7 +203,7 @@ function Footer() {
             </svg>
             ที่ตั้งร้าน
           </button>
-          <button className="flex items-center gap-2 bg-[#f6f7f8] py-2 px-3 w-[200px] rounded-lg text-gray-700 hover:bg-[#ecf3fd] hover:text-primary duration-200">
+          <button className="flex items-center gap-2 bg-[#f6f7f8] py-2 px-3 w-[200px] max-xl:w-[160px] rounded-lg text-gray-700 hover:bg-[#ecf3fd] hover:text-primary duration-200">
             <img src={Thai} alt="Thai" className="rounded-full size-6" />
             ภาษาไทย
             <IoIosArrowDown className="ml-auto text-xl" />

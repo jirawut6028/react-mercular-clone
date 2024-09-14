@@ -187,23 +187,25 @@ function FlashSale() {
   const seconds = String(timeLeft % 60).padStart(2, "0");
 
   return (
-    <div className="w-[1280px] mx-auto mt-[30px]">
-      <div className="flex items-center justify-between gap-2">
+    <div className="w-[1280px] max-xl:w-[97%] mx-auto mt-[30px] mb-10">
+      <div className="flex justify-between gap-2">
         <div className="flex items-center gap-1">
           <img src={FSLogo} alt="FSLogo" className="mr-3 w-52" />
-          {category.map((item, index) => (
-            <button
-              key={index}
-              className={`text-sm font-semibold px-[23px] py-[9px] rounded-full cursor-pointer relative btn-ripple ${
-                cate == item ? "bg-black text-white" : "text-[#637385]"
-              }`}
-              onClick={() => setCate(item)}
-            >
-              <p className="relative z-10">{item}</p>
-            </button>
-          ))}
+          <div className="max-xl:hidden">
+            {category.map((item, index) => (
+              <button
+                key={index}
+                className={`text-sm font-semibold px-[23px] py-[9px] rounded-full cursor-pointer relative btn-ripple ${
+                  cate == item ? "bg-black text-white" : "text-[#637385]"
+                }`}
+                onClick={() => setCate(item)}
+              >
+                <p className="relative z-10">{item}</p>
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="flex items-center gap-1">
+        <div className="flex gap-1 xl:items-center">
           <div className="w-9 h-[52px] bg-black rounded-lg">
             <div className="bg-[#161c24] h-[65%] flex items-center justify-center text-white text-[18px] font-bold rounded-lg">
               {hours}
@@ -225,6 +227,19 @@ function FlashSale() {
             <div className="text-white text-[10px] text-center">วินาที</div>
           </div>
         </div>
+      </div>
+      <div className="xl:hidden">
+        {category.map((item, index) => (
+          <button
+            key={index}
+            className={`text-sm font-semibold px-[23px] py-[9px] rounded-full cursor-pointer relative btn-ripple ${
+              cate == item ? "bg-black text-white" : "text-[#637385]"
+            }`}
+            onClick={() => setCate(item)}
+          >
+            <p className="relative z-10">{item}</p>
+          </button>
+        ))}
       </div>
       {cate == "ทั้งหมด" && <FlashSaleSwiper data={data} />}
       {cate == "หูฟัง/ลำโพง" && (
@@ -250,7 +265,7 @@ function FlashSale() {
           data={data.filter((item) => item.cate == "จัดโต๊ะคอม")}
         />
       )}
-      <button className="bg-[#161c24] text-white font-semibold flex items-center gap-3 rounded-md px-20 py-2.5 mx-auto mb-10 text-sm relative btn-ripple">
+      <button className="bg-[#161c24] max-lg:w-[98%] text-white font-semibold flex justify-center items-center gap-3 rounded-md px-20 py-2.5 mx-auto text-sm relative btn-ripple">
         <p className="relative z-10">ดู Flash Sale ทั้งหมด</p>
         <FaArrowRight className="relative z-10" />
       </button>

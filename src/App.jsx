@@ -27,7 +27,7 @@ function App() {
       <img
         src={Merchandise}
         alt="Merchandise"
-        className="mx-auto my-10 rounded-xl"
+        className="mx-auto max-xl:w-[97%] my-6 max-lg:my-3 rounded-xl"
       />
       <ParallaxText />
       <FacilityFooter />

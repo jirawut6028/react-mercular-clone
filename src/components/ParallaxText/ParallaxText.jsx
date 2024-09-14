@@ -37,7 +37,7 @@ function ParallaxText() {
   return (
     <div className="flex overflow-hidden text-nowrap flex-nowrap">
       <motion.div
-        className="text-[110px] text-transparent font-outline-2 font-bold uppercase"
+        className="text-[110px] max-lg:text-[42px] text-transparent font-outline-2 font-bold uppercase"
         style={{ x }}
       >
         Mercular, Gadgets your way Mercular, Gadgets your way

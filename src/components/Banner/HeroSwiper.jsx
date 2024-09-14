@@ -38,7 +38,7 @@ function HeroSwiper() {
     }
   };
   return (
-    <div className="w-[850px] relative">
+    <div className="w-[850px] max-xl:w-full xl:h-[400px] relative">
       <Swiper
         onSwiper={setHeroSwiper}
         className="w-full rounded-xl"
@@ -59,7 +59,11 @@ function HeroSwiper() {
       >
         {data.map((item, index) => (
           <SwiperSlide key={index}>
-            <img src={item.img} alt="Banner" className="cursor-pointer" />
+            <img
+              src={item.img}
+              alt="Banner"
+              className="w-full cursor-pointer"
+            />
           </SwiperSlide>
         ))}
       </Swiper>

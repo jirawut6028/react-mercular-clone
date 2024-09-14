@@ -75,14 +75,44 @@ function Navbar() {
 
   return (
     <nav
-      className={`sticky top-0 flex flex-col py-[7px] mx-auto z-50 bg-white ${
+      className={`sticky top-0 flex flex-col py-[7px] z-50 bg-white ${
         scrolled && "shadow-md"
       }`}
     >
-      <div className="w-[1280px] mx-auto flex justify-between items-center pl-2 pb-[11px]">
-        <div className="flex gap-6">
+      <div className="w-full xl:w-[1280px] mx-auto flex justify-between items-center pl-4 lg:pb-[11px]">
+        <div className="hover:bg-[#f5f5f5] rounded-lg text-gray-600 text-[26px] p-2 cursor-pointer duration-200 lg:hidden">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M5 12C5 12.5523 4.55228 13 4 13C3.44772 13 3 12.5523 3 12C3 11.4477 3.44772 11 4 11C4.55228 11 5 11.4477 5 12Z"
+              fill="rgba(69, 79, 91, 1)"
+              fillOpacity="1"
+            ></path>
+            <path
+              d="M7 11.94C7 11.4209 7.42085 11 7.94 11H20.06C20.5791 11 21 11.4209 21 11.94V12.06C21 12.5791 20.5791 13 20.06 13H7.94C7.42085 13 7 12.5791 7 12.06V11.94Z"
+              fill="rgba(69, 79, 91, 1)"
+              fillOpacity="1"
+            ></path>
+            <path
+              d="M3 16.94C3 16.4209 3.42085 16 3.94 16H20.06C20.5791 16 21 16.4209 21 16.94V17.06C21 17.5791 20.5791 18 20.06 18H3.94C3.42085 18 3 17.5791 3 17.06V16.94Z"
+              fill="rgba(69, 79, 91, 1)"
+              fillOpacity="1"
+            ></path>
+            <path
+              d="M3 6.94C3 6.42085 3.42085 6 3.94 6H20.06C20.5791 6 21 6.42085 21 6.94V7.06C21 7.57915 20.5791 8 20.06 8H3.94C3.42085 8 3 7.57915 3 7.06V6.94Z"
+              fill="rgba(69, 79, 91, 1)"
+              fillOpacity="1"
+            ></path>
+          </svg>
+        </div>
+        <div className="flex gap-6 max-lg:mx-auto">
           <img src={logo} alt="logo" className="h-10 cursor-pointer" />
-          <div className="relative group">
+          <div className="hidden group lg:block">
             <button className="text-primary bg-[#d8e6fb] hover:bg-[#b2cdf8] rounded-lg text-sm w-[133px] pl-2.5 py-2 font-bold flex items-center gap-1.5 cursor-pointer duration-200">
               <GrAppsRounded className="text-2xl" />
               สินค้าทั้งหมด
@@ -91,7 +121,7 @@ function Navbar() {
           </div>
         </div>
         <div>
-          <div className="relative w-[544px]">
+          <div className="relative w-[560px] max-xl:hidden">
             <div className="absolute left-1 top-1/2 transform -translate-y-1/2 text-xl text-white bg-primary rounded-full p-1.5">
               <IoIosSearch />
             </div>
@@ -105,15 +135,18 @@ function Navbar() {
             />
           </div>
         </div>
-        <div className="flex items-center">
-          <div className="hover:bg-[#f5f5f5] rounded-full p-2 cursor-pointer duration-200">
+        <div className="flex items-center gap-2.5">
+          <div className="hover:bg-[#f5f5f5] rounded-full text-gray-600 text-[26px] p-2 cursor-pointer duration-200 xl:hidden">
+            <IoIosSearch />
+          </div>
+          <div className="hover:bg-[#f5f5f5] rounded-full p-2 cursor-pointer duration-200 max-lg:hidden">
             <img
               src={thai}
               alt="thai"
               className="w-6 h-6 border-2 rounded-full"
             />
           </div>
-          <div className="hover:bg-[#ecf3fd] rounded-full mr-5 ml-[11px] p-1 text-2xl text-gray-600 hover:text-primary cursor-pointer duration-200">
+          <div className="hover:bg-[#ecf3fd] rounded-full mr-3 p-1 text-2xl text-gray-600 hover:text-primary cursor-pointer duration-200 max-lg:hidden">
             <svg
               width="24"
               height="24"
@@ -135,12 +168,12 @@ function Navbar() {
               ></path>
             </svg>
           </div>
-          <button className="text-white bg-primary rounded-lg text-sm px-[16.5px] py-2.5 font-bold hover:drop-shadow-[0_10px_10px_#d4e3fb] cursor-pointer duration-200">
+          <button className="text-white bg-primary rounded-lg text-sm px-[16.5px] py-2.5 font-bold hover:drop-shadow-[0_10px_10px_#d4e3fb] cursor-pointer duration-200 max-lg:hidden">
             เข้าสู่ระบบ
           </button>
         </div>
       </div>
-      <div className="w-[1280px] mx-auto flex gap-2">
+      <div className="xl:w-[1280px] xl:mx-auto gap-2 flex max-lg:hidden">
         {data.map((item, index) => (
           <button
             key={index}

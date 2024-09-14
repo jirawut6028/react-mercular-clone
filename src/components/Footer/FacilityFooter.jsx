@@ -2,10 +2,11 @@ import React from "react";
 
 function FacilityFooter() {
   return (
-    <div className="bg-[#f9fafb] flex items-center justify-center gap-14 py-6 mt-4">
-      <div className="flex items-center gap-3 cursor-pointer">
+    <div className="bg-[#f9fafb] flex flex-wrap items-center justify-center gap-4 py-6 mt-4 *:flex *:items-center *:gap-3 *:cursor-pointer *:max-lg:flex-col">
+      <div>
         <div className="p-2 rounded-full bg-primary">
           <svg
+            className="max-lg:size-6"
             width="32"
             height="32"
             viewBox="0 0 33 32"
@@ -22,14 +23,15 @@ function FacilityFooter() {
             ></path>
           </svg>
         </div>
-        <div>
-          <p className="text-lg font-bold">ของแท้</p>
+        <div className="max-lg:text-center w-[160px]">
+          <p className="font-bold lg:text-lg">ของแท้</p>
           <p className="text-sm">มั่นใจประกันศูนย์</p>
         </div>
       </div>
-      <div className="flex gap-3 cursor-pointer">
+      <div>
         <div className="p-2 rounded-full bg-primary">
           <svg
+            className="max-lg:size-6"
             width="32"
             height="32"
             viewBox="0 0 32 32"
@@ -44,14 +46,15 @@ function FacilityFooter() {
             ></path>
           </svg>
         </div>
-        <div>
-          <p className="text-lg font-bold">ส่งด้วยใจ</p>
+        <div className="max-lg:text-center w-[160px]">
+          <p className="font-bold lg:text-lg">ส่งด้วยใจ</p>
           <p className="text-sm">จัดส่งไว ทั่วไทย</p>
         </div>
       </div>
-      <div className="flex gap-3 cursor-pointer">
+      <div>
         <div className="p-2 rounded-full bg-primary">
           <svg
+            className="max-lg:size-6"
             width="32"
             height="32"
             viewBox="0 0 30 30"
@@ -68,14 +71,15 @@ function FacilityFooter() {
             ></path>
           </svg>
         </div>
-        <div>
-          <p className="text-lg font-bold">ผ่อนได้ทุกชิ้น</p>
+        <div className="max-lg:text-center w-[160px]">
+          <p className="font-bold lg:text-lg">ผ่อนได้ทุกชิ้น</p>
           <p className="text-sm">0% หรือสูงสุด 10 เดือน*</p>
         </div>
       </div>
-      <div className="flex gap-3 cursor-pointer">
+      <div>
         <div className="p-2 rounded-full bg-primary">
           <svg
+            className="max-lg:size-6"
             width="32"
             height="32"
             viewBox="0 0 24 24"
@@ -90,8 +94,8 @@ function FacilityFooter() {
             ></path>
           </svg>
         </div>
-        <div>
-          <p className="text-lg font-bold">ทักแชท</p>
+        <div className="max-lg:text-center w-[160px]">
+          <p className="font-bold lg:text-lg">ทักแชท</p>
           <p className="text-sm">ปรึกษาผู้เชี่ยวชาญฟรี</p>
         </div>
       </div>

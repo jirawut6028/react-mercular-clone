@@ -84,9 +84,10 @@ const data = [
 
 function BestSellSwiper() {
   return (
-    <div className="w-[414px] relative">
+    <div className="w-[414px] max-xl:w-full relative">
       <Swiper
-        className="h-full rounded-xl bg-primary"
+        slidesPerView={"auto"}
+        spaceBetween={10}
         navigation={{
           nextEl: ".swiper-best-button-next",
           prevEl: ".swiper-best-button-prev",
@@ -95,18 +96,18 @@ function BestSellSwiper() {
       >
         {data.map((item, index) => (
           <SwiperSlide
-            className="px-3 py-3.5 flex flex-col justify-between"
+            className="px-3 py-3 flex flex-col justify-between rounded-xl h-[400px] max-lg:h-[310px] max-lg:w-[85%] bg-primary"
             key={index}
           >
-            <p className="text-xl font-bold text-white">
+            <p className="text-xl font-bold text-white max-lg:text-lg">
               🔥Best Seller {item.title}
             </p>
             {item.bestsell.map((i, index) => (
               <div
                 key={index}
-                className="h-[103px] bg-white rounded-xl flex items-center justify-between px-4 cursor-pointer"
+                className="h-[103px] max-lg:h-[80px] bg-white rounded-xl flex items-center justify-between max-xl:justify-start px-4 cursor-pointer"
               >
-                <div className="bg-primary h-[34px] w-[34px] rounded-full text-white flex items-center justify-center text-lg font-bold relative">
+                <div className="relative flex items-center justify-center text-lg font-bold px-4 text-white rounded-full bg-primary size-[34px]">
                   <PiCrownSimpleFill
                     className={`absolute -top-2.5 ${
                       index == 0 && "text-yellow-500"
@@ -119,9 +120,9 @@ function BestSellSwiper() {
                 <img
                   src={i.img}
                   alt={i.name}
-                  className="w-[100px] object-cover"
+                  className="w-[100px] max-lg:w-[80px] object-cover mx-2"
                 />
-                <div className="w-[200px] line-clamp-3">
+                <div className="w-[200px] max-xl:w-full line-clamp-3">
                   <p className="text-xs text-[#2d77ec] pb-1">{i.brand}</p>
                   <p>{i.name}</p>
                 </div>
@@ -130,10 +131,10 @@ function BestSellSwiper() {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className="swiper-best-button-prev -left-4 btn-swiper-left btn-ripple-m">
+      <button className="swiper-best-button-prev -left-4 btn-swiper-left btn-ripple-m max-lg:hidden">
         <FaAngleLeft className="relative z-10" />
       </button>
-      <button className="swiper-best-button-next -right-4 btn-swiper-right btn-ripple-m">
+      <button className="swiper-best-button-next -right-4 btn-swiper-right btn-ripple-m max-lg:hidden">
         <FaAngleRight className="relative z-10" />
       </button>
     </div>

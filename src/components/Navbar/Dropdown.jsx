@@ -15,7 +15,7 @@ function Dropdown() {
 
   return (
     <div
-      className="absolute invisible pt-1 group-hover:visible"
+      className="absolute invisible pt-1 max-xl:left-3 group-hover:visible"
       onMouseLeave={() => {
         setIndexTitle(0);
         setIndexCate(0);

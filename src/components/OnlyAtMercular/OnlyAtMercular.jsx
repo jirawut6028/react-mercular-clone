@@ -29,13 +29,13 @@ const image = [
 
 function OnlyAtMercular() {
   return (
-    <div className="w-[1280px] mx-auto">
-      <p className="mb-2 text-2xl font-bold text-center">
+    <div className="w-[1280px] max-xl:w-[97%] mx-auto mb-10">
+      <p className="mb-2 text-2xl font-bold text-center max-sm:mb-0 max-lg:text-xl max-lg:text-start">
         🌟 Only at Mercular 🌟
       </p>
-      <div className="relative mb-10">
+      <div className="relative">
         <Swiper
-          className="pb-10"
+          className="pb-10 max-sm:pb-0"
           effect={"coverflow"}
           speed={800}
           centeredSlides={true}
@@ -62,15 +62,15 @@ function OnlyAtMercular() {
               <img
                 src={item}
                 alt="slide_image"
-                className="w-[600px] object-cover rounded-lg cursor-pointer"
+                className="w-[600px]  max-sm:scale-[0.6] max-sm:rounded-2xl object-cover rounded-lg cursor-pointer"
               />
             </SwiperSlide>
           ))}
         </Swiper>
-        <button className="-left-2 swiper-only-button-prev btn-swiper-left btn-ripple-m">
+        <button className="-left-2 swiper-only-button-prev btn-swiper-left btn-ripple-m max-sm:hidden">
           <FaAngleLeft className="relative z-10" />
         </button>
-        <button className="-right-2 swiper-only-button-next btn-swiper-right btn-ripple-m">
+        <button className="-right-2 swiper-only-button-next btn-swiper-right btn-ripple-m max-sm:hidden">
           <FaAngleRight className="relative z-10" />
         </button>
       </div>

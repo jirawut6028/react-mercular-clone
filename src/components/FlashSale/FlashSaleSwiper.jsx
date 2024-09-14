@@ -17,7 +17,7 @@ function FlashSaleSwiper({ data }) {
     <div className="relative mt-4">
       <Swiper
         className="pb-4"
-        slidesPerView={6}
+        slidesPerView={"auto"}
         slidesPerGroup={6}
         spaceBetween={15}
         navigation={{
@@ -125,10 +125,10 @@ function FlashSaleSwiper({ data }) {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button className="swiper-flash-button-prev -left-4 btn-swiper-left btn-ripple-m">
+      <button className="swiper-flash-button-prev -left-4 btn-swiper-left btn-ripple-m max-lg:hidden">
         <FaAngleLeft className="relative z-10" />
       </button>
-      <button className="swiper-flash-button-next -right-4 btn-swiper-right btn-ripple-m">
+      <button className="swiper-flash-button-next -right-4 btn-swiper-right btn-ripple-m max-lg:hidden">
         <FaAngleRight className="relative z-10" />
       </button>
     </div>
