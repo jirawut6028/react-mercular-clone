@@ -21,7 +21,7 @@ function Dropdown() {
         setIndexCate(0);
       }}
     >
-      <div className="flex bg-white rounded-lg shadow-xl h-[480px]">
+      <div className="flex bg-white rounded-lg shadow-[0_4px_8px_0_rgba(145,158,171,0.16)] h-[480px]">
         <div className="bg-[#f4f6f8] flex flex-col p-3 w-[230px] rounded-s-lg">
           <p className="pb-3 font-semibold">สินค้าทั้งหมด</p>
           <ul className="text-sm font-semibold">

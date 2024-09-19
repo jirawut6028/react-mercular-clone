@@ -76,10 +76,10 @@ function Navbar() {
   return (
     <nav
       className={`sticky top-0 flex flex-col py-[7px] z-50 bg-white ${
-        scrolled && "shadow-md"
+        scrolled && "shadow-[0_4px_16px_0_rgba(145,158,171,0.16)]"
       }`}
     >
-      <div className="w-full xl:w-[1280px] mx-auto flex justify-between items-center pl-4 lg:pb-[11px]">
+      <div className="w-full xl:w-[1280px] mx-auto flex justify-between items-center max-xl:pr-1 max-xl:pl-4 pl-2 lg:pb-[11px]">
         <div className="hover:bg-[#f5f5f5] rounded-lg text-gray-600 text-[26px] p-2 cursor-pointer duration-200 lg:hidden">
           <svg
             width="24"
@@ -112,7 +112,7 @@ function Navbar() {
         </div>
         <div className="flex gap-6 max-lg:mx-auto">
           <img src={logo} alt="logo" className="h-10 cursor-pointer" />
-          <div className="hidden group lg:block">
+          <div className="max-lg:hidden group">
             <button className="text-primary bg-[#d8e6fb] hover:bg-[#b2cdf8] rounded-lg text-sm w-[133px] pl-2.5 py-2 font-bold flex items-center gap-1.5 cursor-pointer duration-200">
               <GrAppsRounded className="text-2xl" />
               สินค้าทั้งหมด

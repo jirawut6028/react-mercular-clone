@@ -10,6 +10,7 @@ import Merchandise from "./assets/Merchandise.webp";
 import ParallaxText from "./components/ParallaxText/ParallaxText";
 import FacilityFooter from "./components/Footer/FacilityFooter";
 import Footer from "./components/Footer/Footer";
+import BottomNavigate from "./components/BottomNavigate/BottomNavigate";
 
 function App() {
   useEffect(() => {
@@ -32,6 +33,7 @@ function App() {
       <ParallaxText />
       <FacilityFooter />
       <Footer />
+      <BottomNavigate />
     </div>
   );
 }

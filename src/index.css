@@ -16,6 +16,7 @@
 
 body {
   font-family: "Noto Sans Thai", "sans-serif";
+  overflow-x: hidden;
 }
 
 .swiper-button-disabled {
@@ -71,8 +72,8 @@ body {
 
 .btn-ripple:active:before {
   opacity: 0.4;
-  width: 700px;
-  height: 700px;
+  width: 1600px;
+  height: 1600px;
 }
 
 .btn-ripple-m::before {

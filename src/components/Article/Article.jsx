@@ -94,7 +94,7 @@ function Article() {
   const [selectCate, setSelectCate] = useState("บทความทั้งหมด");
 
   return (
-    <div className="w-[1280px] mx-auto max-xl:w-[97%] lg:pb-6">
+    <div className="w-[1280px] mx-auto max-xl:w-full max-xl:px-4 lg:pb-6">
       <div className="flex items-center justify-between mb-4">
         <p className="text-2xl font-bold">บทความแนะนำ</p>
         <button className="flex gap-1.5 items-center text-sm font-bold text-primary hover:bg-[#ecf3fd] duration-200 rounded-lg px-2.5 py-2 cursor-pointer">

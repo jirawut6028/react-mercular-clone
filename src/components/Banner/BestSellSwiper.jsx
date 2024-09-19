@@ -84,13 +84,18 @@ const data = [
 
 function BestSellSwiper() {
   return (
-    <div className="w-[414px] max-xl:w-full relative">
+    <div className="w-[412px] max-xl:w-full relative">
       <Swiper
         slidesPerView={"auto"}
         spaceBetween={10}
         navigation={{
           nextEl: ".swiper-best-button-next",
           prevEl: ".swiper-best-button-prev",
+        }}
+        breakpoints={{
+          1024: {
+            slidesPerView: "1",
+          },
         }}
         modules={[Navigation]}
       >

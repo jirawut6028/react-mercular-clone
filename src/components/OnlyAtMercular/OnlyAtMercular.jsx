@@ -29,7 +29,7 @@ const image = [
 
 function OnlyAtMercular() {
   return (
-    <div className="w-[1280px] max-xl:w-[97%] mx-auto mb-10">
+    <div className="w-[1280px] max-xl:w-full max-xl:px-4 mx-auto mb-10">
       <p className="mb-2 text-2xl font-bold text-center max-sm:mb-0 max-lg:text-xl max-lg:text-start">
         🌟 Only at Mercular 🌟
       </p>

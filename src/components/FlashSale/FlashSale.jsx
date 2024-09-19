@@ -187,11 +187,11 @@ function FlashSale() {
   const seconds = String(timeLeft % 60).padStart(2, "0");
 
   return (
-    <div className="w-[1280px] max-xl:w-[97%] mx-auto mt-[30px] mb-10">
-      <div className="flex justify-between gap-2">
+    <div className="w-[1280px] max-xl:w-full max-xl:px-4 mx-auto mt-[30px] mb-10">
+      <div className="flex justify-between gap-2 max-lg:mb-3">
         <div className="flex items-center gap-1">
-          <img src={FSLogo} alt="FSLogo" className="mr-3 w-52" />
-          <div className="max-xl:hidden">
+          <img src={FSLogo} alt="FSLogo" className="mr-3 w-52 max-lg:w-36" />
+          <div className="space-x-2 max-xl:hidden">
             {category.map((item, index) => (
               <button
                 key={index}
@@ -228,7 +228,7 @@ function FlashSale() {
           </div>
         </div>
       </div>
-      <div className="xl:hidden">
+      <div className="space-x-1 overflow-y-auto xl:hidden whitespace-nowrap scrollbar-hide">
         {category.map((item, index) => (
           <button
             key={index}

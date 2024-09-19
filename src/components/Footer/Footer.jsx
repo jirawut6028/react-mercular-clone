@@ -97,7 +97,7 @@ const Social = [Facebook, Twitter, Tiktok, Youtube, Instagram, Line, Threads];
 
 function Footer() {
   return (
-    <div className="w-[1280px] max-xl:w-[97%] mx-auto mb-8">
+    <div className="w-[1280px] max-xl:w-full max-xl:px-4 mx-auto mb-20">
       <div className="grid mt-6 text-gray-700 xl:grid-cols-4 gap-y-5">
         {cate.map((item, index) => (
           <div key={index} className="space-y-1">
