@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import logo from "../../assets/mercular-logo.webp";
-import thai from "../../assets/icons/th.png";
+import Logo from "../../assets/mercular-logo.webp";
+import Thai from "../../assets/icons/th.png";
 import { GrAppsRounded } from "react-icons/gr";
 import { IoIosSearch } from "react-icons/io";
 import FlashSale from "../../assets/icons/flash-sale.webp";
@@ -9,6 +9,7 @@ import Blog from "../../assets/icons/review-article.webp";
 import Best from "../../assets/icons/best-of.webp";
 import Store from "../../assets/icons/store.webp";
 import Dropdown from "./Dropdown";
+import Sidebar from "./Sidebar";
 
 const data = [
   {
@@ -41,6 +42,7 @@ function Navbar() {
   const fullText = "หา Gadget ที่ใช่กับ Mercular...";
   const [isFocused, setIsFocused] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -73,6 +75,10 @@ function Navbar() {
     }
   }, [isFocused, fullText]);
 
+  const btnClick = () => {
+    setToggle(false);
+  };
+
   return (
     <nav
       className={`sticky top-0 flex flex-col py-[7px] z-50 bg-white ${
@@ -80,7 +86,10 @@ function Navbar() {
       }`}
     >
       <div className="w-full xl:w-[1280px] mx-auto flex justify-between items-center max-xl:pr-1 max-xl:pl-4 pl-2 lg:pb-[11px]">
-        <div className="hover:bg-[#f5f5f5] rounded-lg text-gray-600 text-[26px] p-2 cursor-pointer duration-200 lg:hidden">
+        <div
+          className="hover:bg-[#f5f5f5] rounded-lg text-gray-600 text-[26px] p-2 cursor-pointer duration-200 lg:hidden"
+          onClick={() => setToggle(true)}
+        >
           <svg
             width="24"
             height="24"
@@ -110,8 +119,12 @@ function Navbar() {
             ></path>
           </svg>
         </div>
+        <Sidebar data={data} btnClick={btnClick} toggle={toggle} />
+        {toggle && (
+          <div className="fixed top-0 left-0 z-20 w-screen h-screen bg-black opacity-45 lg:hidden"></div>
+        )}
         <div className="flex gap-6 max-lg:mx-auto">
-          <img src={logo} alt="logo" className="h-10 cursor-pointer" />
+          <img src={Logo} alt="logo" className="h-10 cursor-pointer" />
           <div className="max-lg:hidden group">
             <button className="text-primary bg-[#d8e6fb] hover:bg-[#b2cdf8] rounded-lg text-sm w-[133px] pl-2.5 py-2 font-bold flex items-center gap-1.5 cursor-pointer duration-200">
               <GrAppsRounded className="text-2xl" />
@@ -121,7 +134,7 @@ function Navbar() {
           </div>
         </div>
         <div>
-          <div className="relative w-[560px] max-xl:hidden">
+          <div className="relative w-[560px] max-xl:hidden z-10">
             <div className="absolute left-1 top-1/2 transform -translate-y-1/2 text-xl text-white bg-primary rounded-full p-1.5">
               <IoIosSearch />
             </div>
@@ -141,7 +154,7 @@ function Navbar() {
           </div>
           <div className="hover:bg-[#f5f5f5] rounded-full p-2 cursor-pointer duration-200 max-lg:hidden">
             <img
-              src={thai}
+              src={Thai}
               alt="thai"
               className="w-6 h-6 border-2 rounded-full"
             />
