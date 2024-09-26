@@ -16,7 +16,7 @@ function Sidebar({ data, btnClick, toggle }) {
       <div className="h-full px-4 py-2 overflow-y-auto bg-white border">
         <button
           className="rounded-full hover:bg-[#f5f5f5] duration-150"
-          onClick={btnClick}
+          onClick={() => btnClick(false)}
         >
           <svg
             width="24"

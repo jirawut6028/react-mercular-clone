@@ -26,7 +26,7 @@ function Category() {
               <p className="line-clamp-1">{item.title}</p>
             </button>
             <div
-              className={`absolute z-30 pt-2 duration-200 opacity-0 group-hover:opacity-100 ${
+              className={`absolute z-30 pt-2 duration-200 invisible opacity-0 group-hover:opacity-100 group-hover:visible ${
                 [0, 1, 2].includes(index)
                   ? "left-0"
                   : index === 3

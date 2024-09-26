@@ -75,10 +75,6 @@ function Navbar() {
     }
   }, [isFocused, fullText]);
 
-  const btnClick = () => {
-    setToggle(false);
-  };
-
   return (
     <nav
       className={`sticky top-0 flex flex-col py-[7px] z-50 bg-white ${
@@ -119,7 +115,7 @@ function Navbar() {
             ></path>
           </svg>
         </div>
-        <Sidebar data={data} btnClick={btnClick} toggle={toggle} />
+        <Sidebar data={data} btnClick={setToggle} toggle={toggle} />
         {toggle && (
           <div className="fixed top-0 left-0 z-20 w-screen h-screen bg-black opacity-45 lg:hidden"></div>
         )}
@@ -142,7 +138,7 @@ function Navbar() {
               name="search"
               type="text"
               placeholder={placeholderText}
-              className="bg-[#f5f5f5] rounded-full pl-11 p-2 w-full border border-transparent hover:border-primary focus:border-primary duration-200"
+              className="bg-[#f5f5f5] rounded-full pl-11 p-2 w-full border border-transparent hover:border-primary focus:outline-none focus:border-primary duration-200"
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
             />

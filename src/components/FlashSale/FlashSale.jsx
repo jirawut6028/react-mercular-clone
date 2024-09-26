@@ -36,6 +36,7 @@ import QwertykeysNeo70_1 from "../../assets/flash-sale/gaming/qwertykeys-neo70-1
 import QwertykeysNeo70_2 from "../../assets/flash-sale/gaming/qwertykeys-neo70-2.jpg";
 import QwertyQK100_1 from "../../assets/flash-sale/gaming/qwertykeys-qk100-1.webp";
 import QwertyQK100_2 from "../../assets/flash-sale/gaming/qwertykeys-qk100-2.jpg";
+import Countdown from "./Countdown";
 
 const category = [
   "ทั้งหมด",
@@ -171,13 +172,25 @@ const data = [
 function FlashSale() {
   const [cate, setCate] = useState("ทั้งหมด");
   const [timeLeft, setTimeLeft] = useState(86400);
+  const [sIndex, setSIndex] = useState(0);
+  const [mIndex, setMIndex] = useState(0);
+  const [hIndex, setHIndex] = useState(0);
 
   useEffect(() => {
     if (timeLeft <= 0) return;
 
     const timerId = setInterval(() => {
       setTimeLeft(timeLeft - 1);
+      setSIndex(sIndex + 1);
     }, 1000);
+
+    if (timeLeft % 60 === 0) {
+      setMIndex(mIndex + 1);
+    }
+
+    if (timeLeft % 3600 === 0) {
+      setHIndex(hIndex + 1);
+    }
 
     return () => clearInterval(timerId);
   }, [timeLeft]);
@@ -206,26 +219,11 @@ function FlashSale() {
           </div>
         </div>
         <div className="flex gap-1 xl:items-center">
-          <div className="w-9 h-[52px] bg-black rounded-lg">
-            <div className="bg-[#161c24] h-[65%] flex items-center justify-center text-white text-[18px] font-bold rounded-lg">
-              {hours}
-            </div>
-            <div className="text-white text-[10px] text-center">ชั่วโมง</div>
-          </div>
+          <Countdown time={hours} index={hIndex} text="ชั่วโมง" />
           <p className="text-xl font-bold">:</p>
-          <div className="w-9 h-[52px] bg-black rounded-lg">
-            <div className="bg-[#161c24] h-[65%] flex items-center justify-center text-white text-[18px] font-bold rounded-lg">
-              {minutes}
-            </div>
-            <div className="text-white text-[10px] text-center">นาที</div>
-          </div>
+          <Countdown time={minutes} index={mIndex} text="นาที" />
           <p className="text-xl font-bold">:</p>
-          <div className="w-9 h-[52px] bg-black rounded-lg">
-            <div className="bg-[#161c24] h-[65%] flex items-center justify-center text-white text-[18px] font-bold rounded-lg">
-              {seconds}
-            </div>
-            <div className="text-white text-[10px] text-center">วินาที</div>
-          </div>
+          <Countdown time={seconds} index={sIndex} text="วินาที" />
         </div>
       </div>
       <div className="space-x-1 overflow-y-auto xl:hidden whitespace-nowrap scrollbar-hide">
