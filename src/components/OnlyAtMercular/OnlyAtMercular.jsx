@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import Wobkey from "../../assets/only-at-mercular/wobkey.webp";
@@ -9,11 +8,9 @@ import Qwerty from "../../assets/only-at-mercular/qwerty.webp";
 import Hifiman from "../../assets/only-at-mercular/hifiman.webp";
 import ThunderRobot from "../../assets/only-at-mercular/thunderRobot.webp";
 import DryStudio from "../../assets/only-at-mercular/dry-studio.webp";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 
 const image = [

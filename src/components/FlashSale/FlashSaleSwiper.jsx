@@ -1,4 +1,3 @@
-import React from "react";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -8,7 +7,7 @@ import "swiper/css";
 // import required modules
 import { Navigation } from "swiper/modules";
 
-function FlashSaleSwiper({ data }) {
+function FlashSaleSwiper({ products }) {
   const formatNumber = (number) => {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
@@ -26,7 +25,7 @@ function FlashSaleSwiper({ data }) {
         }}
         modules={[Navigation]}
       >
-        {data.map((item, index) => (
+        {products.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="flex flex-col w-[200px] rounded-xl shadow-lg cursor-pointer hover:shadow-[0_10px_10px_#d4e3fb] group/card duration-200">
               <div className="relative group/img">

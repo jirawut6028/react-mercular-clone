@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Thai from "../../assets/icons/th.png";
 import En from "../../assets/icons/en.png";
 import { GrAppsRounded } from "react-icons/gr";
 import { FaAngleRight } from "react-icons/fa6";
 
-function Sidebar({ data, btnClick, toggle }) {
+function Sidebar({ menu, btnClick, sidebar }) {
   const [dropDown, setDropDown] = useState(false);
 
   return (
     <aside
       className={`fixed top-0 left-0 z-40 h-screen transition-transform w-[271px] duration-300 lg:-translate-x-full ${
-        toggle ? "translate-x-0" : "-translate-x-full"
+        sidebar ? "translate-x-0" : "-translate-x-full"
       }`}
     >
       <div className="h-full px-4 py-2 overflow-y-auto bg-white border">
@@ -38,7 +38,7 @@ function Sidebar({ data, btnClick, toggle }) {
             <FaAngleRight className="ml-auto" />
           </li>
           <hr className="my-4 border-t" />
-          {data.map((item, index) => (
+          {menu.map((item, index) => (
             <li
               key={index}
               className="flex gap-2 px-2 items-center my-2 cursor-pointer h-[34px]"

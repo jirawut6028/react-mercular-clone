@@ -1,5 +1,3 @@
-import React from "react";
-
 function FacilityFooter() {
   return (
     <div className="bg-[#f9fafb] flex flex-wrap items-center justify-center gap-4 py-6 mt-4 *:flex *:items-center *:gap-3 *:cursor-pointer *:max-lg:flex-col">

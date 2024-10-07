@@ -122,7 +122,7 @@ import ProjectorAndAccessory from "../assets/category/tv/projector-and-accessory
 import Projector from "../assets/category/tv/projector-and-accessory/projector.png";
 import ProjectorAccessory from "../assets/category/tv/projector-and-accessory/projector-accessory.png";
 
-export const dropDownNav = [
+export const categoryNav = [
   {
     title: "หูฟัง/ลำโพง",
     img: Audio,

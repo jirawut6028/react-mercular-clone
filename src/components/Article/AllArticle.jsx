@@ -1,9 +1,7 @@
-import React from "react";
-
-function AllArticle({ data }) {
+function AllArticle({ article }) {
   return (
     <div className="grid w-full gap-4 xl:grid-cols-5 lg:ml-5 lg:grid-cols-3">
-      {data.slice(0, 7).map((item, index) => (
+      {article.slice(0, 7).map((item, index) => (
         <div
           key={index}
           className={`cursor-pointer ${

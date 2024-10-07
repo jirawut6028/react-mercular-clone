@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaAngleLeft, FaAngleRight, FaArrowRight } from "react-icons/fa6";
-import { dropDownNav } from "../../utils/constants";
+import { categoryNav } from "../../utils/constants";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
-
-// import required modules
 import { Navigation } from "swiper/modules";
 
 function Dropdown() {
@@ -25,7 +21,7 @@ function Dropdown() {
         <div className="bg-[#f4f6f8] flex flex-col p-3 w-[230px] rounded-s-lg">
           <p className="pb-3 font-semibold">สินค้าทั้งหมด</p>
           <ul className="text-sm font-semibold">
-            {dropDownNav.map((item, index) => (
+            {categoryNav.map((item, index) => (
               <li
                 key={index}
                 className={`py-2 px-2 mb-0.5 gap-3 rounded-lg flex items-center cursor-pointer ${
@@ -44,7 +40,7 @@ function Dropdown() {
         </div>
         <div className="flex flex-col w-[730px] p-4">
           <div className="flex justify-between font-semibold">
-            <p>{dropDownNav[indexTitle].title}</p>
+            <p>{categoryNav[indexTitle].title}</p>
             <button className="flex gap-1.5 items-center text-sm text-primary hover:bg-[#ecf3fd] rounded-lg p-[5px] cursor-pointer">
               <p>ดูทั้งหมด</p>
               <div className="bg-[#ecf3fe] rounded-full p-0.5 text-[10px]">
@@ -63,7 +59,7 @@ function Dropdown() {
               }}
               modules={[Navigation]}
             >
-              {dropDownNav[indexTitle].cate.map((item, index) => (
+              {categoryNav[indexTitle].cate.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div
                     className={`overflow-visible relative flex items-center justify-center pl-[66px] h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
@@ -97,7 +93,7 @@ function Dropdown() {
           </div>
           <div className="bg-[#f4f6f8] h-[215px] rounded-lg pt-5 px-4">
             <div className="flex justify-between font-semibold">
-              <p>{dropDownNav[indexTitle].cate[indexCate].title}</p>
+              <p>{categoryNav[indexTitle].cate[indexCate].title}</p>
               <button className="flex gap-1.5 items-center text-sm text-primary hover:bg-[#ecf3fd] rounded-lg p-[5px] cursor-pointer">
                 <p>ดูทั้งหมด</p>
                 <div className="bg-[#ecf3fe] rounded-full p-0.5 text-[10px]">
@@ -106,7 +102,7 @@ function Dropdown() {
               </button>
             </div>
             <div className="flex flex-wrap gap-3 h-[164px] overflow-y-auto scrollbar-hide">
-              {dropDownNav[indexTitle].cate[indexCate].cate?.map(
+              {categoryNav[indexTitle].cate[indexCate].cate?.map(
                 (item, index) => (
                   <button
                     key={index}
@@ -121,7 +117,7 @@ function Dropdown() {
               )}
             </div>
           </div>
-          {dropDownNav[indexTitle].brand?.length > 0 && (
+          {categoryNav[indexTitle].brand?.length > 0 && (
             <>
               <p className="mt-6 font-semibold">แบรนด์แนะนำ</p>
               <div className="relative">
@@ -135,7 +131,7 @@ function Dropdown() {
                   }}
                   modules={[Navigation]}
                 >
-                  {dropDownNav[indexTitle].brand.map((item, index) => (
+                  {categoryNav[indexTitle].brand.map((item, index) => (
                     <SwiperSlide key={index}>
                       <img
                         src={item}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import FlashSaleSwiper from "./FlashSaleSwiper";
 import { FaArrowRight } from "react-icons/fa6";
 import FSLogo from "../../assets/flash-sale/Mercular_FS.webp";
@@ -47,7 +47,7 @@ const category = [
   "จัดโต๊ะคอม",
 ];
 
-const data = [
+const products = [
   {
     cate: "หูฟัง/ลำโพง",
     img1: Bose700_1,
@@ -239,28 +239,32 @@ function FlashSale() {
           </button>
         ))}
       </div>
-      {cate == "ทั้งหมด" && <FlashSaleSwiper data={data} />}
+      {cate == "ทั้งหมด" && <FlashSaleSwiper products={products} />}
       {cate == "หูฟัง/ลำโพง" && (
         <FlashSaleSwiper
-          data={data.filter((item) => item.cate == "หูฟัง/ลำโพง")}
+          products={products.filter((item) => item.cate == "หูฟัง/ลำโพง")}
         />
       )}
       {cate == "คอมพิวเตอร์" && (
         <FlashSaleSwiper
-          data={data.filter((item) => item.cate == "คอมพิวเตอร์")}
+          products={products.filter((item) => item.cate == "คอมพิวเตอร์")}
         />
       )}
       {cate == "เกมมิ่ง" && (
-        <FlashSaleSwiper data={data.filter((item) => item.cate == "เกมมิ่ง")} />
+        <FlashSaleSwiper
+          products={products.filter((item) => item.cate == "เกมมิ่ง")}
+        />
       )}
       {cate == "เครื่องเสียงมืออาชีพ" && (
         <FlashSaleSwiper
-          data={data.filter((item) => item.cate == "เครื่องเสียงมืออาชีพ")}
+          products={products.filter(
+            (item) => item.cate == "เครื่องเสียงมืออาชีพ"
+          )}
         />
       )}
       {cate == "จัดโต๊ะคอม" && (
         <FlashSaleSwiper
-          data={data.filter((item) => item.cate == "จัดโต๊ะคอม")}
+          products={products.filter((item) => item.cate == "จัดโต๊ะคอม")}
         />
       )}
       <button className="bg-[#161c24] max-lg:w-[98%] text-white font-semibold flex justify-center items-center gap-3 rounded-md px-20 py-2.5 mx-auto text-sm relative btn-ripple">

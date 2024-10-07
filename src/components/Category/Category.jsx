@@ -1,12 +1,8 @@
-import React, { useState } from "react";
-import { dropDownNav } from "../../utils/constants";
+import { useState } from "react";
+import { categoryNav } from "../../utils/constants";
 import { FaAngleLeft, FaAngleRight, FaArrowRight } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
-
-// import required modules
 import { Navigation } from "swiper/modules";
 
 function Category() {
@@ -15,7 +11,7 @@ function Category() {
   return (
     <div className="my-[7px] xl:w-[1280px] mx-auto w-[97%] max-lg:hidden">
       <div className="relative flex gap-2 xl:gap-4">
-        {dropDownNav.map((item, index) => (
+        {categoryNav.map((item, index) => (
           <div key={index} className="group">
             <button className="bg-[#f6f7f8] hover:bg-[#d8e6fb] hover:text-primary rounded-xl text-sm xl:h-[126px] h-[96px] focus:outline-none font-semibold flex flex-col justify-center items-center gap-2 cursor-pointer duration-200">
               <img
@@ -42,7 +38,7 @@ function Category() {
               <div className="flex bg-white rounded-lg shadow-[0_4px_8px_0_rgba(145,158,171,0.16)] h-[368px] w-[923px] p-4">
                 <div className="flex flex-col w-[730px]">
                   <div className="flex justify-between font-semibold">
-                    <p>{dropDownNav[index].title}</p>
+                    <p>{categoryNav[index].title}</p>
                     <button className="flex gap-1.5 items-center text-sm text-primary hover:bg-[#ecf3fd] rounded-lg p-[5px] cursor-pointer">
                       <p>ดูทั้งหมด</p>
                       <div className="bg-[#ecf3fe] rounded-full p-0.5 text-[10px]">
@@ -61,7 +57,7 @@ function Category() {
                       }}
                       modules={[Navigation]}
                     >
-                      {dropDownNav[index].cate.map((item, i) => (
+                      {categoryNav[index].cate.map((item, i) => (
                         <SwiperSlide key={i}>
                           <div
                             className={`overflow-visible relative flex items-center justify-center pl-[66px] h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
@@ -95,7 +91,7 @@ function Category() {
                   </div>
                   <div className="bg-[#f4f6f8] h-[215px] rounded-lg pt-5 px-4">
                     <div className="flex justify-between font-semibold">
-                      <p>{dropDownNav[index].cate[indexCate].title}</p>
+                      <p>{categoryNav[index].cate[indexCate].title}</p>
                       <button className="flex gap-1.5 items-center text-sm text-primary hover:bg-[#ecf3fd] rounded-lg p-[5px] cursor-pointer">
                         <p>ดูทั้งหมด</p>
                         <div className="bg-[#ecf3fe] rounded-full p-0.5 text-[10px]">
@@ -104,7 +100,7 @@ function Category() {
                       </button>
                     </div>
                     <div className="flex flex-wrap gap-3 h-[164px] overflow-y-auto scrollbar-hide">
-                      {dropDownNav[index].cate[indexCate].cate?.map(
+                      {categoryNav[index].cate[indexCate].cate?.map(
                         (item, i) => (
                           <button
                             key={i}
@@ -125,12 +121,12 @@ function Category() {
                   </div>
                 </div>
                 <hr className="h-[320px] w-[1px] mx-4 my-auto bg-[#e5e8eb]"></hr>
-                {dropDownNav[index].brand?.length > 0 && (
+                {categoryNav[index].brand?.length > 0 && (
                   <div>
                     <p className="font-semibold">แบรนด์แนะนำ</p>
                     <div className="flex flex-col h-[312px] overflow-y-auto scrollbar-hide">
                       <div className="flex flex-wrap w-[128px] gap-4">
-                        {dropDownNav[index].brand.map((item, i) => (
+                        {categoryNav[index].brand.map((item, i) => (
                           <img
                             key={i}
                             src={item}

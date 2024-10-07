@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Banner1 from "../../assets/banners/GG_Sale.webp";
 import Banner2 from "../../assets/banners/Hot-Deals.jpg";
 import Banner3 from "../../assets/banners/HP-Banner.webp";
@@ -7,15 +7,11 @@ import Banner5 from "../../assets/banners/JBL.webp";
 import Banner6 from "../../assets/banners/Smartwatch.webp";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { IoPlayOutline, IoPauseOutline } from "react-icons/io5";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
 import "swiper/css";
-
-// import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
-const data = [
+const bannerIMG = [
   { img: Banner1 },
   { img: Banner2 },
   { img: Banner3 },
@@ -24,23 +20,23 @@ const data = [
   { img: Banner6 },
 ];
 
-function HeroSwiper() {
-  const [heroSwiper, setHeroSwiper] = useState(null);
+function BannerSwiper() {
+  const [bannerSwiper, setBannerSwiper] = useState(null);
   const [pause, setPause] = useState(false);
 
   const handleAutoplay = () => {
     if (pause) {
-      heroSwiper.autoplay.start();
+      bannerSwiper.autoplay.start();
       setPause(false);
     } else {
-      heroSwiper.autoplay.stop();
+      bannerSwiper.autoplay.stop();
       setPause(true);
     }
   };
   return (
     <div className="w-[850px] max-xl:w-full xl:h-[400px] relative">
       <Swiper
-        onSwiper={setHeroSwiper}
+        onSwiper={setBannerSwiper}
         className="w-full rounded-xl"
         loop={true}
         autoplay={{
@@ -52,12 +48,12 @@ function HeroSwiper() {
           type: "fraction",
         }}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-banner-button-next",
+          prevEl: ".swiper-banner-button-prev",
         }}
         modules={[Autoplay, Pagination, Navigation]}
       >
-        {data.map((item, index) => (
+        {bannerIMG.map((item, index) => (
           <SwiperSlide key={index}>
             <img
               src={item.img}
@@ -75,10 +71,10 @@ function HeroSwiper() {
           {pause ? <IoPlayOutline /> : <IoPauseOutline />}
         </button>
         <div className="px-4 py-2 text-base text-white bg-black rounded-full select-none max-sm:px-7 swiper-banner-pagination bg-opacity-30 -tracking-widest"></div>
-        <button className="swiper-button-prev cursor-pointer bg-black rounded-full p-2.5 bg-opacity-30">
+        <button className="swiper-banner-button-prev cursor-pointer bg-black rounded-full p-2.5 bg-opacity-30">
           <FaAngleLeft />
         </button>
-        <button className="swiper-button-next cursor-pointer bg-black rounded-full p-2.5 bg-opacity-30">
+        <button className="swiper-banner-button-next cursor-pointer bg-black rounded-full p-2.5 bg-opacity-30">
           <FaAngleRight />
         </button>
       </div>
@@ -86,4 +82,4 @@ function HeroSwiper() {
   );
 }
 
-export default HeroSwiper;
+export default BannerSwiper;

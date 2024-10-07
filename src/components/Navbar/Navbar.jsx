@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../../assets/mercular-logo.webp";
 import Thai from "../../assets/icons/th.png";
 import { GrAppsRounded } from "react-icons/gr";
@@ -11,7 +11,7 @@ import Store from "../../assets/icons/store.webp";
 import Dropdown from "./Dropdown";
 import Sidebar from "./Sidebar";
 
-const data = [
+const menuItems = [
   {
     title: "คูปองส่วนลด",
   },
@@ -42,7 +42,7 @@ function Navbar() {
   const fullText = "หา Gadget ที่ใช่กับ Mercular...";
   const [isFocused, setIsFocused] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [toggle, setToggle] = useState(false);
+  const [sidebar, setSidebar] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,7 +84,7 @@ function Navbar() {
       <div className="w-full xl:w-[1280px] mx-auto flex justify-between items-center max-xl:pr-1 max-xl:pl-4 pl-2 lg:pb-[11px]">
         <div
           className="hover:bg-[#f5f5f5] rounded-lg text-gray-600 text-[26px] p-2 cursor-pointer duration-200 lg:hidden"
-          onClick={() => setToggle(true)}
+          onClick={() => setSidebar(true)}
         >
           <svg
             width="24"
@@ -115,8 +115,8 @@ function Navbar() {
             ></path>
           </svg>
         </div>
-        <Sidebar data={data} btnClick={setToggle} toggle={toggle} />
-        {toggle && (
+        <Sidebar menu={menuItems} btnClick={setSidebar} sidebar={sidebar} />
+        {sidebar && (
           <div className="fixed top-0 left-0 z-20 w-screen h-screen bg-black opacity-45 lg:hidden"></div>
         )}
         <div className="flex gap-6 max-lg:mx-auto">
@@ -183,7 +183,7 @@ function Navbar() {
         </div>
       </div>
       <div className="xl:w-[1280px] xl:mx-auto gap-2 flex max-lg:hidden">
-        {data.map((item, index) => (
+        {menuItems.map((item, index) => (
           <button
             key={index}
             className="bg-[#f6f7f8] hover:bg-[#d8e6fb] hover:text-primary rounded-lg text-sm px-2 py-[5px] focus:outline-none font-semibold flex items-center gap-2 cursor-pointer duration-200"

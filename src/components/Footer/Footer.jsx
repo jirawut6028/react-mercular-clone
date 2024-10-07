@@ -1,4 +1,3 @@
-import React from "react";
 import Logo from "../../assets/mercular-logo.webp";
 import Facebook from "../../assets/icons/facebook.png";
 import Twitter from "../../assets/icons/twitter.png";

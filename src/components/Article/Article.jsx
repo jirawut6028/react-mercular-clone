@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import ColorGamet from "../../assets/articles/what-is-color-gamut-in-working-monitor-banner.jpg";
 import NewIpad from "../../assets/articles/new-ipad-pro-2024.jpg";
@@ -325,40 +325,40 @@ function Article() {
             เปรียบเทียบสินค้า
           </button>
         </div>
-        {selectCate == "บทความทั้งหมด" && <AllArticle data={article} />}
+        {selectCate == "บทความทั้งหมด" && <AllArticle article={article} />}
         {selectCate == "Hobby News" && (
           <AllArticle
-            data={article.filter((item) => item.cate == "Hobby News")}
+            article={article.filter((item) => item.cate == "Hobby News")}
           />
         )}
         {selectCate == "Buying Guide" && (
           <AllArticle
-            data={article.filter((item) => item.cate == "Buying Guide")}
+            article={article.filter((item) => item.cate == "Buying Guide")}
           />
         )}
         {selectCate == "Tip & Tricks" && (
           <AllArticle
-            data={article.filter((item) => item.cate == "Tip & Tricks")}
+            article={article.filter((item) => item.cate == "Tip & Tricks")}
           />
         )}
         {selectCate == "Editors' Pick" && (
           <AllArticle
-            data={article.filter((item) => item.cate == "Editors' Pick")}
+            article={article.filter((item) => item.cate == "Editors' Pick")}
           />
         )}
         {selectCate == "รีวิวสินค้า" && (
           <AllArticle
-            data={article.filter((item) => item.cate == "รีวิวสินค้า")}
+            article={article.filter((item) => item.cate == "รีวิวสินค้า")}
           />
         )}
         {selectCate == "Best of Mercular" && (
           <AllArticle
-            data={article.filter((item) => item.cate == "Best of Mercular")}
+            article={article.filter((item) => item.cate == "Best of Mercular")}
           />
         )}
         {selectCate == "เปรียบเทียบสินค้า" && (
           <AllArticle
-            data={article.filter((item) => item.cate == "เปรียบเทียบสินค้า")}
+            article={article.filter((item) => item.cate == "เปรียบเทียบสินค้า")}
           />
         )}
       </div>

@@ -1,5 +1,3 @@
-import React from "react";
-import { RiFireFill } from "react-icons/ri";
 import { PiCrownSimpleFill } from "react-icons/pi";
 import BewellFoster from "../../assets/best-seller/bewell-foster.jpg";
 import BewellGlory from "../../assets/best-seller/bewell-glory.jpg";
@@ -12,14 +10,10 @@ import LamzuThorn from "../../assets/best-seller/lamzu-thorn.jpg";
 import ThunderobotMl903 from "../../assets/best-seller/thunderobot-ml903.webp";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import "swiper/css";
-
-// import required modules
 import { Navigation } from "swiper/modules";
 
-const data = [
+const bestSell = [
   {
     title: "เก้าอี้สุขภาพ",
     bestsell: [
@@ -99,7 +93,7 @@ function BestSellSwiper() {
         }}
         modules={[Navigation]}
       >
-        {data.map((item, index) => (
+        {bestSell.map((item, index) => (
           <SwiperSlide
             className="px-3 py-3 flex flex-col justify-between rounded-xl h-[400px] max-lg:h-[310px] max-lg:w-[85%] bg-primary"
             key={index}
