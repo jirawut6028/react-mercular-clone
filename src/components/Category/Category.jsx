@@ -61,7 +61,7 @@ function Category() {
                         <SwiperSlide key={i}>
                           <div
                             className={`overflow-visible relative flex items-center justify-center pl-[66px] h-14 w-[150px] pr-3 rounded-lg cursor-pointer ${
-                              indexCate == i
+                              indexCate === i
                                 ? "bg-[#cfdef5] text-primary"
                                 : "bg-[#f4f6f8]"
                             }`}
@@ -75,7 +75,7 @@ function Category() {
                             <p className="text-sm font-semibold text-center line-clamp-2">
                               {item.title}
                             </p>
-                            {indexCate == index && (
+                            {indexCate === i && (
                               <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 w-0 h-0 border-solid border-t-0 border-r-[25px] border-l-[25px] border-b-[20px] border-l-transparent border-r-transparent border-t-transparent border-b-[#f4f6f8]"></span>
                             )}
                           </div>
@@ -91,7 +91,7 @@ function Category() {
                   </div>
                   <div className="bg-[#f4f6f8] h-[215px] rounded-lg pt-5 px-4">
                     <div className="flex justify-between font-semibold">
-                      <p>{categoryNav[index].cate[indexCate].title}</p>
+                      <p>{categoryNav[index].cate[indexCate]?.title}</p>
                       <button className="flex gap-1.5 items-center text-sm text-primary hover:bg-[#ecf3fd] rounded-lg p-[5px] cursor-pointer">
                         <p>ดูทั้งหมด</p>
                         <div className="bg-[#ecf3fe] rounded-full p-0.5 text-[10px]">
@@ -100,7 +100,7 @@ function Category() {
                       </button>
                     </div>
                     <div className="flex flex-wrap gap-3 h-[164px] overflow-y-auto scrollbar-hide">
-                      {categoryNav[index].cate[indexCate].cate?.map(
+                      {categoryNav[index].cate[indexCate]?.cate?.map(
                         (item, i) => (
                           <button
                             key={i}
